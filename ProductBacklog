@@ -1,0 +1,59 @@
+CS 307 Team 2
+Project Name: Project Trials (not final name)
+Project Owners: Ryan DeSalvio, Keith Droll, Nicolas Bratton, Garrett Kizior
+Product Backlog
+Problem Statement:
+There is currently a high demand for video games in the entertainment industry. We aim to create a 2D top-down role playing action video game with software that meets this demand and differentiates from other software by incorporating elements of random level generation, artificially intelligent enemies, and a simple but rewarding progression system. 
+
+Background Information:
+There are many popular 2-D top-down games, such as Legend of Zelda, Pokémon, Binding of Isaac, et cetera. These games all have varying degrees of story, RPG elements, and action. Project Trials excels at each of these elements individually; put together they create a game that is accessible and fun for all ages. Limitations of games in the industry today mostly involve a sacrifice of either an engaging story or satisfying game play; it is hard to accomplish both. Project Trails incorporates both of these elements without significant sacrifice. Project Trails’ story keeps you coming back with its unobtrusive and simple choose your own adventure storyline, where the user decides the way the story progresses by in game decisions. Project Trails allows the user to improve armor, movement speed, and attack power based on experience points earned. At the end of each level a decision must be made by the player to choose one of two bonuses that will decide the build of their character. The action of Project Trails will revolve around the idea of a fast paced weapon and item pickup system which will allow the user to micromanage the character’s attack style and attributes. 
+
+Requirements:
+Functional:
+As a user, I would like to start a new game
+As a user, I would like to pick up items
+As a user, I would like to pick up weapons
+As a user, I would like to be able to choose different dialogue options
+As a user, I would like to be able to view high scores
+As a user, I would like to know what my current health, experience bar, and level number is
+As a user, I would like to spend experience points on skills
+As a user, I would like to choose a perk after each level
+As a user, I would like to be able to use a controller or keyboard
+As a user, I would like my character attributes to be shown in a simple menu
+As a user, I would like to choose my difficulty level (if time allows)
+As a user, I would like to pause the game (if time allows)
+As a user, I would like to fight a final boss at the end of the game
+As a user, I would like to fight in either ranged and melee styles
+As a user, I would like to view an end-game statistics screen
+As a developer, I would like to like to include animations for character movement
+As a developer, I would like to like to include animations for character attack
+As a developer, I would like to be able to store high scores
+As a developer, I would like for enemies to spawn at an increasing rate as the level progresses
+As a developer, I would like to randomly generate levels, maps
+As a developer, I would like to make sure gameplay is balanced (enemy vs. player)
+As a developer, I would like each level to have a different setting
+As a developer, I would like the story to be entertaining yet unobtrusive to gameplay
+As a developer, I would like the story to be a choose-your-own-adventure style story
+As a developer, I would like the game to support multiple platforms (if time allows)
+As a developer, I would like to implement an achievement system (if time allows)
+As a developer, I would like to incorporate a start menu that allows for starting games, and viewing high scores, etc.
+As a developer, I would like to allow for cooperative play (if time allows)
+As a developer, I would like the game to run off an executable file
+As a developer, I would like to implement different terrain objects that affect the character
+As a developer, I would like for some enemies to follow the character blindly
+As a developer, I would like for some enemies to shoot the character
+As a developer, I would like to have a health system for enemy (not all enemies have the same amount of health)
+As a developer, I would like to allow the character to equip armor as well as weapons (if time allows)
+As a developer, I would like to include a credit scene at the end of game (if time allows)
+As a developer, I would like to include a store to purchase character skins, etc. with in-game tokens earned from completing each play through (if time allows)
+
+Non-functional:
+As a user, I would like to have fast response times with user input
+We must be able to play this game on PC
+The menus and interface needs to be simple, intuitive and responsive
+We must have fast frame rates, and minimize computer resources
+Art style must be attractive and simple
+Game must include catchy and fitting soundtrack
+Game must include sound effects for different events
+Game is stored in an executable file – this prevents people from viewing source code
+
