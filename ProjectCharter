@@ -1,0 +1,36 @@
+Team 2 Project Charter
+Top­Down Action Video Game
+Team Members:
+Nicolas Bratton, Ryan DeSalvio, Keith Droll, Garrett Kizior
+
+Problem Statement:
+There is currently a high demand for video games in the entertainment industry. We aim to
+create video game software that meets this demand and differentiates from other software by
+incorporating elements of unique, ambitious storytelling with fast­paced, top­down action
+gameplay.
+
+Project Objectives:
+1. Provide story through which player will advance in a linear fashion.
+2. Create an engaging world, including a soundtrack, for the player to experience
+3. Develop fast­paced and intense action gameplay.
+4. Develop and implement artificially intelligent enemies to challenge the player.
+5. Implement role­playing elements by allowing player to choose their own playstyle.
+
+Stakeholders:
+
+● Users: Same as project owners – anyone who plays the game.
+● Product Owners: Same as users – anyone who buys the game.
+● Developers: Nicolas Bratton, Ryan DeSalvio, Keith Droll, Garrett Kizior
+● Project Manager: Ryan DeSalvio
+● Project Owners: Nicolas Bratton, Ryan DeSalvio, Keith Droll, Garrett Kizior
+
+Deliverables:
+
+● A computer video game application created with the Unity engine, coded in C# and
+JavaScript, including:
+o Complete menu functions outside of the game, including but not limited to saving
+and loading games
+o A system to track and store progression of player statistics
+o Enemy artificial intelligence to combat the player and provide opposition
+o A soundtrack created from scratch to provide an atmospheric experience for the
+user
