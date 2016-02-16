@@ -3,16 +3,16 @@ Keith Droll, Nicolas Bratton, Garrett Kizior, Ryan DeSalvio
 Team 2 – Project Trials
 
 Table of Contents
-
-
-
-
-
-
-
-
-
-
+Sprint Overview									2
+Current Sprint Detail								3-7
+User Story #1										3
+User Story #2										4
+User Story #3										5
+User Story #4										6
+User Story #5										7
+Remaining Backlog									7-8
+Functional Requirements							7
+Non-Functional Requirements						8
 
 
 
@@ -20,7 +20,7 @@ Table of Contents
 
 
 Sprint Overview
-	For our initial sprint, we are focus on creating a groundwork for us to build on. This groundwork will include creating an environment filled with rocks, trees, and other obstacles for the player to move around in and interact with, a random level generator to create this environment, the player and enemy models and their basic functionality such as moving and attacking animations and basic enemy AI.
+	For our initial sprint, we are focused on creating a solid groundwork for us to build on. This groundwork will include creating an environment filled with rocks, trees, and other obstacles for the player to move around in and interact with, a random level generator to create this environment, the player and enemy models and their basic functionality such as moving and attacking animations and basic enemy AI.
 
 Scrum Master: Ryan DeSalvio
 Meeting Schedule:  Tuesdays, Thursday, and Saturday at 1:30pm
@@ -33,7 +33,7 @@ Risks/Challenges: A challenge we will face will be gaining familiarity with the 
 
 
 
-21, 28, 29, 32, 42, 45
+
 
 
 
@@ -45,9 +45,9 @@ Current Sprint Detail
 User Story #1
 As a user, I would like to be able to use a controller or keyboard.
 #	Task Description	Estimated Time (hrs)	Owner
-1	Familiarize with Unity’s input controllers	2	
-2	Set up keyboard functionality	1	
-3	Set up controller (ex. Xbox Controller) functionality	2	
+1	Familiarize with Unity’s input controllers	4	Ryan
+2	Set up keyboard functionality	3	Garrett
+3	Set up controller (ex. Xbox Controller) functionality	5	Keith
 
 Acceptance Criteria:
 -	Given that the groundwork has acceptable keyboard functionality, when I press the arrow keys (or WASD keys), then I expect the character model to move in the according direction around the environment. 
@@ -68,10 +68,10 @@ Acceptance Criteria:
 User Story #2
 As a developer, I would like to include animations for character movement.
 #	Task Description	Estimated Time (hrs)	Owner
-1	Create Player model.	2	
-2	Create Player walking animation.	2	
-3	Create Player running animation.	2	
-4	Link together Player model, walking animation, and running.	2	
+1	Create Player model.	6	Ryan
+2	Create Player walking animation.	4	Ryan
+3	Create Player running animation.	4	Ryan
+4	Link together Player model, walking animation, and running.	5	Nick
 
 Acceptance Criteria:
 -	Given that the player model is made correctly, when the Player is in the game, then the Player has proper hitboxes and move properly in a natural way.
@@ -90,16 +90,14 @@ Acceptance Criteria:
 
 
 
-
-
 User Story #3
 As a developer, I would like to implement the Abstract Character Class structure including subclasses as a basic outline.
 #	Task Description	Estimated Time (hrs)	Owner
-1	Create Abstract Character Class complete with fields and skeleton functions	1	
-2	Create Player class with fields and skeleton functions	1	
-3	Create Abstract Enemy Class with fields and skeleton functions	1	
-4	Create a basic Walking Enemy Class with fields and skeleton functions	1	
-5	Develop basic enemy AI	3	
+1	Create Abstract Character Class complete with fields and skeleton functions	4	Garrett
+2	Create Player class with fields and skeleton functions	4	Garrett
+3	Create Abstract Enemy Class with fields and skeleton functions	4	Keith
+4	Create a basic Walking Enemy Class with fields and skeleton functions	4	Keith
+5	Develop basic enemy AI	7	Nick
 
 Acceptance Criteria:
 -	Given that the abstract character class is made, when we develop the subclasses Player and Abstract Enemy, it should be easily extended and the appropriate functions are inherited.
@@ -114,15 +112,93 @@ Acceptance Criteria:
 
 
 
+
 User Story #4
 As a developer, I would like to implement the Environment class and a random level generator.
 #	Task Description	Estimated Time (hrs)	Owner
-1	Create Environment Class	1	
-2	Place Character and enemy models on Environment	1	
-3	Create algorithm for random level generator	2	
-4	Implement said algorithm into environment class	2	
+1	Create Environment Class	4	Keith
+2	Place Character and enemy models on Environment	3	Keith
+3	Create algorithm for random level generator	6	Garrett
+4	Implement said algorithm into environment class	2	Garrett
 
 Acceptance Criteria:
 -	Given that the Environment Class was made correctly, when a player moves they should not be able to move onto or pass boundaries, such as tress, rocks, or walls
 -	Given that the algorithm for random level generator is correctly made, when a level is generated It should be different each time and the density of the generated obstacles should be fair
 -	Given that the Environment Class was made correctly, when we further develop the environment class it should be easily expandable and able to handle multiple different types of environment(each level makes a different environment)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+User Story #5
+As a developer, I would like to have a health system for Players and Enemies.
+#	Task Description	Estimated Time (hrs)	Owner
+1	Implement health tracking functions within each class (Player, Enemies)	4	Ryan
+2	Determine appropriate health levels for enemies and Player, including modifiers from experience	3	Garrett
+3	Implement health subtractors for on-hit when attacking/being attacked, linked with hit-boxes	2	Nick
+
+Acceptance Criteria:
+-	Given that the health tracking is accurate, when a Player attacks an Enemy then the Enemy’s health should be subtracted appropriately, and when the Enemy attacks the Player then it should be subtracted appropriately as well.
+-	Given that the health is balanced properly, when the Player starts the game, then the Enemies should have less health than the Player, but not too low to the point where defeating the enemies is easy. 
+-	Given that the health system is made to be compatible with future systems, when an event occurs where the Player’s health is changed by items, it happens immediately in concurrence with Enemy interactions.
+
+
+
+
+
+
+
+
+
+
+
+Remaining Backlog
+Functional: 
+As a user, I would like to start a new game
+As a user, I would like to pick up items
+As a user, I would like to pick up weapons
+As a user, I would like to be able to choose different dialogue options
+As a user, I would like to be able to view high scores
+As a user, I would like to know what my current health, experience bar, and level number is
+As a user, I would like to spend experience points on skills
+As a user, I would like to choose a perk after each level
+As a user, I would like my character attributes to be shown in a simple menu
+As a user, I would like to choose my difficulty level (if time allows)
+As a user, I would like to pause the game (if time allows)
+As a user, I would like to fight a final boss at the end of the game
+As a user, I would like to fight in either ranged and melee styles
+As a user, I would like to view an end-game statistics screen
+As a developer, I would like to be able to store high scores
+As a developer, I would like for enemies to spawn at an increasing rate as the level progresses
+As a developer, I would like to make sure gameplay is balanced (enemy vs. player)
+As a developer, I would like each level to have a different setting
+As a developer, I would like the story to be entertaining yet unobtrusive to gameplay
+As a developer, I would like the story to be a choose-your-own-adventure style story
+As a developer, I would like the game to support multiple platforms (if time allows)
+As a developer, I would like to implement an achievement system (if time allows)
+As a developer, I would like to incorporate a start menu that allows for starting games, and viewing high scores, etc.
+As a developer, I would like to allow for cooperative play (if time allows)
+As a developer, I would like the game to run off an executable file
+As a developer, I would like to allow the character to equip armor as well as weapons (if time allows)
+As a developer, I would like to include a credit scene at the end of game (if time allows)
+As a developer, I would like to include a store to purchase character skins, etc. with in-game tokens earned from completing each play through (if time allows)
+
+Non-Functional:
+As a user, I would like to have fast response times with user input
+We must be able to play this game on PC
+The menus and interface needs to be simple, intuitive and responsive
+We must have fast frame rates, and minimize computer resources
+Art style must be attractive and simple
+Game must include catchy and fitting soundtrack
+Game must include sound effects for different events
+Game is stored in an executable file – this prevents people from viewing source code
+
