@@ -1,0 +1,128 @@
+Sprint 1 Planning Document
+Keith Droll, Nicolas Bratton, Garrett Kizior, Ryan DeSalvio
+Team 2 – Project Trials
+
+Table of Contents
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sprint Overview
+	For our initial sprint, we are focus on creating a groundwork for us to build on. This groundwork will include creating an environment filled with rocks, trees, and other obstacles for the player to move around in and interact with, a random level generator to create this environment, the player and enemy models and their basic functionality such as moving and attacking animations and basic enemy AI.
+
+Scrum Master: Ryan DeSalvio
+Meeting Schedule:  Tuesdays, Thursday, and Saturday at 1:30pm
+Risks/Challenges: A challenge we will face will be gaining familiarity with the software development package (Unity), because none of us have proficient skill with this tool, and those that do have a basic understanding will need to help those that have never used it before. This could use some of our time during the Sprint that could be used developing instead.
+
+
+
+
+
+
+
+
+21, 28, 29, 32, 42, 45
+
+
+
+
+
+
+
+Current Sprint Detail
+User Story #1
+As a user, I would like to be able to use a controller or keyboard.
+#	Task Description	Estimated Time (hrs)	Owner
+1	Familiarize with Unity’s input controllers	2	
+2	Set up keyboard functionality	1	
+3	Set up controller (ex. Xbox Controller) functionality	2	
+
+Acceptance Criteria:
+-	Given that the groundwork has acceptable keyboard functionality, when I press the arrow keys (or WASD keys), then I expect the character model to move in the according direction around the environment. 
+-	Given that there is controller functionality, when I move the joystick/directional pad in a direction or press a button, then I expect the character model to move around the environment or perform an action.
+-	Given that the controller and keyboard functionality is relatively bug-free, when I play the game on another computer, I expect the input to have the same results.
+
+
+
+
+
+
+
+
+
+
+
+
+User Story #2
+As a developer, I would like to include animations for character movement.
+#	Task Description	Estimated Time (hrs)	Owner
+1	Create Player model.	2	
+2	Create Player walking animation.	2	
+3	Create Player running animation.	2	
+4	Link together Player model, walking animation, and running.	2	
+
+Acceptance Criteria:
+-	Given that the player model is made correctly, when the Player is in the game, then the Player has proper hitboxes and move properly in a natural way.
+-	Given that the animations are fluid and working correctly, when the User provides input, then there should be no input lag when moving and the animation states should link together naturally.
+-	Given that the animations are working correctly, when the User presses on the joystick, then the level of input provided by the User determines the animation of the Player model (eg. Pushing harder on the joystick initiates running, softly initiates walking)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+User Story #3
+As a developer, I would like to implement the Abstract Character Class structure including subclasses as a basic outline.
+#	Task Description	Estimated Time (hrs)	Owner
+1	Create Abstract Character Class complete with fields and skeleton functions	1	
+2	Create Player class with fields and skeleton functions	1	
+3	Create Abstract Enemy Class with fields and skeleton functions	1	
+4	Create a basic Walking Enemy Class with fields and skeleton functions	1	
+5	Develop basic enemy AI	3	
+
+Acceptance Criteria:
+-	Given that the abstract character class is made, when we develop the subclasses Player and Abstract Enemy, it should be easily extended and the appropriate functions are inherited.
+-	Given that the Player class is complete, when we implement the experience functionality and other systems, then the Player class should be made in an organized and expandable way.
+-	Given that the Abstract Enemy class is complete, when we develop more Enemy subclasses it should be easily extended with appropriate functions and fields.
+
+
+
+
+
+
+
+
+
+User Story #4
+As a developer, I would like to implement the Environment class and a random level generator.
+#	Task Description	Estimated Time (hrs)	Owner
+1	Create Environment Class	1	
+2	Place Character and enemy models on Environment	1	
+3	Create algorithm for random level generator	2	
+4	Implement said algorithm into environment class	2	
+
+Acceptance Criteria:
+-	Given that the Environment Class was made correctly, when a player moves they should not be able to move onto or pass boundaries, such as tress, rocks, or walls
+-	Given that the algorithm for random level generator is correctly made, when a level is generated It should be different each time and the density of the generated obstacles should be fair
+-	Given that the Environment Class was made correctly, when we further develop the environment class it should be easily expandable and able to handle multiple different types of environment(each level makes a different environment)
