@@ -46,6 +46,9 @@ As a developer, I would like to have a health system for enemy (not all enemies 
 As a developer, I would like to allow the character to equip armor as well as weapons (if time allows)
 As a developer, I would like to include a credit scene at the end of game (if time allows)
 As a developer, I would like to include a store to purchase character skins, etc. with in-game tokens earned from completing each play through (if time allows)
+As a developer, I would like to implement the Abstract Character Class structure
+As a developer, I would like to implement the Abstract Item Class structure
+As a developer, I would like to implement the Environment CLass
 
 Non-functional:
 As a user, I would like to have fast response times with user input
