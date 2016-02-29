@@ -1,0 +1,451 @@
+fileFormatVersion: 2
+guid: d3dbc3060827ca040a1a492637d3d88c
+timeCreated: 1456370102
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: walkBack_0
+    21300002: walkBack_1
+    21300004: walkBack_2
+    21300006: walkBack_3
+    21300008: walkBack_4
+    21300010: walkBack_5
+    21300012: walkBack_6
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 30
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: walkBack_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 3
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 23}
+        - {x: -16, y: 9}
+        - {x: -16, y: -22}
+        - {x: -15, y: -23}
+        - {x: 16, y: -23}
+        - {x: 16, y: 20}
+        - {x: 14, y: 23}
+    - name: walkBack_1
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 2
+        width: 32
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 23.5}
+        - {x: -16, y: 19.5}
+        - {x: -16, y: -23.5}
+        - {x: 16, y: -23.5}
+        - {x: 16, y: 23.5}
+    - name: walkBack_2
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 3
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 23}
+        - {x: -16, y: 9}
+        - {x: -16, y: -22}
+        - {x: -15, y: -23}
+        - {x: 16, y: -23}
+        - {x: 16, y: 20}
+        - {x: 14, y: 23}
+    - name: walkBack_3
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 3
+        width: 31
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+        - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+        - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+        - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+      - - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+        - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+        - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+      - - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+        - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+      - - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+    - name: walkBack_4
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 3
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 23}
+        - {x: -16, y: 18}
+        - {x: -16, y: -23}
+        - {x: 16, y: -23}
+        - {x: 16, y: 23}
+    - name: walkBack_5
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 3
+        width: 31
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+        - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+        - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+        - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+        - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+        - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+      - - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+        - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+        - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+        - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+        - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+      - - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+        - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+        - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+        - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+      - - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+        - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+        - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+      - - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+        - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+      - - {x: 13, y: 23}
+        - {x: -15, y: 23}
+        - {x: -19, y: 13}
+        - {x: -19, y: -20}
+        - {x: -16, y: -23}
+        - {x: 18, y: -23}
+        - {x: 19, y: -21}
+        - {x: 19, y: 7}
+        - {x: 16, y: 17}
+    - name: walkBack_6
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 3
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 23}
+        - {x: -16, y: 9}
+        - {x: -16, y: -22}
+        - {x: -15, y: -23}
+        - {x: 16, y: -23}
+        - {x: 16, y: 20}
+        - {x: 14, y: 23}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

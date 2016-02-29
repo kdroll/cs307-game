@@ -1,0 +1,293 @@
+fileFormatVersion: 2
+guid: 91544e775d485e44da3e98508b599778
+timeCreated: 1456267149
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: UpWalkPitchfork_0
+    21300002: UpWalkPitchfork_1
+    21300004: UpWalkPitchfork_2
+    21300006: UpWalkPitchfork_3
+    21300008: UpWalkPitchfork_4
+    21300010: UpWalkPitchfork_5
+    21300012: UpWalkPitchfork_6
+    21300014: UpWalkPitchfork_7
+    21300016: UpWalkPitchfork_8
+    21300018: UpWalkPitchfork_9
+    21300020: UpWalkPitchfork_10
+    21300022: UpWalkPitchfork_11
+    21300024: UpWalkPitchfork_12
+    21300026: UpWalkPitchfork_13
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 30
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: UpWalkPitchfork_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 5
+        width: 44
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: -20}
+        - {x: 15, y: -20}
+        - {x: 17, y: -18}
+        - {x: 22, y: -11}
+        - {x: 22, y: 23}
+        - {x: -22, y: 23}
+        - {x: -22, y: -23}
+        - {x: 8, y: -23}
+        - {x: 12, y: -21}
+        - {x: 10, y: -11}
+        - {x: 11, y: -18}
+    - name: UpWalkPitchfork_1
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 10
+        width: 14
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: UpWalkPitchfork_2
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 5
+        width: 43
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13.5, y: -20.5}
+        - {x: 21.5, y: -22.5}
+        - {x: 21.5, y: 23.5}
+        - {x: -17.5, y: 23.5}
+        - {x: -21.5, y: 18.5}
+        - {x: -21.5, y: -23.5}
+        - {x: 8.5, y: -23.5}
+        - {x: 12.5, y: -21.5}
+        - {x: 10.5, y: -11.5}
+        - {x: 11.5, y: -18.5}
+    - name: UpWalkPitchfork_3
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 10
+        width: 14
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: UpWalkPitchfork_4
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 5
+        width: 43
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13.5, y: -20.5}
+        - {x: 21.5, y: -22.5}
+        - {x: 21.5, y: 23.5}
+        - {x: -17.5, y: 23.5}
+        - {x: -21.5, y: 18.5}
+        - {x: -21.5, y: -23.5}
+        - {x: 8.5, y: -23.5}
+        - {x: 12.5, y: -21.5}
+        - {x: 10.5, y: -11.5}
+        - {x: 11.5, y: -18.5}
+    - name: UpWalkPitchfork_5
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 10
+        width: 14
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: UpWalkPitchfork_6
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 5
+        width: 43
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21.5, y: 21.5}
+        - {x: -21.5, y: -24.5}
+        - {x: 17.5, y: -24.5}
+        - {x: 21.5, y: -23.5}
+        - {x: 21.5, y: 24.5}
+        - {x: -5.5, y: 24.5}
+        - {x: -15.5, y: 23.5}
+    - name: UpWalkPitchfork_7
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 12
+        width: 14
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: UpWalkPitchfork_8
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 5
+        width: 43
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21.5, y: -9.5}
+        - {x: 21.5, y: 24.5}
+        - {x: -7.5, y: 24.5}
+        - {x: -21.5, y: 22.5}
+        - {x: -21.5, y: -24.5}
+        - {x: 9.5, y: -24.5}
+        - {x: 12.5, y: -22.5}
+        - {x: 11.5, y: -23.5}
+        - {x: 15.5, y: -22.5}
+    - name: UpWalkPitchfork_9
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 10
+        width: 14
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: UpWalkPitchfork_10
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 5
+        width: 43
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12.5, y: -21.5}
+        - {x: 19.5, y: -21.5}
+        - {x: 21.5, y: -13.5}
+        - {x: 21.5, y: 24.5}
+        - {x: -9.5, y: 24.5}
+        - {x: -21.5, y: 22.5}
+        - {x: -21.5, y: -24.5}
+        - {x: 10.5, y: -24.5}
+        - {x: 11.5, y: -22.5}
+        - {x: 10.5, y: -12.5}
+        - {x: 11.5, y: -19.5}
+    - name: UpWalkPitchfork_11
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 10
+        width: 14
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: UpWalkPitchfork_12
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 5
+        width: 43
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13.5, y: -20.5}
+        - {x: 21.5, y: -22.5}
+        - {x: 21.5, y: 23.5}
+        - {x: -17.5, y: 23.5}
+        - {x: -21.5, y: 18.5}
+        - {x: -21.5, y: -23.5}
+        - {x: 8.5, y: -23.5}
+        - {x: 12.5, y: -21.5}
+        - {x: 10.5, y: -11.5}
+        - {x: 11.5, y: -18.5}
+    - name: UpWalkPitchfork_13
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 10
+        width: 14
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
