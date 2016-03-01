@@ -77,6 +77,7 @@ public class OpeningLevel : MonoBehaviour {
 			}
 		}
 			
+
 		//random boundaries
 		int randx, randy, adjacent, howMany;
 		int divisor = 6;
