@@ -25,7 +25,7 @@ public class OpeningLevel : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		int high = 0;
+		int hello = 0;
 		player = GameObject.FindGameObjectWithTag("Player");
 		pitchfork = GameObject.FindGameObjectWithTag ("Pitchfork");
 		levelHeight = levelTexture.height;
