@@ -80,8 +80,8 @@ public class OpeningLevel : MonoBehaviour {
 
 		//random boundaries
 		int randx, randy, adjacent, howMany;
-		int divisor = 9;
-		int density = 70;
+		int divisor = 6;
+		int density = 100;
 		int maxWallLength = 4;
 		for (int a = 0; a < density; a++) { 
 			randx = rand.Next (levelWidth / divisor, ((divisor - 1) * levelWidth) / divisor);
