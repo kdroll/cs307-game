@@ -20,8 +20,7 @@ public class EnemyAi : MonoBehaviour {
 	void Update(){
 
 		target = GameObject.FindWithTag ("Player").transform;
-		Vector3 targetHeading = target.position - transform.position;
-		Vector3 targetDirection = targetHeading.normalized;
+
 
 		if (Vector3.Distance (target.position, enemyTransform.position) <= distanceToAttack || follow == 1) {
 			follow = 1;

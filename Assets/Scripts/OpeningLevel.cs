@@ -21,6 +21,7 @@ public class OpeningLevel : MonoBehaviour {
 	GameObject player;
 	GameObject pitchfork;
 	GameObject enemy;
+	GameObject sword;
 
 	// Use this for initialization
 	
@@ -40,6 +41,7 @@ public class OpeningLevel : MonoBehaviour {
 		enemy = GameObject.FindGameObjectWithTag("Enemy");
 		player = GameObject.FindGameObjectWithTag("Player");
 		pitchfork = GameObject.FindGameObjectWithTag ("Pitchfork");
+		sword = GameObject.FindGameObjectWithTag ("Sword");
 		levelHeight = levelTexture.height;
 		levelWidth = levelTexture.width;
 		loadLevel ();
@@ -75,7 +77,7 @@ public class OpeningLevel : MonoBehaviour {
         }
         if(hit == 1) 
         {
-            print("got hit");
+
             return false;
         }
         return true;
@@ -259,8 +261,10 @@ public class OpeningLevel : MonoBehaviour {
 					Instantiate (grassTile, new Vector3 (x, y), Quaternion.identity);
 					Vector2 pos1 = new Vector2(x,y);
 					Vector2 pos2 = new Vector2 (x + 2f, y + 2f);
+					Vector2 pos3 = new Vector2 (x + 3f, y + 3f);
 					enemy.transform.position = pos1;
 					pitchfork.transform.position = pos2;
+					sword.transform.position = pos3;
 				}
 			}
 		}

@@ -1,36 +1,36 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Pitchfork : MonoBehaviour {
+public class SwordWeapon : MonoBehaviour {
 	Animator anim;
 	int lastMovement;
 	// Use this for initialization
 	void Start () {
 		anim = this.transform.GetComponent<Animator> ();
-		anim.SetBool ("ifPitchforkEquipped", false);
+		anim.SetBool ("ifSwordEquipped", false);
 	}
 
 	// Update is called once per frame
 	void Update () {
 		anim.SetBool ("ifAttacking", false);
-		if (Input.GetKey (KeyCode.F)) {
-			WeaponPickup.setPitchfork (false);
+		if (Input.GetKey (KeyCode.F) && WeaponPickup.getSword() == true) {
+			WeaponPickup.setSword (false);
 			WeaponPickup.setPickedUp (false);
-			anim.SetBool ("ifPitchforkEquipped", false);
-			GameObject.FindGameObjectWithTag ("Pitchfork").GetComponent<Collider2D> ().isTrigger = false;
-			GameObject.FindGameObjectWithTag ("Pitchfork").transform.position = GameObject.FindGameObjectWithTag ("Player").transform.position;
-			GameObject.FindGameObjectWithTag ("Pitchfork").GetComponent<Rigidbody2D> ().AddForce (new Vector2 ((Random.value * 2) - 1, (Random.value * 2) - 1).normalized * 100.0f);
+			anim.SetBool ("ifSwordEquipped", false);
+			GameObject.FindGameObjectWithTag ("Sword").GetComponent<Collider2D> ().isTrigger = false;
+			GameObject.FindGameObjectWithTag ("Sword").transform.position = GameObject.FindGameObjectWithTag ("Player").transform.position;
+			GameObject.FindGameObjectWithTag ("Sword").GetComponent<Rigidbody2D> ().AddForce (new Vector2 ((Random.value * 2) - 1, (Random.value * 2) - 1).normalized * 100.0f);
 		}
 		if (WeaponPickup.getPickedUp () == true) {
-			if (WeaponPickup.getPitchfork () == true) {
-				anim.SetBool ("ifPitchforkEquipped", true);
+			if (WeaponPickup.getSword () == true) {
+				anim.SetBool ("ifSwordEquipped", true);
 			} else {
-				anim.SetBool ("ifPitchforkEquipped", false);
+				anim.SetBool ("ifSwordEquipped", false);
 			}
 		} else {
-			anim.SetBool ("ifPitchforkEquipped", false);
+			anim.SetBool ("ifSwordEquipped", false);
 		}
-		if (WeaponPickup.getPitchfork () == true && Input.GetButtonDown ("attack")) {
+		if (WeaponPickup.getSword () == true && Input.GetButtonDown ("attack")) {
 			anim.SetBool ("ifAttacking", true);
 			lastMovement = PlayerMovement.getLastMovementDirection ();
 			if (lastMovement == 1) {

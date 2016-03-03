@@ -1,0 +1,203 @@
+fileFormatVersion: 2
+guid: 960847b37cbdf4efca77d70d5736cc95
+timeCreated: 1457035457
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: RightSwordSwing_0
+    21300002: RightSwordSwing_1
+    21300004: RightSwordSwing_2
+    21300006: RightSwordSwing_3
+    21300008: RightSwordSwing_4
+    21300010: RightSwordSwing_5
+    21300012: RightSwordSwing_6
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 25
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: RightSwordSwing_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 56
+        height: 62
+      alignment: 9
+      pivot: {x: 0.18038014, y: 0.3595569}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19.898712, y: 21.707472}
+        - {x: 13.898712, y: 21.707472}
+        - {x: 11.898712, y: 20.707472}
+        - {x: 11.898712, y: 12.707472}
+        - {x: 17.898712, y: -8.292528}
+        - {x: 28.898712, y: -11.292528}
+        - {x: 30.898712, y: -11.292528}
+        - {x: 32.898712, y: -9.292528}
+        - {x: 34.898712, y: -4.292528}
+        - {x: 34.898712, y: 1.7074718}
+    - name: RightSwordSwing_1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 0
+        width: 53
+        height: 63
+      alignment: 9
+      pivot: {x: 0.27181646, y: 0.36946455}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14.593727, y: 20.723734}
+        - {x: 8.593727, y: 20.723734}
+        - {x: 6.593727, y: 19.723734}
+        - {x: 6.593727, y: 11.723734}
+        - {x: 12.593727, y: -9.276266}
+        - {x: 23.593727, y: -12.276266}
+        - {x: 25.593727, y: -12.276266}
+        - {x: 27.593727, y: -10.276266}
+        - {x: 29.593727, y: -5.276266}
+        - {x: 29.593727, y: 0.7237339}
+    - name: RightSwordSwing_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 63
+        height: 64
+      alignment: 9
+      pivot: {x: 0.19285777, y: 0.46220714}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10.84996, y: -2.5812569}
+        - {x: 2.8499603, y: -9.581257}
+        - {x: 2.8499603, y: -12.581257}
+        - {x: 5.8499603, y: -17.581257}
+        - {x: 17.84996, y: -24.581257}
+        - {x: 32.84996, y: -27.581257}
+        - {x: 39.84996, y: -27.581257}
+        - {x: 41.84996, y: -23.581257}
+        - {x: 41.84996, y: -8.581257}
+        - {x: 26.84996, y: -2.5812569}
+    - name: RightSwordSwing_3
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 0
+        width: 54
+        height: 64
+      alignment: 9
+      pivot: {x: 0.17750041, y: 0.45464855}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4.414978, y: 9.902493}
+        - {x: 1.414978, y: -6.0975075}
+        - {x: 1.414978, y: -11.097507}
+        - {x: 15.414978, y: -21.097507}
+        - {x: 36.414978, y: -21.097507}
+        - {x: 36.414978, y: 8.902493}
+        - {x: 26.414978, y: 9.902493}
+    - name: RightSwordSwing_4
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 0
+        width: 58
+        height: 64
+      alignment: 9
+      pivot: {x: 0.14969872, y: 0.43197283}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5.3174744, y: 23.353739}
+        - {x: 3.3174744, y: 21.353739}
+        - {x: 3.3174744, y: -0.6462612}
+        - {x: 10.317474, y: -6.646261}
+        - {x: 37.317474, y: -6.646261}
+        - {x: 37.317474, y: 22.353739}
+        - {x: 29.317474, y: 23.353739}
+    - name: RightSwordSwing_5
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 0
+        width: 59
+        height: 64
+      alignment: 9
+      pivot: {x: 0.17203431, y: 0.4395314}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 25.849976, y: 33.86999}
+        - {x: 16.849976, y: 33.86999}
+        - {x: 2.8499756, y: 25.869991}
+        - {x: 2.8499756, y: -1.1300087}
+        - {x: 7.8499756, y: -3.1300087}
+        - {x: 13.849976, y: -3.1300087}
+        - {x: 26.849976, y: -1.1300087}
+        - {x: 36.849976, y: 1.8699913}
+        - {x: 36.849976, y: 20.869991}
+    - name: RightSwordSwing_6
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 0
+        width: 45
+        height: 64
+      alignment: 9
+      pivot: {x: 0.11300049, y: 0.42441425}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14.914978, y: 36.837486}
+        - {x: 8.914978, y: 33.837486}
+        - {x: 5.914978, y: 28.837488}
+        - {x: 5.914978, y: 6.837488}
+        - {x: 6.914978, y: 0.8374882}
+        - {x: 24.914978, y: 0.8374882}
+        - {x: 39.914978, y: 8.837488}
+        - {x: 39.914978, y: 26.837488}
+        - {x: 24.914978, y: 36.837486}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

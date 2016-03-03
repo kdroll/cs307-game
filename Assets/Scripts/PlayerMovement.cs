@@ -4,9 +4,6 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour {
     private Vector3 movementVector;
     private CharacterController characterController;
-    private float movementSpeed = 8;
-    private float jumpPower = 15;
-    private float gravity = 40;
 
     public float speedMultiplier; 
 	private int currentSpeed;

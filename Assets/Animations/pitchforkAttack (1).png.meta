@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: aafe0994852259b4daf00ba637cdec76
-timeCreated: 1456977838
+timeCreated: 1457032183
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -49,7 +49,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 15
+  spritePixelsToUnits: 25
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
@@ -94,19 +94,19 @@ TextureImporter:
         y: 0
         width: 48
         height: 57
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45756593}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -2, y: 28.5}
-        - {x: -6, y: 25.5}
-        - {x: -6, y: 19.5}
-        - {x: -5, y: 16.5}
-        - {x: 20, y: -5.5}
-        - {x: 23, y: -5.5}
-        - {x: 24, y: -4.5}
-        - {x: 24, y: 3.5}
-        - {x: 11, y: 28.5}
+      - - {x: -2, y: 30.918741}
+        - {x: -6, y: 27.918741}
+        - {x: -6, y: 21.918741}
+        - {x: -5, y: 18.918741}
+        - {x: 20, y: -3.0812588}
+        - {x: 23, y: -3.0812588}
+        - {x: 24, y: -2.0812588}
+        - {x: 24, y: 5.918741}
+        - {x: 11, y: 30.918741}
     - name: pitchforkAttack (1)_3
       rect:
         serializedVersion: 2
@@ -114,17 +114,17 @@ TextureImporter:
         y: 0
         width: 42
         height: 62
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.48354593, y: 0.39968342}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -10, y: 17}
-        - {x: 10, y: -2}
-        - {x: 21, y: -2}
-        - {x: 21, y: 12}
-        - {x: 9, y: 31}
-        - {x: -7, y: 31}
-        - {x: -10, y: 28}
+      - - {x: -9.308929, y: 23.219627}
+        - {x: 10.691071, y: 4.2196274}
+        - {x: 21.69107, y: 4.2196274}
+        - {x: 21.69107, y: 18.219627}
+        - {x: 9.691071, y: 37.219627}
+        - {x: -6.3089294, y: 37.219627}
+        - {x: -9.308929, y: 34.219627}
     - name: pitchforkAttack (1)_4
       rect:
         serializedVersion: 2
@@ -132,16 +132,16 @@ TextureImporter:
         y: 0
         width: 39
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4082172}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 7.5, y: 4}
-        - {x: 16.5, y: 4}
-        - {x: 16.5, y: 11}
-        - {x: 8.5, y: 32}
-        - {x: -12.5, y: 32}
-        - {x: -12.5, y: 24}
+      - - {x: 7.5, y: 9.8741}
+        - {x: 16.5, y: 9.8741}
+        - {x: 16.5, y: 16.8741}
+        - {x: 8.5, y: 37.8741}
+        - {x: -12.5, y: 37.8741}
+        - {x: -12.5, y: 29.8741}
     outline: []
   spritePackingTag: 
   userData: 

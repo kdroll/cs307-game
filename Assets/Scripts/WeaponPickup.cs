@@ -6,6 +6,7 @@ public class WeaponPickup : MonoBehaviour {
 	static bool pitchfork = false;
 	static bool hands = true;
 	static bool pickedUp = false;
+	static bool sword = false;
 	Animator anim;
 
 	// Use this for initialization
@@ -15,6 +16,14 @@ public class WeaponPickup : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	public static bool getSword() {
+		return sword;
+	}
+
+	public static void setSword(bool input) {
+		sword = input;
 	}
 
 	public static void setPitchfork(bool input) {
@@ -43,6 +52,13 @@ public class WeaponPickup : MonoBehaviour {
 			pitchfork = true;
 			hands = false;
 			GameObject.FindGameObjectWithTag ("Pitchfork").transform.position = new Vector2 (-20f, -20f);
+		} else if (collision.gameObject.tag == "Sword") {
+			pickedUp = true;
+			sword = true;
+			pitchfork = false;
+			hands = false;
+			GameObject.FindGameObjectWithTag ("Sword").transform.position = new Vector2 (-40f, -40f);
+			print (sword);
 		}
 	}
 }
