@@ -58,7 +58,6 @@ public class WeaponPickup : MonoBehaviour {
 			pitchfork = false;
 			hands = false;
 			GameObject.FindGameObjectWithTag ("Sword").transform.position = new Vector2 (-40f, -40f);
-			print (sword);
 		}
 	}
 }
