@@ -1,9 +1,15 @@
 fileFormatVersion: 2
 guid: a04cf230c1a415e49871a9761856943f
-timeCreated: 1456977734
+timeCreated: 1456980991
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: PitchforkRightAttack (1)_0
+    21300002: PitchforkRightAttack (1)_1
+    21300004: PitchforkRightAttack (1)_2
+    21300006: PitchforkRightAttack (1)_3
+    21300008: PitchforkRightAttack (1)_4
+    21300010: PitchforkRightAttack (1)_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -44,12 +50,117 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 15
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: PitchforkRightAttack (1)_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 8
+        width: 49
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7.5, y: 22}
+        - {x: 7.5, y: -6}
+        - {x: 13.5, y: -21}
+        - {x: 23.5, y: -21}
+        - {x: 24.5, y: -17}
+        - {x: 24.5, y: 22}
+    - name: PitchforkRightAttack (1)_1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 8
+        width: 52
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9, y: 22}
+        - {x: 9, y: -6}
+        - {x: 15, y: -21}
+        - {x: 25, y: -21}
+        - {x: 26, y: -17}
+        - {x: 26, y: 22}
+    - name: PitchforkRightAttack (1)_2
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 6
+        width: 48
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: -15}
+        - {x: -9, y: -17}
+        - {x: 19, y: -17}
+        - {x: 19, y: 1}
+        - {x: -24, y: 1}
+    - name: PitchforkRightAttack (1)_3
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 3
+        width: 58
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 1.5}
+        - {x: -29, y: -3.5}
+        - {x: -29, y: -10.5}
+        - {x: -9, y: -16.5}
+        - {x: 18, y: -16.5}
+        - {x: 18, y: 0.5}
+        - {x: 14, y: 1.5}
+    - name: PitchforkRightAttack (1)_4
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 8
+        width: 55
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10.5, y: -2}
+        - {x: -10.5, y: -2}
+        - {x: -27.5, y: -9}
+        - {x: -27.5, y: -15}
+        - {x: -16.5, y: -19}
+        - {x: -13.5, y: -20}
+        - {x: 13.5, y: -20}
+        - {x: 14.5, y: -18}
+        - {x: 14.5, y: -4}
+    - name: PitchforkRightAttack (1)_5
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 9
+        width: 45
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4.5, y: -2}
+        - {x: -16.5, y: -8}
+        - {x: -16.5, y: -20}
+        - {x: 22.5, y: -20}
+        - {x: 22.5, y: -3}
+        - {x: 18.5, y: -2}
     outline: []
   spritePackingTag: 
   userData: 

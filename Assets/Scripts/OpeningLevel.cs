@@ -20,6 +20,7 @@ public class OpeningLevel : MonoBehaviour {
 
 	GameObject player;
 	GameObject pitchfork;
+	GameObject enemy;
 
 	// Use this for initialization
 	
@@ -36,7 +37,7 @@ public class OpeningLevel : MonoBehaviour {
     // Use this for initialization
     void Start () {
 		//int hello = 0;
-
+		enemy = GameObject.FindGameObjectWithTag("Enemy");
 		player = GameObject.FindGameObjectWithTag("Player");
 		pitchfork = GameObject.FindGameObjectWithTag ("Pitchfork");
 		levelHeight = levelTexture.height;
@@ -236,6 +237,7 @@ public class OpeningLevel : MonoBehaviour {
             print("point " + i + " : x = " + positions[i].X + "   y = " + positions[i].Y);
         }*/
 
+
 		for (int y = 0; y < levelHeight; y++) {
 			for (int x = 0; x < levelWidth; x++) {
 
@@ -256,7 +258,9 @@ public class OpeningLevel : MonoBehaviour {
 				else if (tileColors[x + y * levelWidth] == enemySpawnPointColor) {
 					Instantiate (grassTile, new Vector3 (x, y), Quaternion.identity);
 					Vector2 pos1 = new Vector2(x,y);
-					pitchfork.transform.position = pos1;
+					Vector2 pos2 = new Vector2 (x + 2f, y + 2f);
+					enemy.transform.position = pos1;
+					pitchfork.transform.position = pos2;
 				}
 			}
 		}

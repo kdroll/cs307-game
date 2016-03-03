@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Camera2DFollow.cs" />
+     <Compile Include="Assets\Scripts\EnemyAi.cs" />
      <Compile Include="Assets\Scripts\Hands.cs" />
      <Compile Include="Assets\Scripts\OpeningLevel.cs" />
      <Compile Include="Assets\Scripts\Pitchfork.cs" />
