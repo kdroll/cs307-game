@@ -80,8 +80,8 @@ public class PlayerMovement : MonoBehaviour {
 			if (!Running ()) {
                 //anim.SetBool("running", false);
                 //GetComponent<CharacterController>().transform.position += direction.normalized * speedMultiplier * Time.deltaTime;
-                GetComponent<Rigidbody2D>().transform.position += direction.normalized * speedMultiplier * Time.deltaTime;
-
+				//GetComponent<Rigidbody2D>().transform.position += direction.normalized * speedMultiplier * Time.deltaTime;
+				transform.Translate(direction.normalized * speedMultiplier * Time.deltaTime);
                 //anim.SetFloat("speed", Mathf.Abs(direction.x) + Mathf.Abs (direction.y));
             }
         } else {
@@ -108,7 +108,8 @@ public class PlayerMovement : MonoBehaviour {
 
 	bool Running() {
 		if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.JoystickButton4)) {
-            GetComponent<Rigidbody2D>().transform.position += direction.normalized * (speedMultiplier + 2) * Time.deltaTime;
+            //GetComponent<Rigidbody2D>().transform.position += direction.normalized * (speedMultiplier + 2) * Time.deltaTime;
+			transform.Translate(direction.normalized * (speedMultiplier + 2) * Time.deltaTime);
             //GetComponent<CharacterController>().transform.position += direction.normalized * speedMultiplier * Time.deltaTime;
 
             //anim.SetFloat("speed", Mathf.Abs(direction.x) + Mathf.Abs (direction.y));

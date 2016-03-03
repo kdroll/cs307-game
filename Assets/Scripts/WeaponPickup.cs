@@ -47,12 +47,12 @@ public class WeaponPickup : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D collision) {
-		if (collision.gameObject.tag == "Pitchfork") {
+		if (collision.gameObject.tag == "Pitchfork" && sword != true) {
 			pickedUp = true;
 			pitchfork = true;
 			hands = false;
 			GameObject.FindGameObjectWithTag ("Pitchfork").transform.position = new Vector2 (-20f, -20f);
-		} else if (collision.gameObject.tag == "Sword") {
+		} else if (collision.gameObject.tag == "Sword" && pitchfork != true) {
 			pickedUp = true;
 			sword = true;
 			pitchfork = false;
