@@ -229,9 +229,9 @@ GameObject:
   - 4: {fileID: 1034681704}
   - 212: {fileID: 1034681703}
   - 114: {fileID: 1034681705}
-  - 50: {fileID: 1034681706}
   - 61: {fileID: 1034681707}
   - 95: {fileID: 1034681708}
+  - 50: {fileID: 1034681706}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
