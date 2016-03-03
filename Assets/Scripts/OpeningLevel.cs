@@ -21,8 +21,24 @@ public class OpeningLevel : MonoBehaviour {
 	GameObject player;
 	GameObject pitchfork;
 
+<<<<<<< HEAD
 	// Use this for initialization
 	void Start () {
+=======
+    public struct Point
+    {
+        public int X { get; set; }
+        public int Y { get; set; }
+    }
+    static int density = 200;
+    static int maxWallLength = 4;
+    Point[] positions = new Point[density * maxWallLength];
+    int pointIndex = 0;
+
+    // Use this for initialization
+    void Start () {
+		//int hello = 0;
+>>>>>>> refs/remotes/origin/master
 		player = GameObject.FindGameObjectWithTag("Player");
 		pitchfork = GameObject.FindGameObjectWithTag ("Pitchfork");
 		levelHeight = levelTexture.height;
@@ -38,6 +54,34 @@ public class OpeningLevel : MonoBehaviour {
 
 	}
 
+    //return false if position is filled
+    bool checkIfPosEmpty(Vector3 target)
+    {
+        /*var hit = Physics.OverlapSphere(target, 1);
+        print("hit = " + hit.Length);
+        if(hit.Length > 0)
+        {
+            print("target = " + target);
+            return false;
+        }
+        return true;*/
+        int hit = 0;
+        for(int i = 0; i < pointIndex; i++)
+        {
+            if(positions[i].X == target.x && positions[i].Y == target.y)
+            {
+                hit = 1;
+                break;
+            }
+        }
+        if(hit == 1) 
+        {
+            print("got hit");
+            return false;
+        }
+        return true;
+    }
+
 	void loadLevel() {
 		tileColors = new Color[(levelWidth * levelHeight)];
 		tileColors = levelTexture.GetPixels ();
@@ -45,6 +89,7 @@ public class OpeningLevel : MonoBehaviour {
 
 		print ("levelHeight = " + levelHeight);
 		print ("levelWidth = " + levelWidth);
+
 
 		//boundary left
 		for(int leftBW = 0; leftBW < 7; leftBW++) {
@@ -73,41 +118,125 @@ public class OpeningLevel : MonoBehaviour {
 				Instantiate(stoneTile, new Vector3 ( upBW, upBH), Quaternion.identity);
 			}
 		}
-			
-
-		//random boundaries
-		int randx, randy, adjacent, howMany;
+        //random boundaries
+        int randx, randy, adjacent, howMany;
 		int divisor = 9;
-		int density = 70;
-		int maxWallLength = 4;
+		
 		for (int a = 0; a < density; a++) { 
 			randx = rand.Next (levelWidth / divisor, ((divisor - 1) * levelWidth) / divisor);
 			randy = rand.Next (levelWidth / divisor, ((divisor - 1) * levelWidth) / divisor);
 			adjacent = rand.Next (0, 3);
 			howMany = rand.Next (1, maxWallLength);
-			if (adjacent == 0) {
-				//left
-				for (int i = 1; i <= howMany; i++) {
-					Instantiate (stoneTile, new Vector3 (randx - i, randy), Quaternion.identity);
-				}
-			} else if (adjacent == 1) {
-				//right
-				for (int i = 1; i <= howMany; i++) {
-					Instantiate (stoneTile, new Vector3 (randx + i, randy), Quaternion.identity);
-				}
-			} else if (adjacent == 2) {
-				//down
-				for (int i = 1; i <= howMany; i++) {
-					Instantiate (stoneTile, new Vector3 (randx, randy - i), Quaternion.identity);
-				}
-			} else if (adjacent == 3) {
-				//up
-				for (int i = 1; i <= howMany; i++) {
-					Instantiate (stoneTile, new Vector3 (randx, randy + i), Quaternion.identity);
-				}
-			}
-			Instantiate (stoneTile, new Vector3 (randx, randy), Quaternion.identity);
+            int placeMore = 0;
+            if (checkIfPosEmpty(new Vector3(randx + 1, randy)) && checkIfPosEmpty(new Vector3(randx - 1, randy)) && checkIfPosEmpty(new Vector3(randx, randy - 1)) && checkIfPosEmpty(new Vector3(randx, randy + 1))
+                && checkIfPosEmpty(new Vector3(randx + 2, randy)) && checkIfPosEmpty(new Vector3(randx - 2, randy)) && checkIfPosEmpty(new Vector3(randx, randy - 2)) && checkIfPosEmpty(new Vector3(randx, randy + 2))
+                && checkIfPosEmpty(new Vector3(randx + 1, randy - 1)) && checkIfPosEmpty(new Vector3(randx - 1, randy - 1)) && checkIfPosEmpty(new Vector3(randx - 1, randy - 1)) && checkIfPosEmpty(new Vector3(randx - 1, randy + 1))
+                && checkIfPosEmpty(new Vector3(randx + 2, randy - 1)) && checkIfPosEmpty(new Vector3(randx - 2, randy - 1)) && checkIfPosEmpty(new Vector3(randx - 1, randy - 2)) && checkIfPosEmpty(new Vector3(randx - 1, randy + 2))
+                && checkIfPosEmpty(new Vector3(randx + 1, randy + 1)) && checkIfPosEmpty(new Vector3(randx - 1, randy + 1)) && checkIfPosEmpty(new Vector3(randx + 1, randy - 1)) && checkIfPosEmpty(new Vector3(randx + 1, randy + 1))
+                && checkIfPosEmpty(new Vector3(randx + 2, randy + 1)) && checkIfPosEmpty(new Vector3(randx - 2, randy + 1)) && checkIfPosEmpty(new Vector3(randx + 1, randy - 2)) && checkIfPosEmpty(new Vector3(randx + 1, randy + 2))
+                && checkIfPosEmpty(new Vector3(randx, randy)))
+            {
+                Instantiate(stoneTile, new Vector3(randx, randy), Quaternion.identity);
+                Point p = new Point();
+                p.X = randx;
+                p.Y = randy;
+                positions[pointIndex] = p;
+                pointIndex++;
+                placeMore = 1;
+            }
+            if (placeMore == 1)
+            {
+                if (adjacent == 0)
+                {
+                    //left
+                    for (int i = 1; i <= howMany; i++)
+                    {
+                        if (checkIfPosEmpty(new Vector3(randx - i - 1, randy)) && checkIfPosEmpty(new Vector3(randx - i - 2, randy))
+                            && checkIfPosEmpty(new Vector3(randx, randy + 1)) && checkIfPosEmpty(new Vector3(randx, randy - 1))
+                            && checkIfPosEmpty(new Vector3(randx, randy + 2)) && checkIfPosEmpty(new Vector3(randx, randy - 2))
+                            && checkIfPosEmpty(new Vector3(randx - 1, randy + 1)) && checkIfPosEmpty(new Vector3(randx - 1, randy - 1))
+                            && checkIfPosEmpty(new Vector3(randx - 1, randy + 2)) && checkIfPosEmpty(new Vector3(randx - 1, randy - 2))
+                            && checkIfPosEmpty(new Vector3(randx - i, randy)))
+                        {
+                            Point p = new Point();
+                            p.X = randx;
+                            p.Y = randy;
+                            positions[pointIndex] = p;
+                            pointIndex++;
+                            Instantiate(stoneTile, new Vector3(randx - i, randy), Quaternion.identity);
+                        }
+                    }
+                }
+                else if (adjacent == 1)
+                {
+                    //right
+                    for (int i = 1; i <= howMany; i++)
+                    {
+                        if (checkIfPosEmpty(new Vector3(randx + i + 1, randy)) && checkIfPosEmpty(new Vector3(randx + i + 2, randy))
+                            && checkIfPosEmpty(new Vector3(randx, randy + 1)) && checkIfPosEmpty(new Vector3(randx, randy - 1))
+                            && checkIfPosEmpty(new Vector3(randx, randy + 2)) && checkIfPosEmpty(new Vector3(randx, randy - 2))
+                            && checkIfPosEmpty(new Vector3(randx + 1, randy + 1)) && checkIfPosEmpty(new Vector3(randx + 1, randy - 1))
+                            && checkIfPosEmpty(new Vector3(randx + 1, randy + 2)) && checkIfPosEmpty(new Vector3(randx + 1, randy - 2))
+                            && checkIfPosEmpty(new Vector3(randx + i, randy)))
+                        {
+                            Point p = new Point();
+                            p.X = randx;
+                            p.Y = randy;
+                            positions[pointIndex] = p;
+                            pointIndex++;
+                            Instantiate(stoneTile, new Vector3(randx + i, randy), Quaternion.identity);
+                        }
+                    }
+                }
+                else if (adjacent == 2)
+                {
+                    //down
+                    for (int i = 1; i <= howMany; i++)
+                    {
+                        if (checkIfPosEmpty(new Vector3(randx, randy - i - 1)) && checkIfPosEmpty(new Vector3(randx, randy - i - 2))
+                            && checkIfPosEmpty(new Vector3(randx - 1, randy)) && checkIfPosEmpty(new Vector3(randx + 1, randy))
+                            && checkIfPosEmpty(new Vector3(randx - 2, randy)) && checkIfPosEmpty(new Vector3(randx + 2, randy))
+                            && checkIfPosEmpty(new Vector3(randx - 1, randy - 1)) && checkIfPosEmpty(new Vector3(randx + 1, randy - 1))
+                            && checkIfPosEmpty(new Vector3(randx - 2, randy - 1)) && checkIfPosEmpty(new Vector3(randx + 2, randy - 1))
+                            && checkIfPosEmpty(new Vector3(randx, randy - i)))
+                        {
+                            Point p = new Point();
+                            p.X = randx;
+                            p.Y = randy;
+                            positions[pointIndex] = p;
+                            pointIndex++;
+                            Instantiate(stoneTile, new Vector3(randx, randy - i), Quaternion.identity);
+                        }
+                    }
+                }
+                else if (adjacent == 3)
+                {
+                    //up
+                    for (int i = 1; i <= howMany; i++)
+                    {
+                        if (checkIfPosEmpty(new Vector3(randx, randy + i + 1)) && checkIfPosEmpty(new Vector3(randx, randy + i + 2))
+                            && checkIfPosEmpty(new Vector3(randx - 1, randy)) && checkIfPosEmpty(new Vector3(randx + 1, randy))
+                            && checkIfPosEmpty(new Vector3(randx - 2, randy)) && checkIfPosEmpty(new Vector3(randx + 2, randy))
+                            && checkIfPosEmpty(new Vector3(randx - 1, randy + 1)) && checkIfPosEmpty(new Vector3(randx + 1, randy + 1))
+                            && checkIfPosEmpty(new Vector3(randx - 2, randy + 1)) && checkIfPosEmpty(new Vector3(randx + 2, randy + 1))
+                            && checkIfPosEmpty(new Vector3(randx, randy + i)))
+                        {
+                            Point p = new Point();
+                            p.X = randx;
+                            p.Y = randy;
+                            positions[pointIndex] = p;
+                            pointIndex++;
+                            Instantiate(stoneTile, new Vector3(randx, randy + i), Quaternion.identity);
+                        }
+                    }
+                }
+            }
 		}
+
+        /*for(int i = 0; i < pointIndex; i++)
+        {
+            print("point " + i + " : x = " + positions[i].X + "   y = " + positions[i].Y);
+        }*/
 
 		for (int y = 0; y < levelHeight; y++) {
 			for (int x = 0; x < levelWidth; x++) {
