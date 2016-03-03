@@ -21,10 +21,8 @@ public class OpeningLevel : MonoBehaviour {
 	GameObject player;
 	GameObject pitchfork;
 
-<<<<<<< HEAD
 	// Use this for initialization
-	void Start () {
-=======
+	
     public struct Point
     {
         public int X { get; set; }
@@ -38,7 +36,7 @@ public class OpeningLevel : MonoBehaviour {
     // Use this for initialization
     void Start () {
 		//int hello = 0;
->>>>>>> refs/remotes/origin/master
+
 		player = GameObject.FindGameObjectWithTag("Player");
 		pitchfork = GameObject.FindGameObjectWithTag ("Pitchfork");
 		levelHeight = levelTexture.height;

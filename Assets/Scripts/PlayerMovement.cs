@@ -106,7 +106,7 @@ public class PlayerMovement : MonoBehaviour {
 
 
 	bool Running() {
-		if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) {
+		if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.JoystickButton4)) {
             GetComponent<Rigidbody2D>().transform.position += direction.normalized * (speedMultiplier + 2) * Time.deltaTime;
             //GetComponent<CharacterController>().transform.position += direction.normalized * speedMultiplier * Time.deltaTime;
 
