@@ -58,14 +58,6 @@ public class OpeningLevel : MonoBehaviour {
     //return false if position is filled
     bool checkIfPosEmpty(Vector3 target)
     {
-        /*var hit = Physics.OverlapSphere(target, 1);
-        print("hit = " + hit.Length);
-        if(hit.Length > 0)
-        {
-            print("target = " + target);
-            return false;
-        }
-        return true;*/
         int hit = 0;
         for(int i = 0; i < pointIndex; i++)
         {
@@ -268,6 +260,11 @@ public class OpeningLevel : MonoBehaviour {
 				}
 			}
 		}
+
+        for(int i = 0; i < 5; i++)
+        {
+            Instantiate(enemy, new Vector3((levelWidth/2 + i*5), (levelHeight/2 + i*5)), Quaternion.identity);
+        }
 
 
 	}
