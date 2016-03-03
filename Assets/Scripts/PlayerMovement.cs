@@ -8,13 +8,17 @@ public class PlayerMovement : MonoBehaviour {
 	private bool sprinting;
 	private bool attacking;
 	Vector3 direction = new Vector3 (0, 0, 0);
-	public int lastMovementDirection;
+	public static int lastMovementDirection;
 	int layer;
 
 	// Use this for initialization
 	void Start () {
 		anim = this.transform.GetComponent<Animator>();
 		sprinting = false;
+	}
+
+	public static int getLastMovementDirection() {
+		return lastMovementDirection;
 	}
 
 	// Update is called once per frame

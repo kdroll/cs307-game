@@ -303,9 +303,9 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1034681702}
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 100
+  m_AngularDrag: 100
   m_GravityScale: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -323,9 +323,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.07865774, y: -0.4943147}
+  m_Offset: {x: 0.0058471425, y: -0.579335}
   serializedVersion: 2
-  m_Size: {x: 1.0250301, y: 0.6517453}
+  m_Size: {x: 0.7039113, y: 0.31203747}
 --- !u!95 &1034681708
 Animator:
   serializedVersion: 3
@@ -394,7 +394,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -619,7 +619,7 @@ Rigidbody2D:
   m_GravityScale: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!61 &2065484355
