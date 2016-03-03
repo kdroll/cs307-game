@@ -3,8 +3,6 @@ using System.Collections;
 
 
 public class OpeningLevel : MonoBehaviour {
-
-
 	private int levelHeight;
 	private int levelWidth;
 
@@ -25,7 +23,6 @@ public class OpeningLevel : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		int hello = 0;
 		player = GameObject.FindGameObjectWithTag("Player");
 		pitchfork = GameObject.FindGameObjectWithTag ("Pitchfork");
 		levelHeight = levelTexture.height;
@@ -38,7 +35,7 @@ public class OpeningLevel : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 
 	void loadLevel() {
