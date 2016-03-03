@@ -9,7 +9,7 @@ public class EnemyAi : MonoBehaviour {
 	public float rotationSpeed=3f;
 	public int distanceToAttack = 10;
 	private int follow = 0;
-	public static int damage = 10;
+    public static int damage = 10;
 
 
 	void Start () {
@@ -25,9 +25,6 @@ public class EnemyAi : MonoBehaviour {
 		if (Vector3.Distance (target.position, enemyTransform.position) <= distanceToAttack || follow == 1) {
 			follow = 1;
 			//rotate to look at the player
-
-			//transform.rotation = Quaternion.LookRotation (targetDirection); // Converts target direction vector to Quaternion
-			//transform.eulerAngles = new Vector3 (0, transform.eulerAngles.y, 0);
 
 			//move towards the player
 			transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
