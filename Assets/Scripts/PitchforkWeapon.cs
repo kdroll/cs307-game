@@ -30,7 +30,7 @@ public class PitchforkWeapon : MonoBehaviour {
 		} else {
 			anim.SetBool ("ifPitchforkEquipped", false);
 		}
-		if (WeaponPickup.getPitchfork () == true && Input.GetButtonDown ("attack")) {
+		if (WeaponPickup.getPitchfork () == true && (Input.GetButtonDown ("attack") || Input.GetKey(KeyCode.JoystickButton2))) {
 			anim.SetBool ("ifAttacking", true);
 			lastMovement = PlayerMovement.getLastMovementDirection ();
 			if (lastMovement == 1) {

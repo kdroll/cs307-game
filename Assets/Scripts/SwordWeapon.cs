@@ -30,7 +30,7 @@ public class SwordWeapon : MonoBehaviour {
 		} else {
 			anim.SetBool ("ifSwordEquipped", false);
 		}
-		if (WeaponPickup.getSword () == true && Input.GetButtonDown ("attack")) {
+		if (WeaponPickup.getSword () == true && (Input.GetButtonDown ("attack") || Input.GetKey(KeyCode.JoystickButton2))) {
 			anim.SetBool ("ifAttacking", true);
 			lastMovement = PlayerMovement.getLastMovementDirection ();
 			if (lastMovement == 1) {
