@@ -18,7 +18,7 @@ public class OpeningLevel : MonoBehaviour {
 
 	public Texture2D levelTexture;
 
-	GameObject player;
+	static public GameObject player;
 	GameObject pitchfork;
 	GameObject enemy;
 	GameObject sword;

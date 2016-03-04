@@ -14,8 +14,11 @@ public class EnemyAi : MonoBehaviour {
 	Vector3 newPosition;
 	Animator anim;
 
+    int firstRunUpdate = 0;
+    int playerDied = 0;
 
-	void Start () {
+
+    void Start () {
 		//obtain the game object Transform
 		enemyTransform = this.GetComponent<Transform>();
 		anim = this.GetComponent<Animator> ();
@@ -25,55 +28,74 @@ public class EnemyAi : MonoBehaviour {
 		yield return new WaitForSeconds (0.5f);
 	}
 
-	void Update(){
+    void Update() {
 
-		target = GameObject.FindWithTag ("Player").transform;
+        if (firstRunUpdate == 0) {
+            target = GameObject.FindWithTag("Player").transform;
+        }
 
+        if(firstRunUpdate != 0 && target == null) {
+            playerDied = 1;
+            print("Game Over");
+        }
 
-		if (Vector3.Distance (target.position, enemyTransform.position) <= distanceToAttack || follow == 1) {
-			follow = 1;
-			anim.SetBool ("ifFollowing", true);
-			oldPosition = enemyTransform.position;
-			//move towards the player
-			transform.position = Vector2.MoveTowards (transform.position, target.position, speed * Time.deltaTime);
-			StartCoroutine (wait ());
-			newPosition = enemyTransform.position;
-			if (((newPosition.y - oldPosition.y) < -0.0001f) && (newPosition.y - oldPosition.y) > -0.1f) {
-				anim.SetFloat ("MoveX", 0.0f);
-				anim.SetFloat ("MoveY", -1.0f);
-			}
-			else if ((((newPosition.x - oldPosition.x) > 0.01f) && (newPosition.x - oldPosition.x) < 0.1f) || ((newPosition.x - oldPosition.x) > -0.1f && (newPosition.x - oldPosition.x) < -0.001f)) {
-				if ((newPosition.x - oldPosition.x) > -0.1f && (newPosition.x - oldPosition.x) < -0.0001f) {
-					anim.SetFloat ("MoveX", -1.0f);
-					anim.SetFloat ("MoveY", 0.0f);
-				} else {
-					anim.SetFloat ("MoveX", 1.0f);
-					anim.SetFloat ("MoveY", 0.0f);
-				}
-			} else if ((((newPosition.y - oldPosition.y) > 0.0001f) && (newPosition.y - oldPosition.y) < 0.1f) || ((newPosition.y - oldPosition.y) > -0.1f) && ((newPosition.y - oldPosition.y)) > -0.0001f) {
-				if ((newPosition.y - oldPosition.y) > -0.1f && (newPosition.y - oldPosition.y) > -0.0001f) {
-					anim.SetFloat ("MoveX", 0.0f);
-					anim.SetFloat ("MoveY", 1.0f);
-				} else {
-					anim.SetFloat ("MoveX", 0.0f);
-					anim.SetFloat ("MoveY", -1.0f);
-				}
-			} 
-			/*if (PlayerMovement.lastMovementDirection == 1) {
-				anim.SetFloat ("MoveX", 0.0f);
-				anim.SetFloat ("MoveY", 1.0f);
-			} else if (PlayerMovement.lastMovementDirection == 2) {
-				anim.SetFloat ("MoveX", 0.0f);
-				anim.SetFloat ("MoveY", -1.0f);
-			} else if (PlayerMovement.lastMovementDirection == 3) {
-				anim.SetFloat ("MoveX", -1.0f);
-				anim.SetFloat ("MoveY", 0.0f);
-			} else if (PlayerMovement.lastMovementDirection == 4) {
-				anim.SetFloat ("MoveX", 1.0f);
-				anim.SetFloat ("MoveY", 0.0f);
-			}*/
-		}
+        firstRunUpdate = 1;
+        if (playerDied == 0)
+        {
+            target = GameObject.FindWithTag("Player").transform;
+            if (Vector3.Distance(target.position, enemyTransform.position) <= distanceToAttack || follow == 1)
+            {
+                follow = 1;
+                anim.SetBool("ifFollowing", true);
+                oldPosition = enemyTransform.position;
+                //move towards the player
+                transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+                StartCoroutine(wait());
+                newPosition = enemyTransform.position;
+                if (((newPosition.y - oldPosition.y) < -0.0001f) && (newPosition.y - oldPosition.y) > -0.1f)
+                {
+                    anim.SetFloat("MoveX", 0.0f);
+                    anim.SetFloat("MoveY", -1.0f);
+                }
+                else if ((((newPosition.x - oldPosition.x) > 0.01f) && (newPosition.x - oldPosition.x) < 0.1f) || ((newPosition.x - oldPosition.x) > -0.1f && (newPosition.x - oldPosition.x) < -0.001f))
+                {
+                    if ((newPosition.x - oldPosition.x) > -0.1f && (newPosition.x - oldPosition.x) < -0.0001f)
+                    {
+                        anim.SetFloat("MoveX", -1.0f);
+                        anim.SetFloat("MoveY", 0.0f);
+                    }
+                    else {
+                        anim.SetFloat("MoveX", 1.0f);
+                        anim.SetFloat("MoveY", 0.0f);
+                    }
+                }
+                else if ((((newPosition.y - oldPosition.y) > 0.0001f) && (newPosition.y - oldPosition.y) < 0.1f) || ((newPosition.y - oldPosition.y) > -0.1f) && ((newPosition.y - oldPosition.y)) > -0.0001f)
+                {
+                    if ((newPosition.y - oldPosition.y) > -0.1f && (newPosition.y - oldPosition.y) > -0.0001f)
+                    {
+                        anim.SetFloat("MoveX", 0.0f);
+                        anim.SetFloat("MoveY", 1.0f);
+                    }
+                    else {
+                        anim.SetFloat("MoveX", 0.0f);
+                        anim.SetFloat("MoveY", -1.0f);
+                    }
+                }
+                /*if (PlayerMovement.lastMovementDirection == 1) {
+                    anim.SetFloat ("MoveX", 0.0f);
+                    anim.SetFloat ("MoveY", 1.0f);
+                } else if (PlayerMovement.lastMovementDirection == 2) {
+                    anim.SetFloat ("MoveX", 0.0f);
+                    anim.SetFloat ("MoveY", -1.0f);
+                } else if (PlayerMovement.lastMovementDirection == 3) {
+                    anim.SetFloat ("MoveX", -1.0f);
+                    anim.SetFloat ("MoveY", 0.0f);
+                } else if (PlayerMovement.lastMovementDirection == 4) {
+                    anim.SetFloat ("MoveX", 1.0f);
+                    anim.SetFloat ("MoveY", 0.0f);
+                }*/
+            }
 
-
+        }
 	}
 }
