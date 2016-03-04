@@ -38,9 +38,6 @@ public class EnemyAi : MonoBehaviour {
 			transform.position = Vector2.MoveTowards (transform.position, target.position, speed * Time.deltaTime);
 			StartCoroutine (wait ());
 			newPosition = enemyTransform.position;
-			print ("begin");
-			print (oldPosition.x - newPosition.x);
-			print (newPosition.x - oldPosition.x);
 			if (((newPosition.y - oldPosition.y) < -0.0001f) && (newPosition.y - oldPosition.y) > -0.1f) {
 				anim.SetFloat ("MoveX", 0.0f);
 				anim.SetFloat ("MoveY", -1.0f);
@@ -49,21 +46,17 @@ public class EnemyAi : MonoBehaviour {
 				if ((newPosition.x - oldPosition.x) > -0.1f && (newPosition.x - oldPosition.x) < -0.0001f) {
 					anim.SetFloat ("MoveX", -1.0f);
 					anim.SetFloat ("MoveY", 0.0f);
-					print ("left");
 				} else {
 					anim.SetFloat ("MoveX", 1.0f);
 					anim.SetFloat ("MoveY", 0.0f);
-					print ("right");
 				}
 			} else if ((((newPosition.y - oldPosition.y) > 0.0001f) && (newPosition.y - oldPosition.y) < 0.1f) || ((newPosition.y - oldPosition.y) > -0.1f) && ((newPosition.y - oldPosition.y)) > -0.0001f) {
 				if ((newPosition.y - oldPosition.y) > -0.1f && (newPosition.y - oldPosition.y) > -0.0001f) {
 					anim.SetFloat ("MoveX", 0.0f);
 					anim.SetFloat ("MoveY", 1.0f);
-					print ("down");
 				} else {
 					anim.SetFloat ("MoveX", 0.0f);
 					anim.SetFloat ("MoveY", -1.0f);
-					print ("up");
 				}
 			} 
 			/*if (PlayerMovement.lastMovementDirection == 1) {

@@ -339,9 +339,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.0032285005, y: -0.52949095}
+  m_Offset: {x: 0, y: -0.52949095}
   serializedVersion: 2
-  m_Size: {x: 0.48988077, y: 0.37435138}
+  m_Size: {x: 0.6, y: 0.37435138}
 --- !u!4 &360794928
 Transform:
   m_ObjectHideFlags: 0
@@ -444,6 +444,7 @@ GameObject:
   - 61: {fileID: 1034681707}
   - 95: {fileID: 1034681708}
   - 50: {fileID: 1034681706}
+  - 114: {fileID: 1034681709}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -476,7 +477,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 16
   m_Sprite: {fileID: 21300000, guid: ae56a07b533d3b44a9f3de6cb13990e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -554,6 +555,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1034681709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1034681702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7526126bf22324a31a33009ae84c05d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
 --- !u!1 &1173831596
 GameObject:
   m_ObjectHideFlags: 0

@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\OpeningLevel.cs" />
      <Compile Include="Assets\Scripts\PitchforkWeapon.cs" />
      <Compile Include="Assets\Scripts\PlayerAttack.cs" />
+     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\SwordWeapon.cs" />
      <Compile Include="Assets\Scripts\WeaponPickup.cs" />
