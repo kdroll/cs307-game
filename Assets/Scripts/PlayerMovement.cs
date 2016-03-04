@@ -28,20 +28,6 @@ public class PlayerMovement : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
-        /*movementVector.x = Input.GetAxis("LeftJoystickX") * movementSpeed;
-        movementVector.z = Input.GetAxis("LeftJoystickY") * movementSpeed;
-
-        if (characterController.isGrounded)
-        {
-            movementVector.y = 0;
-
-            if (Input.GetButtonDown("A"))
-            {
-                movementVector.y = jumpPower;
-            }
-        }
-        movementVector.y -= gravity * Time.deltaTime;
-        characterController.Move(movementVector * Time.deltaTime);*/
 
         direction = new Vector3 (0, 0, 0);
 		//lastMovementDirection = 0;
