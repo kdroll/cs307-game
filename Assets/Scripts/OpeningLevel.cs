@@ -20,7 +20,7 @@ public class OpeningLevel : MonoBehaviour {
 
 	static public GameObject player;
 	GameObject pitchfork;
-	GameObject enemy;
+	static public GameObject enemy;
 	GameObject sword;
 
 	// Use this for initialization

@@ -50,6 +50,7 @@ public class PlayerAttack : MonoBehaviour {
 		}
 		//anim.SetBool ("isAttacking", false);
 	}
+		
 
 	/*public void handleAttack() {
 		if (isAttacking) {

@@ -13,22 +13,46 @@ public class EnemyAi : MonoBehaviour {
 	Vector3 oldPosition;
 	Vector3 newPosition;
 	Animator anim;
+	public GameObject enemy;
 
     int firstRunUpdate = 0;
     int playerDied = 0;
+	int enemyHealth;
+	float locked;
 
 
-    void Start () {
+    public void Start () {
 		//obtain the game object Transform
 		enemyTransform = this.GetComponent<Transform>();
 		anim = this.GetComponent<Animator> ();
+		enemyHealth = 100;
+		enemy = GameObject.FindGameObjectWithTag ("Enemy");
+		locked = 0f;
 	}
 
 	IEnumerator wait() {
 		yield return new WaitForSeconds (0.5f);
 	}
 
+	private IEnumerator takeDamage() {
+		enemyHealth -= 10;
+		print (enemyHealth);
+		locked = 0;
+		yield return null;
+	} 
+
     void Update() {
+		if(locked >= 1)
+		{
+			locked = 1;
+		} else
+		{
+			locked += .016f;
+		}
+		if(enemyHealth <= 0)
+		{
+			Destroy(OpeningLevel.enemy);
+		}
 
         if (firstRunUpdate == 0) {
             target = GameObject.FindWithTag("Player").transform;
