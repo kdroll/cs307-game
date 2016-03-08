@@ -96,6 +96,7 @@ GameObject:
   - 212: {fileID: 84885224}
   - 95: {fileID: 84885223}
   - 114: {fileID: 84885225}
+  - 50: {fileID: 84885226}
   m_Layer: 0
   m_Name: SwordWeapon
   m_TagString: Untagged
@@ -174,6 +175,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f3772c812d147d69bab214e6d040ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &84885226
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 84885221}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &143596409
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,9 +358,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -0.52949095}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 0.37435138}
+  m_Size: {x: 1, y: 0.6}
 --- !u!4 &360794928
 Transform:
   m_ObjectHideFlags: 0
@@ -524,7 +542,7 @@ Rigidbody2D:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &1034681707
 BoxCollider2D:
@@ -866,8 +884,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1835184973}
-  - 68: {fileID: 1835184975}
   - 114: {fileID: 1835184974}
+  - 61: {fileID: 1835184975}
   m_Layer: 0
   m_Name: Sword Collider
   m_TagString: SwordCollider
@@ -898,8 +916,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d26e0e5c29fdf474384f7e42b2659b1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!68 &1835184975
-EdgeCollider2D:
+--- !u!61 &1835184975
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -909,15 +927,9 @@ EdgeCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-  - {x: 0.86960495, y: 0.56918633}
-  - {x: 1.2705398, y: 0.5050039}
-  - {x: 1.4847679, y: 0.30467677}
-  - {x: 1.6363384, y: -0.25961614}
-  - {x: 1.3248802, y: -0.76546425}
-  - {x: 0.86060464, y: -0.9031139}
-  - {x: 0.8557414, y: 0.53361267}
+  m_Offset: {x: 1.0372443, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.835114, y: 1.5}
 --- !u!1 &2049675727
 GameObject:
   m_ObjectHideFlags: 0
