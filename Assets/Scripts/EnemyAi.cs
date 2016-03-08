@@ -25,7 +25,7 @@ public class EnemyAi : MonoBehaviour {
 		//obtain the game object Transform
 		enemyTransform = this.GetComponent<Transform>();
 		anim = this.GetComponent<Animator> ();
-		enemyHealth = 20;
+		enemyHealth = 10;
 		enemy = GameObject.FindGameObjectWithTag ("Enemy");
 		locked = 0f;
 	}
