@@ -96,7 +96,6 @@ GameObject:
   - 212: {fileID: 84885224}
   - 95: {fileID: 84885223}
   - 114: {fileID: 84885225}
-  - 68: {fileID: 84885226}
   m_Layer: 0
   m_Name: SwordWeapon
   m_TagString: Untagged
@@ -113,7 +112,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.104, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1835184973}
   m_Father: {fileID: 1173831597}
   m_RootOrder: 0
 --- !u!95 &84885223
@@ -174,28 +174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f3772c812d147d69bab214e6d040ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!68 &84885226
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 84885221}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-  - {x: 0.69043016, y: -0.6802459}
-  - {x: 0.7423698, y: 0.6909161}
-  - {x: 1.0691589, y: 0.67999786}
-  - {x: 1.294567, y: 0.5319637}
-  - {x: 1.3950886, y: 0.11559679}
-  - {x: 1.3996563, y: -0.30189034}
-  - {x: 1.2980738, y: -0.57876575}
-  - {x: 1.0398121, y: -0.7956691}
-  - {x: 0.7040731, y: -0.72559565}
 --- !u!1 &143596409
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,6 +369,7 @@ MonoBehaviour:
   speed: 2
   rotationSpeed: 0
   distanceToAttack: 10
+  enemy: {fileID: 0}
 --- !u!95 &360794930
 Animator:
   serializedVersion: 3
@@ -728,7 +707,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1384624945}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -200}
+  m_LocalPosition: {x: 28, y: 19, z: -200}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -879,6 +858,66 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd22869157df52f4ea07cbf0f2f95277, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1835184972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1835184973}
+  - 68: {fileID: 1835184975}
+  - 114: {fileID: 1835184974}
+  m_Layer: 0
+  m_Name: Sword Collider
+  m_TagString: SwordCollider
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1835184973
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1835184972}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 84885222}
+  m_RootOrder: 0
+--- !u!114 &1835184974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1835184972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d26e0e5c29fdf474384f7e42b2659b1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!68 &1835184975
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1835184972}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: 0.86960495, y: 0.56918633}
+  - {x: 1.2705398, y: 0.5050039}
+  - {x: 1.4847679, y: 0.30467677}
+  - {x: 1.6363384, y: -0.25961614}
+  - {x: 1.3248802, y: -0.76546425}
+  - {x: 0.86060464, y: -0.9031139}
+  - {x: 0.8557414, y: 0.53361267}
 --- !u!1 &2049675727
 GameObject:
   m_ObjectHideFlags: 0

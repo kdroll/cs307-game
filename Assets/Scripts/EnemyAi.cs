@@ -25,7 +25,7 @@ public class EnemyAi : MonoBehaviour {
 		//obtain the game object Transform
 		enemyTransform = this.GetComponent<Transform>();
 		anim = this.GetComponent<Animator> ();
-		enemyHealth = 100;
+		enemyHealth = 20;
 		enemy = GameObject.FindGameObjectWithTag ("Enemy");
 		locked = 0f;
 	}
@@ -36,22 +36,19 @@ public class EnemyAi : MonoBehaviour {
 
 	private IEnumerator takeDamage() {
 		enemyHealth -= 10;
-		print (enemyHealth);
-		locked = 0;
 		yield return null;
 	} 
 
-    void Update() {
-		if(locked >= 1)
-		{
-			locked = 1;
-		} else
-		{
-			locked += .016f;
+	void OnTriggerStay2D(Collider2D collision) {
+		if (collision.tag == "SwordCollider" && Input.GetButtonDown("attack") && WeaponPickup.getHands() == false) {
+			StartCoroutine(takeDamage ());
 		}
+	}
+
+    void Update() {
 		if(enemyHealth <= 0)
 		{
-			Destroy(OpeningLevel.enemy);
+			Destroy(this.gameObject);
 		}
 
         if (firstRunUpdate == 0) {

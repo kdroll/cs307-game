@@ -7,6 +7,7 @@ TagManager:
   - Pitchfork
   - Enemy
   - Sword
+  - SwordCollider
   layers:
   - Default
   - TransparentFX
