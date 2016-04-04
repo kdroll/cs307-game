@@ -1,27 +1,47 @@
-Initialize engine version: 5.3.2f1 (e87ab445ead0)
+Initialize engine version: 5.3.4f1 (fdbb5133b820)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GTX 770 (ID=0x1184)
+    Renderer: NVIDIA GeForce GTX 960 (ID=0x1401)
     Vendor:   NVIDIA
-    VRAM:     1989 MB
+    VRAM:     1969 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\kmdroll\OneDrive\Homework\cs307\cs307-game\TestRun_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\kmdroll\OneDrive\Homework\cs307\cs307-game\TestRun_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\kmdroll\OneDrive\Homework\cs307\cs307-game\TestRun_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\kmdroll\OneDrive\Homework\cs307\cs307-game\TestRun_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\kmdroll\OneDrive\Homework\cs307\cs307-game\TestRun_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\kmdroll\OneDrive\Homework\cs307\cs307-game\TestRun_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\kmdroll\OneDrive\Homework\cs307\cs307-game\TestRun_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\kmdroll\OneDrive\Homework\cs307\cs307-game\TestRun_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.108 seconds
-Platform assembly: C:\Users\kmdroll\OneDrive\Homework\cs307\cs307-game\TestRun_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\kmdroll\OneDrive\Homework\cs307\cs307-game\TestRun_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.107 seconds
+Platform assembly: C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
+<RI.Hid> Failed to create device file:
+ 2 The system cannot find the file specified.
+
+ 
+(Filename:  Line: 54)
+
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.704598 ms
+The referenced script on this Behaviour (Game Object 'Quit Button') is missing!
+ 
+(Filename:  Line: 1655)
+
+UnloadTime: 0.760000 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.537281 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 409.
+Total: 0.200320 ms (FindLiveObjects: 0.019520 ms CreateObjectMapping: 0.015680 ms MarkObjects: 0.161600 ms  DeleteObjects: 0.002880 ms)
+
 levelHeight = 64
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
@@ -30,6 +50,5 @@ levelWidth = 64
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-Setting up 2 worker threads for Enlighten.
-  Thread -> id: 828 -> priority: 1 
-  Thread -> id: 3bd4 -> priority: 1 
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 1234 -> priority: 1 
