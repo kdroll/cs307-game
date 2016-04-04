@@ -14,11 +14,7 @@ Platform assembly: C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_D
 Loading C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.107 seconds
+- Completed reload, in  0.103 seconds
 Platform assembly: C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
@@ -35,20 +31,22 @@ The referenced script on this Behaviour (Game Object 'Quit Button') is missing!
  
 (Filename:  Line: 1655)
 
-UnloadTime: 0.760000 ms
+UnloadTime: 0.588800 ms
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 4.537281 ms
+UnloadTime: 4.470401 ms
 
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 409.
-Total: 0.200320 ms (FindLiveObjects: 0.019520 ms CreateObjectMapping: 0.015680 ms MarkObjects: 0.161600 ms  DeleteObjects: 0.002880 ms)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 194.
+Total: 0.180480 ms (FindLiveObjects: 0.016000 ms CreateObjectMapping: 0.008640 ms MarkObjects: 0.147520 ms  DeleteObjects: 0.008000 ms)
 
-levelHeight = 64
+The referenced script on this Behaviour (Game Object 'Quit Button') is missing!
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+(Filename:  Line: 1655)
 
-levelWidth = 64
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.304000 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 218.
+Total: 0.187840 ms (FindLiveObjects: 0.010880 ms CreateObjectMapping: 0.007680 ms MarkObjects: 0.166400 ms  DeleteObjects: 0.002560 ms)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1234 -> priority: 1 
+  Thread -> id: 2a50 -> priority: 1 
