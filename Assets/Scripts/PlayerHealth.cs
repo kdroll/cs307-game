@@ -5,6 +5,7 @@ public class PlayerHealth : MonoBehaviour {
 
     int health = 100;
     double locked = 0f;
+	public static bool isDead = false;
 
 	// Use this for initialization
 	void Start () {
@@ -23,6 +24,7 @@ public class PlayerHealth : MonoBehaviour {
         }
         if(health <= 0)
         {
+			isDead = true;
             Destroy(OpeningLevel.player);
         }
         //print("locked = " + locked);
