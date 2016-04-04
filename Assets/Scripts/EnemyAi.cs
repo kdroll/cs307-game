@@ -39,7 +39,8 @@ public class EnemyAi : MonoBehaviour {
 
     IEnumerator waitHit()
     {
-        yield return new WaitForSeconds(hit.length);
+        yield return new WaitForSeconds(0.2f);
+		anim.SetBool("ifHit", false);
     }
 
     private IEnumerator takeDamage() {
@@ -65,7 +66,7 @@ public class EnemyAi : MonoBehaviour {
             }
             StartCoroutine(takeDamage ());
             StartCoroutine(waitHit());
-                anim.SetBool("ifHit", false);
+   
 
 		}
 		if (collision.tag == "PitchforkCollider" && Input.GetButtonDown("attack") && WeaponPickup.getHands() == false) {
