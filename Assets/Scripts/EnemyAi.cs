@@ -31,7 +31,8 @@ public class EnemyAi : MonoBehaviour {
 	}
 
 	IEnumerator wait() {
-		yield return new WaitForSeconds (0.5f);
+		yield return new WaitForSeconds (0.3f);
+		Destroy(this.gameObject);
 	}
 
 	private IEnumerator takeDamage() {
@@ -43,12 +44,15 @@ public class EnemyAi : MonoBehaviour {
 		if (collision.tag == "SwordCollider" && Input.GetButtonDown("attack") && WeaponPickup.getHands() == false) {
 			StartCoroutine(takeDamage ());
 		}
+		if (collision.tag == "PitchforkCollider" && Input.GetButtonDown("attack") && WeaponPickup.getHands() == false) {
+			StartCoroutine(takeDamage ());
+		}
 	}
 
     void Update() {
 		if(enemyHealth <= 0)
 		{
-			Destroy(this.gameObject);
+			StartCoroutine (wait());
 		}
 
         if (firstRunUpdate == 0) {
@@ -71,7 +75,7 @@ public class EnemyAi : MonoBehaviour {
                 oldPosition = enemyTransform.position;
                 //move towards the player
                 transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-                StartCoroutine(wait());
+                //StartCoroutine(wait());
                 newPosition = enemyTransform.position;
                 if (((newPosition.y - oldPosition.y) < -0.0001f) && (newPosition.y - oldPosition.y) > -0.1f)
                 {
