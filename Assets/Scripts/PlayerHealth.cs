@@ -19,7 +19,7 @@ public class PlayerHealth : MonoBehaviour {
             locked = 1;
         } else
         {
-            locked += .04;
+            locked += .02;
         }
         if(health <= 0)
         {
@@ -37,12 +37,12 @@ public class PlayerHealth : MonoBehaviour {
 
 
 
-   public void OnTriggerEnter2D(Collider2D collision) {
-		if (collision.tag == "Enemy" && locked == 1 && !Input.GetButtonDown("attack")) {
-			StartCoroutine (takeDamage ());
-        }
+   //public void OnTriggerEnter2D(Collider2D collision) {
+	//	if (collision.tag == "Enemy" && locked == 1 && !Input.GetButtonDown("attack")) {
+	//		StartCoroutine (takeDamage ());
+      //  }
 
-	}
+	//}
 	public void OnTriggerStay2D(Collider2D coll) {
 		if (coll.tag == "Enemy" && locked == 1 && !Input.GetButtonDown ("attack")) {
 			StartCoroutine (takeDamage ());
