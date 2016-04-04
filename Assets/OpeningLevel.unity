@@ -485,6 +485,7 @@ MonoBehaviour:
   rotationSpeed: 0
   distanceToAttack: 10
   enemy: {fileID: 0}
+  hit: {fileID: 7400000, guid: 077a418253e1e9d40b57ad4a434ef500, type: 2}
 --- !u!95 &360794930
 Animator:
   serializedVersion: 3

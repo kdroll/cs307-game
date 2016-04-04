@@ -13,7 +13,9 @@ public class EnemyAi : MonoBehaviour {
 	Vector3 oldPosition;
 	Vector3 newPosition;
 	Animator anim;
+    Animator anim2;
 	public GameObject enemy;
+    public AnimationClip hit;
 
     int firstRunUpdate = 0;
     int playerDied = 0;
@@ -25,7 +27,7 @@ public class EnemyAi : MonoBehaviour {
 		//obtain the game object Transform
 		enemyTransform = this.GetComponent<Transform>();
 		anim = this.GetComponent<Animator> ();
-		enemyHealth = 10;
+		enemyHealth = 30;
 		enemy = GameObject.FindGameObjectWithTag ("Enemy");
 		locked = 0f;
 	}
@@ -35,14 +37,36 @@ public class EnemyAi : MonoBehaviour {
 		Destroy(this.gameObject);
 	}
 
-	private IEnumerator takeDamage() {
-		enemyHealth -= 10;
+    IEnumerator waitHit()
+    {
+        yield return new WaitForSeconds(hit.length);
+    }
+
+    private IEnumerator takeDamage() {
+        enemyHealth -= 10;
+        print("enemyHealth = " + enemyHealth);
+        locked = 0;
+       // anim.SetBool("ifHit", false);
 		yield return null;
 	} 
 
 	void OnTriggerStay2D(Collider2D collision) {
-		if (collision.tag == "SwordCollider" && Input.GetButtonDown("attack") && WeaponPickup.getHands() == false) {
-			StartCoroutine(takeDamage ());
+        //print(Input.GetButtonDown("attack"));
+        if (collision.tag == "SwordCollider" && Input.GetButtonDown("attack") && WeaponPickup.getHands() == false && locked == 1) {
+            anim.SetBool("ifHit", true);
+            if (anim.GetFloat("MoveY") == 1.0f) {
+                anim.SetFloat("HitY", 1.0f);
+            } else if (anim.GetFloat("MoveY") == -1.0f) {
+                anim.SetFloat("HitY", -1.0f);
+            } else if (anim.GetFloat("MoveX") == 1.0f) {
+                anim.SetFloat("HitX", 1.0f);
+            } else if (anim.GetFloat("MoveX") == -1.0f) {
+                anim.SetFloat("HitX", -1.0f);
+            }
+            StartCoroutine(takeDamage ());
+            StartCoroutine(waitHit());
+                anim.SetBool("ifHit", false);
+
 		}
 		if (collision.tag == "PitchforkCollider" && Input.GetButtonDown("attack") && WeaponPickup.getHands() == false) {
 			StartCoroutine(takeDamage ());
@@ -62,6 +86,15 @@ public class EnemyAi : MonoBehaviour {
         if(firstRunUpdate != 0 && target == null) {
             playerDied = 1;
             print("Game Over");
+        }
+
+        if (locked >= 1)
+        {
+            locked = 1;
+        }
+        else
+        {
+            locked += .02f;
         }
 
         firstRunUpdate = 1;
