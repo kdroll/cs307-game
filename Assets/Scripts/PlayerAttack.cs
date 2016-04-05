@@ -3,11 +3,15 @@ using System.Collections;
 
 public class PlayerAttack : MonoBehaviour {
 	Animator anim;
+    public static float damageModifier;
+    public static int numDamageUpgrades;
 	//bool isAttacking;
 	// Use this for initialization
 	public float cooldown = 0.0f;
 	void Start () {
-		anim = GetComponent<Animator> ();
+        damageModifier = 1;
+        numDamageUpgrades = 0;
+        anim = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame

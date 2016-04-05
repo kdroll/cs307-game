@@ -19,13 +19,14 @@ public class EnemyAi : MonoBehaviour {
 
     int firstRunUpdate = 0;
     int playerDied = 0;
-	int enemyHealth;
+	float enemyHealth;
 	float locked;
-    public static int gold = 0;
+    public static int gold;
 
 
     public void Start () {
-		//obtain the game object Transform
+        //obtain the game object Transform
+        gold = 100000;
 		enemyTransform = this.GetComponent<Transform>();
 		anim = this.GetComponent<Animator> ();
 		enemyHealth = 30;
@@ -46,7 +47,7 @@ public class EnemyAi : MonoBehaviour {
     }
 
     private IEnumerator takeDamage() {
-        enemyHealth -= 10;
+        enemyHealth -= 10 * PlayerAttack.damageModifier;
         print("enemyHealth = " + enemyHealth);
         locked = 0;
        // anim.SetBool("ifHit", false);
@@ -99,7 +100,7 @@ public class EnemyAi : MonoBehaviour {
 
         if(firstRunUpdate != 0 && target == null) {
             playerDied = 1;
-            print("Game Over");
+            //print("Game Over");
         }
 
         if (locked >= 1)

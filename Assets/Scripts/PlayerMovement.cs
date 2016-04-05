@@ -5,7 +5,9 @@ public class PlayerMovement : MonoBehaviour {
     private Vector3 movementVector;
     private CharacterController characterController;
 
-    public float speedMultiplier; 
+    public static float speedModifier;
+    public static int numSpeedUpgrades;
+    public float sprintModifier; 
 	private int currentSpeed;
 	Animator anim;
 	private bool sprinting;
@@ -17,7 +19,9 @@ public class PlayerMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         //characterController = GetComponent<CharacterController>();
-
+        sprintModifier = 3;
+        speedModifier = 1;
+        numSpeedUpgrades = 0;
         anim = this.transform.GetComponent<Animator>();
 		sprinting = false;
 	}
@@ -67,7 +71,7 @@ public class PlayerMovement : MonoBehaviour {
                 //anim.SetBool("running", false);
                 //GetComponent<CharacterController>().transform.position += direction.normalized * speedMultiplier * Time.deltaTime;
 				//GetComponent<Rigidbody2D>().transform.position += direction.normalized * speedMultiplier * Time.deltaTime;
-				transform.Translate(direction.normalized * speedMultiplier * Time.deltaTime);
+				transform.Translate(direction.normalized * sprintModifier * speedModifier * Time.deltaTime);
                 //anim.SetFloat("speed", Mathf.Abs(direction.x) + Mathf.Abs (direction.y));
             }
         } else {
@@ -95,7 +99,7 @@ public class PlayerMovement : MonoBehaviour {
 	bool Running() {
 		if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.JoystickButton4)) {
             //GetComponent<Rigidbody2D>().transform.position += direction.normalized * (speedMultiplier + 2) * Time.deltaTime;
-			transform.Translate(direction.normalized * (speedMultiplier + 2) * Time.deltaTime);
+			transform.Translate(direction.normalized * (sprintModifier + 2) * speedModifier * Time.deltaTime);
             //GetComponent<CharacterController>().transform.position += direction.normalized * speedMultiplier * Time.deltaTime;
 
             //anim.SetFloat("speed", Mathf.Abs(direction.x) + Mathf.Abs (direction.y));

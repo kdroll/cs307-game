@@ -3,7 +3,9 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour {
 
-     public static int health = 100;
+    public static int health;
+    public static int healthModifier;
+    public static int numHealthUpgrades;
     double locked = 0f;
 	public static bool isDead = false;
 	GameObject player;
@@ -12,6 +14,8 @@ public class PlayerHealth : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		health = 100;
+        healthModifier = 0;
+        numHealthUpgrades = 0;
 		player = GameObject.FindGameObjectWithTag ("Player");
 	}
 
