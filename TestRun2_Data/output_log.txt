@@ -1,0 +1,88 @@
+Initialize engine version: 5.3.4f1 (fdbb5133b820)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GT 730M       (ID=0x1290)
+    Vendor:   NVIDIA
+    VRAM:     1996 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\kmdro\OneDrive\Homework\cs307\cs307-game\TestRun2_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\kmdro\OneDrive\Homework\cs307\cs307-game\TestRun2_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\kmdro\OneDrive\Homework\cs307\cs307-game\TestRun2_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\kmdro\OneDrive\Homework\cs307\cs307-game\TestRun2_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\kmdro\OneDrive\Homework\cs307\cs307-game\TestRun2_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\kmdro\OneDrive\Homework\cs307\cs307-game\TestRun2_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\kmdro\OneDrive\Homework\cs307\cs307-game\TestRun2_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\kmdro\OneDrive\Homework\cs307\cs307-game\TestRun2_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\kmdro\OneDrive\Homework\cs307\cs307-game\TestRun2_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\kmdro\OneDrive\Homework\cs307\cs307-game\TestRun2_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\kmdro\OneDrive\Homework\cs307\cs307-game\TestRun2_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\kmdro\OneDrive\Homework\cs307\cs307-game\TestRun2_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.130 seconds
+Platform assembly: C:\Users\kmdro\OneDrive\Homework\cs307\cs307-game\TestRun2_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\kmdro\OneDrive\Homework\cs307\cs307-game\TestRun2_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+The referenced script on this Behaviour (Game Object 'Quit Button') is missing!
+ 
+(Filename:  Line: 1655)
+
+UnloadTime: 0.983602 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 7.269253 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 196.
+Total: 0.293797 ms (FindLiveObjects: 0.029080 ms CreateObjectMapping: 0.017106 ms MarkObjects: 0.233071 ms  DeleteObjects: 0.012829 ms)
+
+The referenced script on this Behaviour (Game Object 'Quit Button') is missing!
+ 
+(Filename:  Line: 1655)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.379328 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 220.
+Total: 0.328865 ms (FindLiveObjects: 0.025231 ms CreateObjectMapping: 0.017106 ms MarkObjects: 0.281823 ms  DeleteObjects: 0.003848 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.526441 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 511.
+Total: 0.465714 ms (FindLiveObjects: 0.036350 ms CreateObjectMapping: 0.028225 ms MarkObjects: 0.394724 ms  DeleteObjects: 0.005131 ms)
+
+levelHeight = 64
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+levelWidth = 64
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+The referenced script on this Behaviour (Game Object 'Quit Button') is missing!
+ 
+(Filename:  Line: 1655)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 30.849636 ms
+
+Unloading 179 unused Assets to reduce memory usage. Loaded Objects now: 223.
+Total: 1.041336 ms (FindLiveObjects: 0.323733 ms CreateObjectMapping: 0.027369 ms MarkObjects: 0.288238 ms  DeleteObjects: 0.401566 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.516177 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 511.
+Total: 0.503348 ms (FindLiveObjects: 0.042765 ms CreateObjectMapping: 0.030791 ms MarkObjects: 0.422521 ms  DeleteObjects: 0.005987 ms)
+
+levelHeight = 64
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+levelWidth = 64
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 1360 -> priority: 1 
