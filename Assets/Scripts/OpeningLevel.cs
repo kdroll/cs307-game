@@ -22,6 +22,7 @@ public class OpeningLevel : MonoBehaviour {
 	GameObject pitchfork;
 	static public GameObject enemy;
 	GameObject sword;
+	public GameObject newEnemy;
 
 	GameObject[] amount;
 
@@ -43,6 +44,7 @@ public class OpeningLevel : MonoBehaviour {
 		player = GameObject.FindGameObjectWithTag("Player");
 		pitchfork = GameObject.FindGameObjectWithTag ("Pitchfork");
 		sword = GameObject.FindGameObjectWithTag ("Sword");
+		enemy = GameObject.FindGameObjectWithTag("Enemy");
 		levelHeight = levelTexture.height;
 		levelWidth = levelTexture.width;
 		loadLevel ();
@@ -54,10 +56,9 @@ public class OpeningLevel : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		System.Random randy = new System.Random();
-		enemy = GameObject.FindGameObjectWithTag("Enemy");
 		amount = GameObject.FindGameObjectsWithTag ("Enemy");
 		if (amount.Length < 6) {
-			Instantiate (enemy, new Vector3 ((levelWidth / 2 + randy.Next (levelWidth / 9, ((9 - 1) * levelWidth) / 9) * 5), (levelHeight / 2 + randy.Next (levelWidth / 9, ((9 - 1) * levelWidth) / 9) * 5)), Quaternion.identity);
+			Instantiate (newEnemy, new Vector3 (10,10,0), Quaternion.identity);
 		}
 
 	}
