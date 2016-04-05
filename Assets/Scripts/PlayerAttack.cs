@@ -40,7 +40,7 @@ public class PlayerAttack : MonoBehaviour {
 				anim.SetFloat ("AttackX", 0.0f);
 			}
 		}*/
-		if (Input.GetKeyDown (KeyCode.F)) {
+		if (Input.GetKeyDown (KeyCode.F) || Input.GetKeyDown(KeyCode.JoystickButton3)) {
 			cooldown = Time.time + 2.0f;
 			anim.SetBool ("ifPitchforkEquipped", false);
 			GameObject.FindGameObjectWithTag ("Pitchfork").GetComponent<Collider2D> ().isTrigger = false;

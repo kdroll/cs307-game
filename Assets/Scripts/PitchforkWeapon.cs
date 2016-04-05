@@ -13,7 +13,7 @@ public class PitchforkWeapon : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		anim.SetBool ("ifAttacking", false);
-		if (Input.GetKey (KeyCode.F)  && WeaponPickup.getPitchfork() == true) {
+		if ((Input.GetKey (KeyCode.F) || Input.GetKey(KeyCode.JoystickButton3))  && WeaponPickup.getPitchfork() == true) {
 			WeaponPickup.setPitchfork (false);
 			WeaponPickup.setPickedUp (false);
 			anim.SetBool ("ifPitchforkEquipped", false);
@@ -30,7 +30,7 @@ public class PitchforkWeapon : MonoBehaviour {
 		} else {
 			anim.SetBool ("ifPitchforkEquipped", false);
 		}
-		if (WeaponPickup.getPitchfork () == true && (Input.GetButtonDown ("attack") || Input.GetKey(KeyCode.JoystickButton2))) {
+		if (WeaponPickup.getPitchfork () == true && (Input.GetButtonDown ("attack") || Input.GetButtonDown("B"))) {
 			anim.SetBool ("ifAttacking", true);
 			lastMovement = PlayerMovement.getLastMovementDirection ();
 			if (lastMovement == 1) {

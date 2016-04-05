@@ -397,7 +397,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Developers:\n\tNicolas Bratton\n\tRyan DeSalvio\n\tKeith Droll\n\tGarrett
-    Kizior\n\nProject Coordinator:\n\tBen Alhbrand"
+    Kizior\n\nProject Coordinator:\n\tBen Ahlbrand"
 --- !u!222 &1208806402
 CanvasRenderer:
   m_ObjectHideFlags: 0
