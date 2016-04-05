@@ -23,6 +23,8 @@ public class OpeningLevel : MonoBehaviour {
 	static public GameObject enemy;
 	GameObject sword;
 
+	GameObject[] amount;
+
 	// Use this for initialization
 	
     public struct Point
@@ -38,7 +40,6 @@ public class OpeningLevel : MonoBehaviour {
     // Use this for initialization
     void Start () {
 		//int hello = 0;
-		enemy = GameObject.FindGameObjectWithTag("Enemy");
 		player = GameObject.FindGameObjectWithTag("Player");
 		pitchfork = GameObject.FindGameObjectWithTag ("Pitchfork");
 		sword = GameObject.FindGameObjectWithTag ("Sword");
@@ -52,6 +53,12 @@ public class OpeningLevel : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		System.Random randy = new System.Random();
+		enemy = GameObject.FindGameObjectWithTag("Enemy");
+		amount = GameObject.FindGameObjectsWithTag ("Enemy");
+		if (amount.Length < 6) {
+			Instantiate (enemy, new Vector3 ((levelWidth / 2 + randy.Next (levelWidth / 9, ((9 - 1) * levelWidth) / 9) * 5), (levelHeight / 2 + randy.Next (levelWidth / 9, ((9 - 1) * levelWidth) / 9) * 5)), Quaternion.identity);
+		}
 
 	}
 
