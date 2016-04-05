@@ -21,6 +21,7 @@ public class EnemyAi : MonoBehaviour {
     int playerDied = 0;
 	int enemyHealth;
 	float locked;
+    public static int gold = 0;
 
 
     public void Start () {
@@ -34,6 +35,7 @@ public class EnemyAi : MonoBehaviour {
 
 	IEnumerator wait() {
 		yield return new WaitForSeconds (0.3f);
+        gold += 10;
 		Destroy(this.gameObject);
 	}
 
