@@ -9,6 +9,7 @@ TagManager:
   - Sword
   - SwordCollider
   - PitchforkCollider
+  - Obstacle
   layers:
   - Default
   - TransparentFX

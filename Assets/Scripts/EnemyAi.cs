@@ -15,7 +15,9 @@ public class EnemyAi : MonoBehaviour {
 	Animator anim;
     Animator anim2;
 	public GameObject enemy;
-    public AnimationClip hit;
+    public AnimationClip hitAnimation;
+	bool ifThereIsAnything = false;
+	RaycastHit2D hit;
 
     int firstRunUpdate = 0;
     int playerDied = 0;
@@ -122,7 +124,19 @@ public class EnemyAi : MonoBehaviour {
                 anim.SetBool("ifFollowing", true);
                 oldPosition = enemyTransform.position;
                 //move towards the player
-                transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+				transform.position = Vector2.MoveTowards (transform.position, target.position, speed * Time.deltaTime);
+				/*Transform leftRay = transform;
+				Transform rightRay = transform;
+				//Use Phyics.RayCast to detect the obstacle
+				if (Physics.Raycast (enemyTransform.position, new Vector3(1,0,0), 10) || Physics.Raycast(enemyTransform.position, new Vector3(1,0,0), 10)) {
+					if (hit.collider.gameObject.CompareTag("Obstacle")){
+						ifThereIsAnything = true;
+						//transform.position = Vector2.MoveTowards (transform.position, new Vector2(transform.position.x + 7f, transform.position.y), speed * Time.deltaTime);
+						transform.position = Vector2.MoveTowards (transform.position, target.position, speed * Time.deltaTime);
+					}
+				}*/
+				//Debug.DrawRay (hit, transform.position, Color.red);
+
                 //StartCoroutine(wait());
                 newPosition = enemyTransform.position;
                 if (((newPosition.y - oldPosition.y) < -0.0001f) && (newPosition.y - oldPosition.y) > -0.1f)
@@ -154,19 +168,6 @@ public class EnemyAi : MonoBehaviour {
                         anim.SetFloat("MoveY", -1.0f);
                     }
                 }
-                /*if (PlayerMovement.lastMovementDirection == 1) {
-                    anim.SetFloat ("MoveX", 0.0f);
-                    anim.SetFloat ("MoveY", 1.0f);
-                } else if (PlayerMovement.lastMovementDirection == 2) {
-                    anim.SetFloat ("MoveX", 0.0f);
-                    anim.SetFloat ("MoveY", -1.0f);
-                } else if (PlayerMovement.lastMovementDirection == 3) {
-                    anim.SetFloat ("MoveX", -1.0f);
-                    anim.SetFloat ("MoveY", 0.0f);
-                } else if (PlayerMovement.lastMovementDirection == 4) {
-                    anim.SetFloat ("MoveX", 1.0f);
-                    anim.SetFloat ("MoveY", 0.0f);
-                }*/
             }
 
         }
