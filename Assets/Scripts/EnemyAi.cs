@@ -53,7 +53,7 @@ public class EnemyAi : MonoBehaviour {
 
 	void OnTriggerStay2D(Collider2D collision) {
         //print(Input.GetButtonDown("attack"));
-		if (collision.tag == "SwordCollider" && Input.GetButtonDown("attack") && WeaponPickup.getHands() == false && locked == 1 && WeaponPickup.getSword() == true) {
+		if (collision.tag == "SwordCollider" && (Input.GetButtonDown("attack") || Input.GetButtonDown("B")) && WeaponPickup.getHands() == false && locked == 1 && WeaponPickup.getSword() == true) {
             anim.SetBool("ifHit", true);
             if (anim.GetFloat("MoveY") == 1.0f) {
                 anim.SetFloat("HitY", 1.0f);
@@ -69,7 +69,7 @@ public class EnemyAi : MonoBehaviour {
    
 
 		}
-		if (collision.tag == "PitchforkCollider" && Input.GetButtonDown("attack") && WeaponPickup.getHands() == false && locked == 1 && WeaponPickup.getPitchfork() == true) {
+		if (collision.tag == "PitchforkCollider" && (Input.GetButtonDown("attack") || Input.GetButtonDown("B")) && WeaponPickup.getHands() == false && locked == 1 && WeaponPickup.getPitchfork() == true) {
 			anim.SetBool("ifHit", true);
 			if (anim.GetFloat("MoveY") == 1.0f) {
 				anim.SetFloat("HitY", 1.0f);

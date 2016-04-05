@@ -13,7 +13,7 @@ public class SwordWeapon : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		anim.SetBool ("ifAttacking", false);
-		if (Input.GetKey (KeyCode.F) && WeaponPickup.getSword() == true) {
+		if ((Input.GetKey (KeyCode.F) || Input.GetKey(KeyCode.JoystickButton3)) && WeaponPickup.getSword() == true) {
 			WeaponPickup.setSword (false);
 			WeaponPickup.setPickedUp (false);
 			anim.SetBool ("ifSwordEquipped", false);
@@ -30,7 +30,7 @@ public class SwordWeapon : MonoBehaviour {
 		} else {
 			anim.SetBool ("ifSwordEquipped", false);
 		}
-		if (WeaponPickup.getSword () == true && (Input.GetButtonDown ("attack") || Input.GetKey(KeyCode.JoystickButton2))) {
+		if (WeaponPickup.getSword () == true && (Input.GetButtonDown ("attack") || Input.GetButtonDown("B"))) {
 			anim.SetBool ("ifAttacking", true);
 			lastMovement = PlayerMovement.getLastMovementDirection ();
 			if (lastMovement == 1) {

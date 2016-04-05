@@ -20,7 +20,7 @@ public class PlayerHealth : MonoBehaviour {
     {
 		enemy = GameObject.FindGameObjectWithTag ("Enemy");
 		
-		if (Vector3.Distance (player.transform.position, enemy.transform.position) < 1f && locked == 1 && !Input.GetButtonDown("attack")) {
+		if (Vector3.Distance (player.transform.position, enemy.transform.position) < 1f && locked == 1 && !Input.GetButtonDown("attack") && !Input.GetButtonDown("B")) {
 			StartCoroutine (takeDamage ());
 		}
         if(locked >= 1)
@@ -48,13 +48,13 @@ public class PlayerHealth : MonoBehaviour {
 
 
    public void OnCollisionEnter2D(Collision2D collision) {
-		if (collision.gameObject.tag == "Enemy" && locked == 1 && !Input.GetButtonDown("attack")) {
+		if (collision.gameObject.tag == "Enemy" && locked == 1 && !Input.GetButtonDown("attack") && !Input.GetButtonDown("B")) {
 			StartCoroutine (takeDamage ());
          } 
 
 	}
 	public void OnCollisionStay2D(Collision2D coll) {
-		if (coll.gameObject.tag == "Enemy" && locked == 1 && !Input.GetButtonDown ("attack")) {
+		if (coll.gameObject.tag == "Enemy" && locked == 1 && !Input.GetButtonDown ("attack") && !Input.GetButtonDown("B")) {
 			StartCoroutine (takeDamage ());
 		}
 	}
