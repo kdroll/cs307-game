@@ -2,51 +2,47 @@ Initialize engine version: 5.3.4f1 (fdbb5133b820)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GTX 960 (ID=0x1401)
-    Vendor:   NVIDIA
-    VRAM:     1969 MB
+    Renderer: Intel(R) HD Graphics Family (ID=0xa16)
+    Vendor:   Intel
+    VRAM:     2018 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.103 seconds
-Platform assembly: C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\Public\Documents\Unity Projects\cs307-game\TestRun_Data\Managed\System.dll (this message is harmless)
-desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+Platform assembly: C:\Users\Nicolas Bratton\Desktop\cs307-game\TestRun_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Nicolas Bratton\Desktop\cs307-game\TestRun_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Nicolas Bratton\Desktop\cs307-game\TestRun_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Nicolas Bratton\Desktop\cs307-game\TestRun_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Nicolas Bratton\Desktop\cs307-game\TestRun_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Nicolas Bratton\Desktop\cs307-game\TestRun_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Nicolas Bratton\Desktop\cs307-game\TestRun_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Nicolas Bratton\Desktop\cs307-game\TestRun_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Nicolas Bratton\Desktop\cs307-game\TestRun_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Nicolas Bratton\Desktop\cs307-game\TestRun_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Nicolas Bratton\Desktop\cs307-game\TestRun_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Nicolas Bratton\Desktop\cs307-game\TestRun_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.178 seconds
+Platform assembly: C:\Users\Nicolas Bratton\Desktop\cs307-game\TestRun_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Nicolas Bratton\Desktop\cs307-game\TestRun_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
-<RI.Hid> Failed to create device file:
- 2 The system cannot find the file specified.
-
- 
-(Filename:  Line: 54)
-
 <RI> Input initialized.
 <RI> Initialized touch support.
 The referenced script on this Behaviour (Game Object 'Quit Button') is missing!
  
 (Filename:  Line: 1655)
 
-UnloadTime: 0.588800 ms
+UnloadTime: 1.870672 ms
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 4.470401 ms
+UnloadTime: 17.397881 ms
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 194.
-Total: 0.180480 ms (FindLiveObjects: 0.016000 ms CreateObjectMapping: 0.008640 ms MarkObjects: 0.147520 ms  DeleteObjects: 0.008000 ms)
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 511.
+Total: 1.010752 ms (FindLiveObjects: 0.107545 ms CreateObjectMapping: 0.071845 ms MarkObjects: 0.816634 ms  DeleteObjects: 0.012941 ms)
 
-The referenced script on this Behaviour (Game Object 'Quit Button') is missing!
+levelHeight = 64
  
-(Filename:  Line: 1655)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.304000 ms
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 218.
-Total: 0.187840 ms (FindLiveObjects: 0.010880 ms CreateObjectMapping: 0.007680 ms MarkObjects: 0.166400 ms  DeleteObjects: 0.002560 ms)
+levelWidth = 64
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2a50 -> priority: 1 
+  Thread -> id: c24 -> priority: 1 
