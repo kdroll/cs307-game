@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour {
 
-    int health = 100;
+     public static int health = 100;
     double locked = 0f;
 	public static bool isDead = false;
 
@@ -45,8 +45,8 @@ public class PlayerHealth : MonoBehaviour {
       //  }
 
 	//}
-	public void OnTriggerStay2D(Collider2D coll) {
-		if (coll.tag == "Enemy" && locked == 1 && !Input.GetButtonDown ("attack")) {
+	public void OnCollisionStay2D(Collision2D coll) {
+		if (coll.gameObject.tag == "Enemy" && locked == 1 && !Input.GetButtonDown ("attack")) {
 			StartCoroutine (takeDamage ());
 		}
 	}
