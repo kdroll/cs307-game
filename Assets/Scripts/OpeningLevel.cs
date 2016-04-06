@@ -257,10 +257,11 @@ public class OpeningLevel : MonoBehaviour {
             print("point " + i + " : x = " + positions[i].X + "   y = " + positions[i].Y);
         }*/
 
-        
+        // Dispersion of grass/flower tiles. Higher number means less flowers.
+        int grassDispersion = 60;
 		for (int y = 0; y < levelHeight; y++) {
 			for (int x = 0; x < levelWidth; x++) {
-                randGrass = rand.Next(1, 20);
+                randGrass = rand.Next(1, grassDispersion);
                 if (tileColors [x + y * levelWidth] == grassColor) {
                     if (randGrass == 2)
                         Instantiate(grassTile2, new Vector3(x, y), Quaternion.identity);
