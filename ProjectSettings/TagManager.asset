@@ -10,6 +10,10 @@ TagManager:
   - SwordCollider
   - PitchforkCollider
   - Obstacle
+  - Pepper
+  - Cupcake
+  - ToxicWaste
+  - Bacon
   layers:
   - Default
   - TransparentFX
