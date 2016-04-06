@@ -133,8 +133,8 @@ public class EnemyAi : MonoBehaviour {
 						//transform.position = Vector2.MoveTowards (transform.position, new Vector2(transform.position.x + 7f, transform.position.y), speed * Time.deltaTime);
 						transform.position = Vector2.MoveTowards (transform.position, target.position, speed * Time.deltaTime);
 					}
-				}*/
-				//Debug.DrawRay (hit, transform.position, Color.red);
+				}
+				Debug.DrawRay (hit, transform.position, Color.red);*/
 
                 //StartCoroutine(wait());
                 newPosition = enemyTransform.position;
