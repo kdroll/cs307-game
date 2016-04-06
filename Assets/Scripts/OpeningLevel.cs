@@ -11,7 +11,10 @@ public class OpeningLevel : MonoBehaviour {
 	public Color spawnPointColor;
 	public Color enemySpawnPointColor;
 
-	public Transform grassTile;
+	public Transform grassTile1;
+    public Transform grassTile2;
+    public Transform grassTile3;
+    public Transform grassTile4;
 	public Transform stoneTile;
 
 	private Color[] tileColors;
@@ -121,7 +124,7 @@ public class OpeningLevel : MonoBehaviour {
 			}
 		}
         //random boundaries
-        int randx, randy, adjacent, howMany;
+        int randx, randy, adjacent, howMany, randGrass;
 		int divisor = 9;
 		
 		for (int a = 0; a < density; a++) { 
@@ -240,27 +243,56 @@ public class OpeningLevel : MonoBehaviour {
             print("point " + i + " : x = " + positions[i].X + "   y = " + positions[i].Y);
         }*/
 
-
+        
 		for (int y = 0; y < levelHeight; y++) {
 			for (int x = 0; x < levelWidth; x++) {
-
-				if (tileColors [x + y * levelWidth] == grassColor) {
-					Instantiate (grassTile, new Vector3 (x, y), Quaternion.identity);
-				}
+                randGrass = rand.Next(1, 20);
+                if (tileColors [x + y * levelWidth] == grassColor) {
+                    if (randGrass == 2)
+                        Instantiate(grassTile2, new Vector3(x, y), Quaternion.identity);
+                    else if (randGrass == 3)
+                        Instantiate(grassTile3, new Vector3(x, y), Quaternion.identity);
+                    else if (randGrass == 4)
+                        Instantiate(grassTile4, new Vector3(x, y), Quaternion.identity);
+                    else
+                        Instantiate(grassTile1, new Vector3(x, y), Quaternion.identity);
+                }
 
 				else if (tileColors [(x + y * levelWidth)] == stoneColor) {
-					Instantiate (grassTile, new Vector3 (x, y), Quaternion.identity);
-				}
+                    if (randGrass == 2)
+                        Instantiate(grassTile2, new Vector3(x, y), Quaternion.identity);
+                    else if (randGrass == 3)
+                        Instantiate(grassTile3, new Vector3(x, y), Quaternion.identity);
+                    else if (randGrass == 4)
+                        Instantiate(grassTile4, new Vector3(x, y), Quaternion.identity);
+                    else
+                        Instantiate(grassTile1, new Vector3(x, y), Quaternion.identity);
+                }
 
 				else if (tileColors[x + y * levelWidth] == spawnPointColor) {
-					Instantiate (grassTile, new Vector3 (x, y), Quaternion.identity);
-					Vector2 pos = new Vector2(x,y);
+                    if (randGrass == 2)
+                        Instantiate(grassTile2, new Vector3(x, y), Quaternion.identity);
+                    else if (randGrass == 3)
+                        Instantiate(grassTile3, new Vector3(x, y), Quaternion.identity);
+                    else if (randGrass == 4)
+                        Instantiate(grassTile4, new Vector3(x, y), Quaternion.identity);
+                    else
+                        Instantiate(grassTile1, new Vector3(x, y), Quaternion.identity);
+
+                    Vector2 pos = new Vector2(x,y);
 					player.transform.position = pos;
 
 				}
 				else if (tileColors[x + y * levelWidth] == enemySpawnPointColor) {
-					Instantiate (grassTile, new Vector3 (x, y), Quaternion.identity);
-					Vector2 pos1 = new Vector2(x,y);
+                    if (randGrass == 2)
+                        Instantiate(grassTile2, new Vector3(x, y), Quaternion.identity);
+                    else if (randGrass == 3)
+                        Instantiate(grassTile3, new Vector3(x, y), Quaternion.identity);
+                    else if (randGrass == 4)
+                        Instantiate(grassTile4, new Vector3(x, y), Quaternion.identity);
+                    else
+                        Instantiate(grassTile1, new Vector3(x, y), Quaternion.identity);
+                    Vector2 pos1 = new Vector2(x,y);
 					Vector2 pos2 = new Vector2 (x + 2f, y + 2f);
 					Vector2 pos3 = new Vector2 (x + 3f, y + 3f);
 					enemy.transform.position = pos1;
