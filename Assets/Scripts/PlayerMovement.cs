@@ -5,8 +5,8 @@ public class PlayerMovement : MonoBehaviour {
     private Vector3 movementVector;
     private CharacterController characterController;
 
-    public static float speedModifier;
-    public static int numSpeedUpgrades;
+    public static float speedModifier = 1;
+    public static int numSpeedUpgrades = 0;
     public float sprintModifier; 
 	private int currentSpeed;
 	Animator anim;
@@ -20,8 +20,6 @@ public class PlayerMovement : MonoBehaviour {
 	void Start () {
         //characterController = GetComponent<CharacterController>();
         sprintModifier = 3;
-        speedModifier = 1;
-        numSpeedUpgrades = 0;
         anim = this.transform.GetComponent<Animator>();
 		sprinting = false;
 	}

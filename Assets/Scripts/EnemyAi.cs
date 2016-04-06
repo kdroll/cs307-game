@@ -23,12 +23,11 @@ public class EnemyAi : MonoBehaviour {
     int playerDied = 0;
 	float enemyHealth;
 	float locked;
-    public static int gold;
+    public static int gold = 100000;
 
 
     public void Start () {
         //obtain the game object Transform
-        gold = 100000;
 		enemyTransform = this.GetComponent<Transform>();
 		anim = this.GetComponent<Animator> ();
 		enemyHealth = 30;

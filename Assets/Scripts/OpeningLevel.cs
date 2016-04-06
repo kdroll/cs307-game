@@ -45,6 +45,7 @@ public class OpeningLevel : MonoBehaviour {
 		pitchfork = GameObject.FindGameObjectWithTag ("Pitchfork");
 		sword = GameObject.FindGameObjectWithTag ("Sword");
 		enemy = GameObject.FindGameObjectWithTag("Enemy");
+        PlayerHealth.isDead = false;
 		levelHeight = levelTexture.height;
 		levelWidth = levelTexture.width;
 		loadLevel ();

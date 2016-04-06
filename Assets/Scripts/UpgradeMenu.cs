@@ -13,6 +13,9 @@ public class UpgradeMenu : MonoBehaviour {
 	void Update () {
 		if (PlayerHealth.isDead == true) {
 			upgradeMenuCanvas.SetActive (true);
-		}
+		} else
+        {
+            upgradeMenuCanvas.SetActive(false);
+        }
 	}
 }

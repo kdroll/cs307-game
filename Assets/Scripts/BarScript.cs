@@ -20,7 +20,7 @@ public class BarScript : MonoBehaviour {
 
 
 	void handleBar() {
-		content.fillAmount = Map(PlayerHealth.health, 0f, 100f, 0f,1f);
+		content.fillAmount = Map(PlayerHealth.health, 0f, PlayerHealth.startHealth, 0f,1f);
 	}
 
 	private float Map(float value, float inMin, float inMax, float outMin, float outMax) {

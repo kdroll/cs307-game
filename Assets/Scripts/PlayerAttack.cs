@@ -3,14 +3,12 @@ using System.Collections;
 
 public class PlayerAttack : MonoBehaviour {
 	Animator anim;
-    public static float damageModifier;
-    public static int numDamageUpgrades;
+    public static float damageModifier = 1;
+    public static int numDamageUpgrades = 0;
 	//bool isAttacking;
 	// Use this for initialization
 	public float cooldown = 0.0f;
 	void Start () {
-        damageModifier = 1;
-        numDamageUpgrades = 0;
         anim = GetComponent<Animator> ();
 	}
 	

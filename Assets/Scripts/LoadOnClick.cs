@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿ using UnityEngine;
 using System.Collections;
 
 public class LoadOnClick : MonoBehaviour
@@ -11,6 +11,13 @@ public class LoadOnClick : MonoBehaviour
     {
         // loadingImage.SetActive(true);
         Application.LoadLevel(level);
+    }
+
+    public void LoadLevel(int level)
+    {
+        // loadingImage.SetActive(true);
+        Application.LoadLevel(level);
+        //UpgradeMenu.upgradeMenuCanvas.SetActive(false);
     }
 
     public void ExitScene()
@@ -41,7 +48,7 @@ public class LoadOnClick : MonoBehaviour
 
         }
         else {
-            PlayerMovement.speedModifier += .1f;
+            PlayerMovement.speedModifier += .02f;
             EnemyAi.gold -= 50 + (50 * PlayerMovement.numSpeedUpgrades);
             PlayerMovement.numSpeedUpgrades++;
             print("Speed modifier: " + PlayerMovement.speedModifier);
