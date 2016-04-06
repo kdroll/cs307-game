@@ -101,8 +101,8 @@ public class OpeningLevel : MonoBehaviour {
 		tileColors = levelTexture.GetPixels ();
 		System.Random rand = new System.Random ();
 
-		print ("levelHeight = " + levelHeight);
-		print ("levelWidth = " + levelWidth);
+		//print ("levelHeight = " + levelHeight);
+		//print ("levelWidth = " + levelWidth);
 
 
 		//boundary left

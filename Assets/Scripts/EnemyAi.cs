@@ -131,15 +131,15 @@ public class EnemyAi : MonoBehaviour {
 
 
 				//Use Phyics.RayCast to detect the obstacle
-				print(transform.position.ToString());
-				print (target.position.ToString());
+				//print(transform.position.ToString());
+				//print (target.position.ToString());
 				Vector3 dir = target.position - transform.position;
 				//print((Physics2D.Raycast (transform.position, dir,hit, 100f)));
 				hit = Physics2D.Raycast (transform.position, dir.normalized, 100f);
-				print ("enemypos = " + transform.position + " hit = " + hit.point);
+				//print ("enemypos = " + transform.position + " hit = " + hit.point);
 				if (hit.collider != null) {
-					print (hit.point);
-					print ("hello");
+					//print (hit.point);
+					//print ("hello");
 					//Debug.DrawRay (hit.transform.position, transform.position, Color.red);
 					Vector3 debugLine = transform.position - new Vector3(hit.point.x, hit.point.y, 0);
 					Debug.DrawRay (hit.point, debugLine, Color.red);
@@ -158,13 +158,13 @@ public class EnemyAi : MonoBehaviour {
 							for (int i = (int)hit.point.x; OpeningLevel.walls[i,(int)hit.point.y] != 0; i--) {
 								left++;
 							}
-							print ("right = " + right + " left = " + left);
+							//print ("right = " + right + " left = " + left);
 							if (left > right) {
 								go.Set (go.x + 10, go.y, go.z);
-								print ("moving right");
+								//print ("moving right");
 							} else if (right > left) {
 								go.Set (go.x - 10, go.y, go.z);
-								print ("moving left");
+								//print ("moving left");
 							} else {
 								StartCoroutine( waitsleep (transform, go));
 							}
