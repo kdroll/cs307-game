@@ -30,6 +30,9 @@ public class OpeningLevel : MonoBehaviour {
 
 	GameObject[] amount;
 
+	public static int[,] walls = new int[64, 64];
+
+
 	// Use this for initialization
 	
     public struct Point
@@ -52,6 +55,11 @@ public class OpeningLevel : MonoBehaviour {
         PlayerHealth.isDead = false;
 		levelHeight = levelTexture.height;
 		levelWidth = levelTexture.width;
+		for (int i = 0; i < 64; i++) {
+			for (int j = 0; j < 64; j++) {
+				walls [i,j] = 0;
+			}
+		}
 		loadLevel ();
 
 
@@ -143,6 +151,7 @@ public class OpeningLevel : MonoBehaviour {
                 && checkIfPosEmpty(new Vector3(randx, randy)))
             {
                 Instantiate(stoneTile, new Vector3(randx, randy), Quaternion.identity);
+				walls [(int)randx,(int)randy] = 1;
                 Point p = new Point();
                 p.X = randx;
                 p.Y = randy;
@@ -170,6 +179,7 @@ public class OpeningLevel : MonoBehaviour {
                             positions[pointIndex] = p;
                             pointIndex++;
                             Instantiate(stoneTile, new Vector3(randx - i, randy), Quaternion.identity);
+							walls [(int)(randx - i),(int)randy] = 1;
                         }
                     }
                 }
@@ -191,6 +201,7 @@ public class OpeningLevel : MonoBehaviour {
                             positions[pointIndex] = p;
                             pointIndex++;
                             Instantiate(stoneTile, new Vector3(randx + i, randy), Quaternion.identity);
+							walls [(int)(randx + i),(int)randy] = 1;
                         }
                     }
                 }
@@ -212,6 +223,7 @@ public class OpeningLevel : MonoBehaviour {
                             positions[pointIndex] = p;
                             pointIndex++;
                             Instantiate(stoneTile, new Vector3(randx, randy - i), Quaternion.identity);
+							walls [(int)randx,(int)(randy - i)] = 1;
                         }
                     }
                 }
@@ -233,6 +245,7 @@ public class OpeningLevel : MonoBehaviour {
                             positions[pointIndex] = p;
                             pointIndex++;
                             Instantiate(stoneTile, new Vector3(randx, randy + i), Quaternion.identity);
+							walls [(int)randx,(int)(randy + i)] = 1;
                         }
                     }
                 }
