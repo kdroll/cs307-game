@@ -124,7 +124,7 @@ public class EnemyAi : MonoBehaviour {
                 oldPosition = enemyTransform.position;
                 //move towards the player
 				transform.position = Vector2.MoveTowards (transform.position, target.position, speed * Time.deltaTime);
-				Transform leftRay = transform;
+				/*Transform leftRay = transform;
 				Transform rightRay = transform;
 				//Use Phyics.RayCast to detect the obstacle
 				if (Physics.Raycast (enemyTransform.position, new Vector3(1,0,0), 10) || Physics.Raycast(enemyTransform.position, new Vector3(1,0,0), 10)) {
@@ -134,7 +134,7 @@ public class EnemyAi : MonoBehaviour {
 						transform.position = Vector2.MoveTowards (transform.position, target.position, speed * Time.deltaTime);
 					}
 				}
-				Debug.DrawRay (hit, transform.position, Color.red);
+				Debug.DrawRay (hit, transform.position, Color.red);*/
 
                 //StartCoroutine(wait());
                 newPosition = enemyTransform.position;
