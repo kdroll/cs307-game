@@ -39,9 +39,9 @@ public class PlayerHealth : MonoBehaviour {
         if(health <= 0)
         {
 			isDead = true;
+			EnemyAi.totalScore += (int)(System.Math.Truncate (TimeScript.roundedTime * 10));
             Destroy(OpeningLevel.player);
         }
-        //print("locked = " + locked);
     }
 
     private IEnumerator takeDamage() {
