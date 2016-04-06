@@ -5,8 +5,7 @@ using UnityEngine.UI;
 public class TimeScript : MonoBehaviour {
 
     public Text timeAmount;
-	float truncatedTime;
-	public static float roundedTime; 
+    float truncatedTime, roundedTime; 
 
 
     // Use this for initialization

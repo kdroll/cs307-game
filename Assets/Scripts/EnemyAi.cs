@@ -24,7 +24,6 @@ public class EnemyAi : MonoBehaviour {
     int playerDied = 0;
 	float enemyHealth;
     public static int numEnemiesDestroyed = 0;
-	public static int totalScore = 0;
 	float locked;
     public static int gold = 100000;
 
@@ -42,7 +41,6 @@ public class EnemyAi : MonoBehaviour {
 		yield return new WaitForSeconds (0.3f);
         gold += 10;
         numEnemiesDestroyed++;
-		totalScore += 10;
 		Destroy(this.gameObject);
 	}
 	IEnumerator waitsleep(Transform transform, Vector3 go) {
