@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour {
     double locked = 0f;
 	public static bool isDead = false;
 	GameObject player;
-	GameObject enemy;
+	GameObject[] enemy;
 
 	// Use this for initialization
 	void Start () {
@@ -22,10 +22,12 @@ public class PlayerHealth : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-		enemy = GameObject.FindGameObjectWithTag ("Enemy");
-		
-		if (Vector3.Distance (player.transform.position, enemy.transform.position) < 1f && locked == 1 && !Input.GetButtonDown("attack") && !Input.GetButtonDown("B")) {
-			StartCoroutine (takeDamage ());
+		enemy = GameObject.FindGameObjectsWithTag ("Enemy");
+		//print(Vector2.Distance(player.transform.position, enemy.transform.position));
+		for (int i = 0; i < enemy.Length; i++) {
+			if (Vector2.Distance (player.transform.position, enemy[i].transform.position) < 1f && locked == 1 && !Input.GetButtonDown ("attack") && !Input.GetButtonDown ("B")) {
+				StartCoroutine (takeDamage ());
+			}
 		}
         if(locked >= 1)
         {
