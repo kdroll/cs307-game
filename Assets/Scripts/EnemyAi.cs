@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class EnemyAi : MonoBehaviour {
 
@@ -22,8 +23,11 @@ public class EnemyAi : MonoBehaviour {
     int firstRunUpdate = 0;
     int playerDied = 0;
 	float enemyHealth;
+<<<<<<< HEAD
     public static int numEnemiesDestroyed = 0;
 	public static int totalScore = 0;
+=======
+>>>>>>> origin/master
 	float locked;
     public static int gold = 100000;
 
@@ -40,8 +44,11 @@ public class EnemyAi : MonoBehaviour {
 	IEnumerator wait() {
 		yield return new WaitForSeconds (0.3f);
         gold += 10;
+<<<<<<< HEAD
         numEnemiesDestroyed++;
 		totalScore += 10;
+=======
+>>>>>>> origin/master
 		Destroy(this.gameObject);
 	}
 	IEnumerator waitsleep(Transform transform, Vector3 go) {
@@ -153,28 +160,223 @@ public class EnemyAi : MonoBehaviour {
 						//transform.position = Vector2.MoveTowards (transform.position, new Vector2(transform.position.x + 7f, transform.position.y), speed * Time.deltaTime);
 						//transform.position = Vector2.MoveTowards (transform.position, target.position, speed * Time.deltaTime);
 						Vector3 go = transform.position;
-						if (hit.point.y < transform.position.y) {
+                       
+                        float hitx = (float)Math.Round(hit.point.x, 0, MidpointRounding.AwayFromZero);
+                        float hity = (float)Math.Round(hit.point.y, 0, MidpointRounding.AwayFromZero);
+                        //print(hitx + " " + hity);
+
+                        Vector2 p1 = new Vector2(3, 3);
+                        Vector2 p2 = new Vector2(2, 4);
+                        float angle = Mathf.Atan2(transform.position.y - hit.point.y, transform.position.x - hit.point.x) * 180 / Mathf.PI;
+
+                        //print("------------------------------------angle = " + angle);
+
+                        //if (hity <= transform.position.y) {
+                        if(angle >= 45 && angle <= 135) { // above
 							int left = 0;
 							int right = 0;
-							for (int i = (int)hit.point.x; OpeningLevel.walls[i,(int)hit.point.y] != 0; i++) {
-								right++;
-							}
-							for (int i = (int)hit.point.x; OpeningLevel.walls[i,(int)hit.point.y] != 0; i--) {
-								left++;
-							}
-							//print ("right = " + right + " left = " + left);
-							if (left > right) {
+                            int i;
+                            for (i = (int)hitx; OpeningLevel.walls[i, (int)hity] != 0; i++)
+                            {
+                                right++;
+                            }
+                            //print("enemy pos = " + transform.position.x + "," + transform.position.y + "  wall at that pos and up one = " + ((int)(transform.position.x + 1)) + "," + ((int)(hity + 1)));
+                            //print("wall = " + OpeningLevel.walls[(int)transform.position.x + 1, (int)hity + 1]);
+                            if (OpeningLevel.walls[(int)transform.position.x + 1, (int)hity + 1] == 1)
+                            {
+                                right = 100;
+                            }
+                            for (i = (int)hitx; OpeningLevel.walls[i, (int)hity] != 0; i--)
+                            {
+                                left++;
+                            }
+                            if (OpeningLevel.walls[(int)transform.position.x - 1, (int)hity + 1] == 1)
+                            {
+                                left = 100;
+                            }
+                          //  print ("right = " + right + " left = " + left);
+							if (left > right-1) {
 								go.Set (go.x + 10, go.y, go.z);
-								//print ("moving right");
-							} else if (right > left) {
+							//	print ("moving right");
+							} else if (right > left-1) {
 								go.Set (go.x - 10, go.y, go.z);
-								//print ("moving left");
+							//	print ("moving left");
 							} else {
-								StartCoroutine( waitsleep (transform, go));
+                                System.Random rnd = new System.Random();
+                                int month = rnd.Next(1, 2);
+                                if (month == 1)
+                                {
+                                    go.Set(go.x + 10, go.y, go.z);
+                              //      print("going right");
+                                } else
+                                {
+                                    go.Set(go.x - 10, go.y, go.z);
+                                //    print("going left");
+                                }
 							}
 						}
+                        //if (hity >= transform.position.y) {
+                        if(angle <= -45 && angle >= -135) {//below
+                            int left = 0;
+                            int right = 0;
+                            int i;
+                            for (i = (int)hitx; OpeningLevel.walls[i, (int)hity] != 0; i++)
+                            {
+                                right++;
+                            }
+                            //print("enemy pos = " + transform.position.x + "," + transform.position.y + "  wall at that pos and up one = " + ((int)(transform.position.x + 1)) + "," + ((int)(hity - 1)));
+                            //print("wall = " + OpeningLevel.walls[(int)transform.position.x + 1, (int)hity - 1]);
+                            if (OpeningLevel.walls[(int)transform.position.x+1, (int)hity - 1] == 1)
+                            {
+                                right = 100;
+                            }
+                            for (i = (int)hitx; OpeningLevel.walls[i, (int)hity] != 0; i--)
+                            {
+                                left++;
+                            }
+                            if (OpeningLevel.walls[(int)transform.position.x - 1, (int)hity - 1] == 1)
+                            {
+                                left = 100;
+                            }
 
-						transform.position = Vector2.MoveTowards (transform.position, go, speed * Time.deltaTime);
+                            //print("right = " + right + " left = " + left);
+                            if (left > right - 1)
+                            {
+                                go.Set(go.x + 10, go.y, go.z);
+                              //  print("moving right");
+                            }
+                            else if (right > left - 1)
+                            {
+                                go.Set(go.x - 10, go.y, go.z);
+                                //print("moving left");
+                            }
+                            else {
+                                System.Random rnd = new System.Random();
+                                int month = rnd.Next(1, 2);
+                                if (month == 1)
+                                {
+                                    go.Set(go.x + 10, go.y, go.z);
+                                  //  print("going right");
+                                }
+                                else
+                                {
+                                    go.Set(go.x - 10, go.y, go.z);
+                                    //print("going left");
+                                }
+                            }
+                        }
+                        //if (hitx <= transform.position.x) {
+                        if( angle < 45 && angle > -45) { //right
+                            int left = 0;
+                            int right = 0;
+                            int i;
+                            for (i = (int)hity; OpeningLevel.walls[(int)hitx, i] != 0; i++)
+                            {
+                                right++;
+                            }
+                            //print("enemy pos = " + transform.position.x + "," + transform.position.y + "  wall at that pos and up one = " + ((int)(transform.position.x + 1)) + "," + ((int)(hity + 1)));
+                            //print("wall = " + OpeningLevel.walls[(int)transform.position.x + 1, (int)hity + 1]);
+                            if (OpeningLevel.walls[(int)hitx + 1, (int)transform.position.y + 1] == 1)
+                            {
+                                right = 100;
+                            }
+                            for (i = (int)hity; OpeningLevel.walls[(int)hitx,i] != 0; i--)
+                            {
+                                left++;
+                            }
+                            if (OpeningLevel.walls[(int)hitx + 1, (int)transform.position.y - 1] == 1)
+                            {
+                                left = 100;
+                            }
+                           // print("right = " + right + " left = " + left);
+                            if (left > right - 1)
+                            {
+                                go.Set(go.x, go.y + 10, go.z);
+                             //   print("moving right");
+                            }
+                            else if (right > left - 1)
+                            {
+                                go.Set(go.x, go.y - 10, go.z);
+                              //  print("moving left");
+                            }
+                            else {
+                                System.Random rnd = new System.Random();
+                                int month = rnd.Next(1, 2);
+                                if (month == 1)
+                                {
+                                    go.Set(go.x, go.y + 10, go.z);
+                                //    print("going right");
+                                }
+                                else
+                                {
+                                    go.Set(go.x, go.y - 10, go.z);
+                                  //  print("going left");
+                                }
+                            }
+                        }
+                        //if (hitx >= transform.position.x) {
+                        if(angle > 135 || angle < -135) { //left
+                            int left = 0;
+                            int right = 0;
+                            int i;
+                            for (i = (int)hity; OpeningLevel.walls[(int)hitx, i] != 0; i++)
+                            {
+                                right++;
+                            }
+                            //print("enemy pos = " + transform.position.x + "," + transform.position.y + "  wall at that pos and up one = " + ((int)(transform.position.x + 1)) + "," + ((int)(hity + 1)));
+                            //print("wall = " + OpeningLevel.walls[(int)transform.position.x + 1, (int)hity + 1]);
+                            if (OpeningLevel.walls[(int)hitx + 1, (int)transform.position.y - 1] == 1)
+                            {
+                                right = 100;
+                            }
+                            for (i = (int)hity; OpeningLevel.walls[(int)hitx, i] != 0; i--)
+                            {
+                                left++;
+                            }
+                            if (OpeningLevel.walls[(int)hitx - 1, (int)transform.position.y - 1] == 1)
+                            {
+                                left = 100;
+                            }
+                            //print("right = " + right + " left = " + left);
+                            if (left > right - 1)
+                            {
+                                go.Set(go.x, go.y + 10, go.z);
+                              //  print("moving right");
+                            }
+                            else if (right > left - 1)
+                            {
+                                go.Set(go.x, go.y - 10, go.z);
+                                //print("moving left");
+                            }
+                            else {
+                                System.Random rnd = new System.Random();
+                                int month = rnd.Next(1, 2);
+                                if (month == 1)
+                                {
+                                    go.Set(go.x, go.y + 10, go.z);
+                                  //  print("going right");
+                                }
+                                else
+                                {
+                                    go.Set(go.x, go.y - 10, go.z);
+                                    //print("going left");
+                                }
+                            }
+                        }
+                        if(angle == 45)
+                        {
+                            go.Set(go.x, -64, 0);
+                        } else if(angle == -45)
+                        {
+                            go.Set(go.x, 64, 0);
+                        } else if(angle == -135)
+                        {
+                            go.Set(go.x, 64, 0);
+                        } else if(angle == 135)
+                        {
+                            go.Set(go.x, -64, 0);
+                        }                    
+                        transform.position = Vector2.MoveTowards (transform.position, go, speed/40);
 
 					}
 				}
