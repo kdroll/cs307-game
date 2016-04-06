@@ -53,6 +53,7 @@ public class OpeningLevel : MonoBehaviour {
 		sword = GameObject.FindGameObjectWithTag ("Sword");
 		enemy = GameObject.FindGameObjectWithTag("Enemy");
         PlayerHealth.isDead = false;
+        EnemyAi.numEnemiesDestroyed = 0;
 		levelHeight = levelTexture.height;
 		levelWidth = levelTexture.width;
 		for (int i = 0; i < 64; i++) {
