@@ -16,6 +16,7 @@ public class OpeningLevel : MonoBehaviour {
     public Transform grassTile3;
     public Transform grassTile4;
 	public Transform stoneTile;
+    public Transform wallTile;
 
 	private Color[] tileColors;
 
@@ -99,28 +100,28 @@ public class OpeningLevel : MonoBehaviour {
 		//boundary left
 		for(int leftBW = 0; leftBW < 7; leftBW++) {
 			for(int leftBH = 0; leftBH < 64; leftBH++) {
-				Instantiate(stoneTile, new Vector3 ( leftBW, leftBH), Quaternion.identity);
+				Instantiate(wallTile, new Vector3 ( leftBW, leftBH), Quaternion.identity);
 			}
 		}
 
 		//boundary right
 		for(int rightBW = 0; rightBW < 7; rightBW++) {
 			for(int rightBH = 0; rightBH < 64; rightBH++) {
-				Instantiate(stoneTile, new Vector3 ( 64 - rightBW, rightBH), Quaternion.identity);
+				Instantiate(wallTile, new Vector3 ( 64 - rightBW, rightBH), Quaternion.identity);
 			}
 		}
 
 		//boundary down
 		for(int downBW = 3; downBW < 62; downBW++) {
 			for(int downBH = 0; downBH < 7; downBH++) {
-				Instantiate(stoneTile, new Vector3 ( downBW, downBH), Quaternion.identity);
+				Instantiate(wallTile, new Vector3 ( downBW, downBH), Quaternion.identity);
 			}
 		}
 
 		//boundary up
 		for(int upBW = 3; upBW < 62; upBW++) {
 			for(int upBH = 57; upBH < 64; upBH++) {
-				Instantiate(stoneTile, new Vector3 ( upBW, upBH), Quaternion.identity);
+				Instantiate(wallTile, new Vector3 ( upBW, upBH), Quaternion.identity);
 			}
 		}
         //random boundaries
