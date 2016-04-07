@@ -11,3 +11,7 @@ EditorBuildSettings:
     path: Assets/OpeningLevel.unity
   - enabled: 1
     path: Assets/Credits.unity
+  - enabled: 1
+    path: Assets/Options.unity
+  - enabled: 1
+    path: Assets/HighScores.unity
