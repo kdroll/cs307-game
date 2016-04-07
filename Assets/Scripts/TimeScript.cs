@@ -21,7 +21,7 @@ public class TimeScript : MonoBehaviour {
     }
 
     void handleTime() {
-        truncatedTime = (float)(System.Math.Truncate((double)Time.time * 100.0) / 100.0);
+        truncatedTime = (float)(System.Math.Truncate((double)Time.timeSinceLevelLoad * 100.0) / 100.0);
         roundedTime = (float)(System.Math.Round((double)truncatedTime, 2));
         timeAmount.text = "" + roundedTime;
     }

@@ -3,9 +3,9 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour {
 
-    public static int startHealth;
-    public static int health;
-    public static int healthModifier = 0;
+    public static float startHealth;
+    public static float health;
+    public static float healthModifier = 0;
     public static int numHealthUpgrades = 0;
     double locked = 0f;
 	public static bool isDead = false;
