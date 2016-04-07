@@ -6,9 +6,9 @@ public class PauseMenu : MonoBehaviour {
 
     public Text damageAmount, speedAmount, healthAmount;
     public string mainMenu;
-    public bool isPaused;
+    public static bool isPaused;
     public GameObject pauseMenuCanvas;
-    float roundedDamage, roundedSpeed, roundedHealth;
+    float roundedDamage, roundedSpeed, roundedHealth, roundedMaxHealth;
 	
 	// Update is called once per frame
 	void Update () {
@@ -21,9 +21,10 @@ public class PauseMenu : MonoBehaviour {
             roundedSpeed = (float)System.Math.Round(PlayerMovement.speedModifier, 2);
             speedAmount = GameObject.Find("Paused Speed Mod").GetComponent<Text>();
             speedAmount.text = "" + roundedSpeed + "x";
-            roundedHealth = (float)System.Math.Round(PlayerHealth.healthModifier, 2);
+            roundedHealth = (float)System.Math.Round(PlayerHealth.health, 2);
+            roundedMaxHealth = (float)System.Math.Round((PlayerHealth.startHealth), 2);
             healthAmount = GameObject.Find("Paused Health Mod").GetComponent<Text>();
-            healthAmount.text = "+" + roundedHealth;
+            healthAmount.text = "" + roundedHealth + "/" + roundedMaxHealth;
             Time.timeScale = 0f;
         } else
         {
