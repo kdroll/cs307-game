@@ -18,12 +18,14 @@ public class ScoreScript : MonoBehaviour {
     }
 
 	IEnumerator wait() {
-		yield return new WaitForSeconds (0.2f);
+		yield return new WaitForSeconds (0.3f);
 	}
 
     void handleScore() {
-		print ((EnemyAi.numEnemiesDestroyed * 5) + EnemyAi.totalScore);
-		Score.text = "" + (EnemyAi.numEnemiesDestroyed*5) + EnemyAi.totalScore;
+        print(EnemyAi.totalScore);
+        print(EnemyAi.numEnemiesDestroyed * 5);
+        print((EnemyAi.numEnemiesDestroyed * 5) + EnemyAi.totalScore);
+        Score.text = "" + ((EnemyAi.numEnemiesDestroyed*5) + EnemyAi.totalScore);
 		wait ();
     }
 }
