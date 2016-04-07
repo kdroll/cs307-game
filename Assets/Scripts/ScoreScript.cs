@@ -22,10 +22,9 @@ public class ScoreScript : MonoBehaviour {
 	}
 
     void handleScore() {
-        print(EnemyAi.totalScore);
-        print(EnemyAi.numEnemiesDestroyed * 5);
-        print((EnemyAi.numEnemiesDestroyed * 5) + EnemyAi.totalScore);
-        Score.text = "" + ((EnemyAi.numEnemiesDestroyed*5) + EnemyAi.totalScore);
-		wait ();
+        if (!Score.text.Equals("" + ((EnemyAi.numEnemiesDestroyed * 5) + EnemyAi.totalScore))) {
+            Score.text = "" + ((EnemyAi.numEnemiesDestroyed * 5) + EnemyAi.totalScore);
+            wait();
+        }
     }
 }

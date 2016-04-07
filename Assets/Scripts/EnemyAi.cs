@@ -20,7 +20,6 @@ public class EnemyAi : MonoBehaviour {
 	bool ifThereIsAnything = false;
 	RaycastHit2D hit;
 
-    //hi
     int firstRunUpdate = 0;
     int playerDied = 0;
 	float enemyHealth;
