@@ -48,6 +48,7 @@ public class OpeningLevel : MonoBehaviour {
     // Use this for initialization
     void Start () {
         Time.timeScale = 1;
+        PerkMenu.inPerkMenu = false;
 		player = GameObject.FindGameObjectWithTag("Player");
 		pitchfork = GameObject.FindGameObjectWithTag ("Pitchfork");
 		sword = GameObject.FindGameObjectWithTag ("Sword");

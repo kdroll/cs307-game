@@ -1,4 +1,4 @@
-﻿ using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class LoadOnClick : MonoBehaviour
@@ -20,9 +20,18 @@ public class LoadOnClick : MonoBehaviour
         //UpgradeMenu.upgradeMenuCanvas.SetActive(false);
     }
 
+    public void advanceToPerkMenu() {
+        PerkMenu.inPerkMenu = true;
+    }
+
     public void ExitScene()
     {
         Application.Quit();
+    }
+
+    public void acquirePerk(int perkNumber) {
+        PlayerHealth.perks[perkNumber] = 1;
+        print("perk" + perkNumber + " = " + PlayerHealth.perks[perkNumber]);
     }
 
     public void increaseDamage()

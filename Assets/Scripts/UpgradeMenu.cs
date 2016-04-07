@@ -9,9 +9,13 @@ public class UpgradeMenu : MonoBehaviour {
 		upgradeMenuCanvas.SetActive(false);
 	}
 
+    public void setFalse() {
+        upgradeMenuCanvas.SetActive(false);
+    }
+
 	// Update is called once per frame
 	void Update () {
-		if (PlayerHealth.isDead == true) {
+		if (PlayerHealth.isDead == true && PerkMenu.inPerkMenu == false) {
 			upgradeMenuCanvas.SetActive (true);
 		} else
         {
