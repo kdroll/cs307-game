@@ -44,6 +44,7 @@ public class EnemyAi : MonoBehaviour {
         gold += (10 + goldBonus);
         numEnemiesDestroyed++;
         totalScore += 10;
+        OpeningLevel.Bacon.transform.position = gameObject.transform.position;
         Destroy(this.gameObject);
 	}
 	IEnumerator waitsleep(Transform transform, Vector3 go) {
@@ -61,8 +62,8 @@ public class EnemyAi : MonoBehaviour {
         enemyHealth -= 10 * PlayerAttack.damageModifier;
         print("enemyHealth = " + enemyHealth);
         locked = 0;
-       // anim.SetBool("ifHit", false);
-		yield return null;
+        // anim.SetBool("ifHit", false);
+        yield return null;
 	} 
 
 	void OnTriggerStay2D(Collider2D collision) {

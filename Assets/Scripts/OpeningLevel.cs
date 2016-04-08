@@ -22,6 +22,12 @@ public class OpeningLevel : MonoBehaviour {
 
 	public Texture2D levelTexture;
 
+    public static GameObject Bacon;
+    GameObject Cupcake;
+    GameObject Pepper;
+    GameObject ToxicWaste;
+
+
 	static public GameObject player;
 	GameObject pitchfork;
 	static public GameObject enemy;
@@ -63,7 +69,10 @@ public class OpeningLevel : MonoBehaviour {
 		pitchfork = GameObject.FindGameObjectWithTag ("Pitchfork");
 		sword = GameObject.FindGameObjectWithTag ("Sword");
 		enemy = GameObject.FindGameObjectWithTag("Enemy");
-        PlayerHealth.isDead = false;
+        Pepper = GameObject.FindGameObjectWithTag("Pepper");
+        ToxicWaste = GameObject.FindGameObjectWithTag("ToxicWaste");
+        Bacon = GameObject.FindGameObjectWithTag("Bacon");
+        Cupcake = GameObject.FindGameObjectWithTag("Cupcake");        PlayerHealth.isDead = false;
         EnemyAi.numEnemiesDestroyed = 0;
         EnemyAi.goldBonus = 0;
 		levelHeight = levelTexture.height;
@@ -403,6 +412,7 @@ public class OpeningLevel : MonoBehaviour {
 					enemy.transform.position = pos1;
 					pitchfork.transform.position = pos2;
 					sword.transform.position = pos3;
+
 				}
 			}
 		}
