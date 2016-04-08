@@ -40,7 +40,7 @@ public class PlayerHealth : MonoBehaviour {
         }
         if (health <= 0) {
             isDead = true;
-            EnemyAi.totalScore -= (int)(System.Math.Truncate(TimeScript.roundedTime));
+            EnemyAi.totalScore += (int)(System.Math.Truncate(TimeScript.roundedTime));
             Destroy(OpeningLevel.player);
         }
     }

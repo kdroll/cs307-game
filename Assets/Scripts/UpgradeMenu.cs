@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UpgradeMenu : MonoBehaviour {
 
 	public GameObject upgradeMenuCanvas;
+    public static bool inUpgradeMenu = false;
     public Text damageAmount, speedAmount, healthAmount;
     float roundedDamage, roundedSpeed, roundedHealth, roundedMaxHealth;
 
@@ -19,8 +20,9 @@ public class UpgradeMenu : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (PlayerHealth.isDead == true && PerkMenu.inPerkMenu == false) {
-			upgradeMenuCanvas.SetActive (true);
+		if (PlayerHealth.isDead == true && PerkMenu.inPerkMenu == false && StatsMenu.inStatsMenu == false) {
+            Time.timeScale = 0f;
+            upgradeMenuCanvas.SetActive (true);
             roundedDamage = (float)System.Math.Round(PlayerAttack.damageModifier, 2);
             damageAmount = GameObject.Find("Damage Mod Display").GetComponent<Text>();
             damageAmount.text = "" + roundedDamage + "x";
@@ -30,7 +32,6 @@ public class UpgradeMenu : MonoBehaviour {
             roundedMaxHealth = (float)System.Math.Round((PlayerHealth.startHealth), 2);
             healthAmount = GameObject.Find("Health Mod Display").GetComponent<Text>();
             healthAmount.text = "" + (roundedMaxHealth + PlayerHealth.healthModifier);
-            Time.timeScale = 0f;
         } else
         {
             upgradeMenuCanvas.SetActive(false);
