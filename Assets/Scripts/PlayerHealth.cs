@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour {
 
+    public static int numTimesHit;
     public static float startHealth;
     public static float health;
     public static float healthModifier = 0;
@@ -19,6 +20,7 @@ public class PlayerHealth : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
+        numTimesHit = 0;
         startHealth = 100 + healthModifier;
         health = 100 + healthModifier;
         player = GameObject.FindGameObjectWithTag("Player");
@@ -48,6 +50,7 @@ public class PlayerHealth : MonoBehaviour {
     private IEnumerator takeDamage() {
         if (!PauseMenu.isPaused) {
             health -= ((5*(OpeningLevel.difficulty)*(OpeningLevel.difficulty)) - (30*OpeningLevel.difficulty) + 55);
+            numTimesHit++;
             print(health);
             locked = 0;
             yield return null;
