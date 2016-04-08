@@ -3,7 +3,7 @@ using System.Collections;
 
 public class LoadOnClick : MonoBehaviour
 {
-    int doubleClick = 0;
+    public static bool difficultySet = false;
 
     // public GameObject loadingImage;
 
@@ -79,6 +79,12 @@ public class LoadOnClick : MonoBehaviour
             print("Health modifier: " + PlayerHealth.healthModifier);
             print("Num healthUpgrades: " + PlayerHealth.numHealthUpgrades);
         }
+    }
+
+    public void setDifficulty(int difficulty) {
+        OpeningLevel.difficulty = difficulty;
+        print(OpeningLevel.difficulty);
+        difficultySet = true;
     }
 }
 

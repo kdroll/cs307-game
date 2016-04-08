@@ -31,7 +31,7 @@ public class OpeningLevel : MonoBehaviour {
 	GameObject[] amount;
     int spawnRate;
     int updateCountSpawnNum;
-    public static int difficulty = 1; //3= easiest    1 = hardest
+    public static int difficulty; //3= easiest    1 = hardest
 	public static int[,] walls = new int[64, 64];
 
 
@@ -42,7 +42,7 @@ public class OpeningLevel : MonoBehaviour {
         public int X { get; set; }
         public int Y { get; set; }
     }
-    static int density = 60/difficulty;
+    static int density;
     static int maxWallLength = 4;
     Point[] positions = new Point[density * maxWallLength];
     int pointIndex = 0;
@@ -50,6 +50,12 @@ public class OpeningLevel : MonoBehaviour {
     // Use this for initialization
     void Start () {
         time = Time.time;
+        if (LoadOnClick.difficultySet) {
+
+        } else {
+            difficulty = 2;
+        }
+        density = 60 / difficulty;
         spawnRate = 300;
         Time.timeScale = 1;
         PerkMenu.inPerkMenu = false;
@@ -74,6 +80,7 @@ public class OpeningLevel : MonoBehaviour {
 
         updateCountSpawnNum = 0;
         //print("time = " + time + "   spawnRate " + spawnRate);
+        print("" + LoadOnClick.difficultySet);
 
     }
 
