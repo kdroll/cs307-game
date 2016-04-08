@@ -20,6 +20,8 @@ public class EnemyAi : MonoBehaviour {
 	bool ifThereIsAnything = false;
 	RaycastHit2D hit;
 
+	public AudioSource hurt;
+
     int firstRunUpdate = 0;
     int playerDied = 0;
 	float enemyHealth;
@@ -97,6 +99,7 @@ public class EnemyAi : MonoBehaviour {
         enemyHealth -= 10 * PlayerAttack.damageModifier;
         print("enemyHealth = " + enemyHealth);
         locked = 0;
+		hurt.Play ();
         // anim.SetBool("ifHit", false);
         yield return null;
 	} 
