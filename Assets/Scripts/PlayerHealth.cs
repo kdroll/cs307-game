@@ -12,7 +12,6 @@ public class PlayerHealth : MonoBehaviour {
     public static bool isDead = false;
     GameObject player;
     GameObject[] enemy;
-	public AudioSource hurt;
 
     // perks array has size of the total number of perks
     // perks[i] = 0 means player does not have the 'i'th perk
@@ -32,7 +31,6 @@ public class PlayerHealth : MonoBehaviour {
         enemy = GameObject.FindGameObjectsWithTag("Enemy");
         //print(Vector2.Distance(player.transform.position, enemy.transform.position));
         for (int i = 0; i < enemy.Length; i++) {
-			
             if (Vector2.Distance(player.transform.position, enemy[i].transform.position) < 1f && locked == 1 && !Input.GetButtonDown("attack") && !Input.GetButtonDown("B")) {
                 StartCoroutine(takeDamage());
             }
@@ -55,7 +53,6 @@ public class PlayerHealth : MonoBehaviour {
             print(health);
             numTimesHit++;
             locked = 0;
-			hurt.Play ();
             yield return null;
         }
     }
