@@ -19,6 +19,7 @@ public class EnemyAi : MonoBehaviour {
     public AnimationClip hitAnimation;
 	bool ifThereIsAnything = false;
 	RaycastHit2D hit;
+	public AudioSource hurt;
 
     int firstRunUpdate = 0;
     int playerDied = 0;
@@ -98,6 +99,7 @@ public class EnemyAi : MonoBehaviour {
         print("enemyHealth = " + enemyHealth);
         locked = 0;
         // anim.SetBool("ifHit", false);
+		hurt.Play();
         yield return null;
 	} 
 
