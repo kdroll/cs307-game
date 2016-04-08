@@ -138,6 +138,7 @@ public class OpeningLevel : MonoBehaviour {
                 {
                     //Instantiate(enemy, new Vector3(10,54,0), Quaternion.identity);
                     GameObject enemyClone = GameObject.FindGameObjectWithTag("Enemy");
+                    
                     Instantiate(enemyClone, new Vector3(playerPos.x - 7, playerPos.y + 7, 0), Quaternion.identity);
                     print("spawned enemy at top left");
                 }
@@ -145,6 +146,7 @@ public class OpeningLevel : MonoBehaviour {
                 {
                     //Instantiate(enemy, new Vector3(54, 54, 0), Quaternion.identity);
                     GameObject enemyClone = GameObject.FindGameObjectWithTag("Enemy");
+                   
                     Instantiate(enemyClone, new Vector3(playerPos.x + 7, playerPos.y + 7, 0), Quaternion.identity);
                     print("spawned enemy at top right");
                 }
@@ -152,13 +154,15 @@ public class OpeningLevel : MonoBehaviour {
                 {
                     //Instantiate(enemy, new Vector3(54, 10, 0), Quaternion.identity);
                     GameObject enemyClone = GameObject.FindGameObjectWithTag("Enemy");
+                 
                     Instantiate(enemyClone, new Vector3(playerPos.x + 7, playerPos.y - 7, 0), Quaternion.identity);
                     print("spawned enemy at bottom right");
                 }
                 else if (choice == 4)
                 {
                     //Instantiate(enemy, new Vector3(10, 10, 0), Quaternion.identity);
-                    GameObject enemyClone = GameObject.FindGameObjectWithTag("Enemy");
+                   GameObject enemyClone = GameObject.FindGameObjectWithTag("Enemy");
+                  
                     Instantiate(enemyClone, new Vector3(playerPos.x - 7, playerPos.y - 7, 0), Quaternion.identity);
                     print("spawned enemy at bottom left");
                 }
@@ -426,7 +430,7 @@ public class OpeningLevel : MonoBehaviour {
                     Vector2 pos1 = new Vector2(x,y);
 					Vector2 pos2 = new Vector2 (x + 2f, y + 2f);
 					Vector2 pos3 = new Vector2 (x + 3f, y + 3f);
-					enemy.transform.position = pos1;
+					enemy.transform.position = new Vector3(0,0,0);  //before was equal to pos1
 					pitchfork.transform.position = pos2;
 					sword.transform.position = pos3;
 

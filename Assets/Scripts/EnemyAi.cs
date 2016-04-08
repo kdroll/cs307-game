@@ -21,6 +21,7 @@ public class EnemyAi : MonoBehaviour {
 	RaycastHit2D hit;
 	public AudioSource hurt;
 
+
     int firstRunUpdate = 0;
     int playerDied = 0;
 	float enemyHealth;
@@ -29,6 +30,8 @@ public class EnemyAi : MonoBehaviour {
     float locked;
     public static int gold = 100000;
     public static int goldBonus = 0;
+
+    public GameObject[] consumables = new GameObject[4];
 
 
     public void Start () {
@@ -46,30 +49,35 @@ public class EnemyAi : MonoBehaviour {
         numEnemiesDestroyed++;
         totalScore += 10;
         Vector3 sheepPos = this.gameObject.transform.position;
-        GameObject BaconClone = GameObject.FindGameObjectWithTag("Bacon"); //1-5
+        /*GameObject BaconClone = GameObject.FindGameObjectWithTag("Bacon"); //1-5
         GameObject CupcakeClone = GameObject.FindGameObjectWithTag("Cupcake"); //6-10
         GameObject ToxicWasteClone = GameObject.FindGameObjectWithTag("ToxicWaste"); //11-15
-        GameObject PepperClone = GameObject.FindGameObjectWithTag("Pepper");//16-20
+        GameObject PepperClone = GameObject.FindGameObjectWithTag("Pepper");//16-20*/
         //GameObject SwordClone = GameObject.FindGameObjectWithTag("Sword");//25-30
         //GameObject PitchforkClone = GameObject.FindGameObjectWithTag("Pitchfork");//35-40
 
         System.Random rnd = new System.Random();
-        int rand = rnd.Next(1, 100);
-        if(rand >= 1 && rand <= 5)
+        int rand = rnd.Next(1, (100 - (10 * PlayerHealth.perks[1])));
+        print(100 - (10 * PlayerHealth.perks[1]));
+        if (rand >= 1 && rand <= 5)
         {
-            Instantiate(BaconClone, sheepPos, Quaternion.identity);
+            //GameObject BaconClone = GameObject.FindGameObjectWithTag("Bacon"); //1-5
+            Instantiate(consumables[0], sheepPos, Quaternion.identity);
             print("cloned bacon");
         } else if(rand >= 6 && rand <= 10)
         {
-            Instantiate(CupcakeClone, sheepPos, Quaternion.identity);
+            //GameObject CupcakeClone = GameObject.FindGameObjectWithTag("Cupcake");
+            Instantiate(consumables[1], sheepPos, Quaternion.identity);
             print("cloned cupcake");
         } else if(rand >= 11 && rand <= 15)
         {
-            Instantiate(ToxicWasteClone, sheepPos, Quaternion.identity);
+            //GameObject ToxicWasteClone = GameObject.FindGameObjectWithTag("ToxicWaste");
+            Instantiate(consumables[2], sheepPos, Quaternion.identity);
             print("cloned toxicwaste");
         } else if(rand >= 16 && rand <= 20)
         {
-            Instantiate(PepperClone, sheepPos, Quaternion.identity);
+            //GameObject PepperClone = GameObject.FindGameObjectWithTag("Pepper");
+            Instantiate(consumables[3], sheepPos, Quaternion.identity);
             print("cloned pepper");
         } /*else if(rand >=25 && rand <= 30)
         {
