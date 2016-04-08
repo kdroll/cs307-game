@@ -23,7 +23,6 @@ public class OpeningLevel : MonoBehaviour {
 	public Texture2D levelTexture;
 
     public static GameObject Bacon;
-    public GameObject pitchforkclone;
     GameObject Cupcake;
     GameObject Pepper;
     GameObject ToxicWaste;
@@ -65,8 +64,9 @@ public class OpeningLevel : MonoBehaviour {
         density = 60 / difficulty;
         positions = new Point[density * maxWallLength];
         spawnRate = 300;
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
         PerkMenu.inPerkMenu = false;
+        StatsMenu.inStatsMenu = false;
 		player = GameObject.FindGameObjectWithTag("Player");
 		pitchfork = GameObject.FindGameObjectWithTag ("Pitchfork");
 		sword = GameObject.FindGameObjectWithTag ("Sword");
@@ -74,7 +74,8 @@ public class OpeningLevel : MonoBehaviour {
         Pepper = GameObject.FindGameObjectWithTag("Pepper");
         ToxicWaste = GameObject.FindGameObjectWithTag("ToxicWaste");
         Bacon = GameObject.FindGameObjectWithTag("Bacon");
-        Cupcake = GameObject.FindGameObjectWithTag("Cupcake");        PlayerHealth.isDead = false;
+        Cupcake = GameObject.FindGameObjectWithTag("Cupcake");
+        PlayerHealth.isDead = false;
         EnemyAi.numEnemiesDestroyed = 0;
         EnemyAi.goldBonus = 0;
 		levelHeight = levelTexture.height;
@@ -113,54 +114,45 @@ public class OpeningLevel : MonoBehaviour {
         if(updateCountSpawnNum % spawnRate == 0)
         {
             int choice = 1;
-            GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-            if (players.Length > 0)
+            float maxDist = Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, new Vector3(10, 54,0));
+            if(maxDist < Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, new Vector3(54, 54, 0)))
             {
-                float maxDist = Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, new Vector3(10, 54, 0));
-                if (maxDist < Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, new Vector3(54, 54, 0)))
-                {
-                    maxDist = Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, new Vector3(54, 54, 0));
-                    choice = 2;
-                }
-                if (maxDist < Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, new Vector3(54, 10, 0)))
-                {
-                    maxDist = Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, new Vector3(54, 10, 0));
-                    choice = 3;
-                }
-                if (maxDist < Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, new Vector3(10, 10, 0)))
-                {
-                    maxDist = Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, new Vector3(10, 10, 0));
-                    choice = 4;
-                }
-                Vector3 playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
-                if (choice == 1)
-                {
-                    //Instantiate(enemy, new Vector3(10,54,0), Quaternion.identity);
-                    GameObject enemyClone = GameObject.FindGameObjectWithTag("Enemy");
-                    Instantiate(enemyClone, new Vector3(playerPos.x - 7, playerPos.y + 7, 0), Quaternion.identity);
-                    print("spawned enemy at top left");
-                }
-                else if (choice == 2)
-                {
-                    //Instantiate(enemy, new Vector3(54, 54, 0), Quaternion.identity);
-                    GameObject enemyClone = GameObject.FindGameObjectWithTag("Enemy");
-                    Instantiate(enemyClone, new Vector3(playerPos.x + 7, playerPos.y + 7, 0), Quaternion.identity);
-                    print("spawned enemy at top right");
-                }
-                else if (choice == 3)
-                {
-                    //Instantiate(enemy, new Vector3(54, 10, 0), Quaternion.identity);
-                    GameObject enemyClone = GameObject.FindGameObjectWithTag("Enemy");
-                    Instantiate(enemyClone, new Vector3(playerPos.x + 7, playerPos.y - 7, 0), Quaternion.identity);
-                    print("spawned enemy at bottom right");
-                }
-                else if (choice == 4)
-                {
-                    //Instantiate(enemy, new Vector3(10, 10, 0), Quaternion.identity);
-                    GameObject enemyClone = GameObject.FindGameObjectWithTag("Enemy");
-                    Instantiate(enemyClone, new Vector3(playerPos.x - 7, playerPos.y - 7, 0), Quaternion.identity);
-                    print("spawned enemy at bottom left");
-                }
+                maxDist = Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, new Vector3(54, 54, 0));
+                choice = 2;
+            }
+            if (maxDist < Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, new Vector3(54, 10, 0)))
+            {
+                maxDist = Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, new Vector3(54, 10, 0));
+                choice = 3;
+            }
+            if (maxDist < Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, new Vector3(10, 10, 0)))
+            {
+                maxDist = Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, new Vector3(10, 10, 0));
+                choice = 4;
+            }
+            Vector3 playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
+            if (choice == 1)
+            {
+                //Instantiate(enemy, new Vector3(10,54,0), Quaternion.identity);
+                Instantiate(enemy, new Vector3(playerPos.x - 7, playerPos.y + 7, 0), Quaternion.identity);
+                //print("spawned enemy at top left");
+            } else if (choice == 2)
+            {
+                //Instantiate(enemy, new Vector3(54, 54, 0), Quaternion.identity);
+                Instantiate(enemy, new Vector3(playerPos.x + 7, playerPos.y + 7, 0), Quaternion.identity);
+                //print("spawned enemy at top right");
+            }
+            else if (choice == 3)
+            {
+                //Instantiate(enemy, new Vector3(54, 10, 0), Quaternion.identity);
+                Instantiate(enemy, new Vector3(playerPos.x + 7, playerPos.y - 7, 0), Quaternion.identity);
+                //print("spawned enemy at bottom right");
+            }
+            else if (choice == 4)
+            {
+                //Instantiate(enemy, new Vector3(10, 10, 0), Quaternion.identity);
+                Instantiate(enemy, new Vector3(playerPos.x - 7, playerPos.y - 7, 0), Quaternion.identity);
+                //print("spawned enemy at bottom left");
             }
         }
 
@@ -391,26 +383,21 @@ public class OpeningLevel : MonoBehaviour {
                         Instantiate(grassTile1, new Vector3(x, y), Quaternion.identity);
 
 
-                    /*if (walls[x, y] == 0)
+                    if (walls[x, y] == 0)
                     {
                         Vector2 pos = new Vector2(x, y);
                         player.transform.position = pos;
                     } else
                     {
                         int add = 1;
-                        while(walls[x+add,y] != 0 && walls[x+add,y+3] != 0)
+                        while(walls[x+add,y] != 0)
                         {
                             add++;
                         }
                         Vector2 pos = new Vector2(x+add, y);
-                        Vector2 pos1 = new Vector2(x + add, y + 3);
                         player.transform.position = pos;
-                        GameObject pitchforkclone = GameObject.FindGameObjectWithTag("Pitchfork");
-                        Instantiate(pitchforkclone, pos1, Quaternion.identity);
-                        print("instatiated pitchfork");
-                        //pitchfork.transform.position = pos1;
 
-                    }*/
+                    }
 
 				}
 				else if (tileColors[x + y * levelWidth] == enemySpawnPointColor) {
@@ -426,27 +413,12 @@ public class OpeningLevel : MonoBehaviour {
 					Vector2 pos2 = new Vector2 (x + 2f, y + 2f);
 					Vector2 pos3 = new Vector2 (x + 3f, y + 3f);
 					enemy.transform.position = pos1;
-				//	pitchfork.transform.position = pos2;
+					pitchfork.transform.position = pos2;
 					sword.transform.position = pos3;
 
 				}
 			}
 		}
-        
-        
-            int add = 0;
-            while (walls[32 + add, 32] != 0 && walls[32 + add, 32 + 3] != 0)
-            {
-                add++;
-            }
-            Vector2 pos = new Vector2(32 + add, 32);
-            Vector2 pospitchfork = new Vector2(32 + add, 32 + 3);
-            player.transform.position = pos;
-            //print("player put onto position " + (32 + add) + "," + 32);
-            Instantiate(pitchforkclone, pospitchfork, Quaternion.identity);
-            //print("instatiated pitchfork");
-            //pitchfork.transform.position = pos1;
-
 
         //for(int i = 0; i < 5; i++)
         //{
@@ -454,5 +426,5 @@ public class OpeningLevel : MonoBehaviour {
         //}
 
 
-    }
+	}
 }

@@ -22,6 +22,13 @@ public class LoadOnClick : MonoBehaviour
 
     public void advanceToPerkMenu() {
         PerkMenu.inPerkMenu = true;
+        UpgradeMenu.inUpgradeMenu = false;
+    }
+
+    public void advanceToStatsMenu() {
+        Time.timeScale = 0f;
+        PerkMenu.inPerkMenu = false;
+        StatsMenu.inStatsMenu = true;
     }
 
     public void ExitScene()

@@ -44,42 +44,7 @@ public class EnemyAi : MonoBehaviour {
         gold += (10 + goldBonus);
         numEnemiesDestroyed++;
         totalScore += 10;
-        Vector3 sheepPos = this.gameObject.transform.position;
-        GameObject BaconClone = GameObject.FindGameObjectWithTag("Bacon"); //1-5
-        GameObject CupcakeClone = GameObject.FindGameObjectWithTag("Cupcake"); //6-10
-        GameObject ToxicWasteClone = GameObject.FindGameObjectWithTag("ToxicWaste"); //11-15
-        GameObject PepperClone = GameObject.FindGameObjectWithTag("Pepper");//16-20
-        GameObject SwordClone = GameObject.FindGameObjectWithTag("Sword");//25-30
-        GameObject PitchforkClone = GameObject.FindGameObjectWithTag("Pitchfork");//35-40
-
-        System.Random rnd = new System.Random();
-        int rand = rnd.Next(1, 100);
-        if(rand >= 1 && rand <= 5)
-        {
-            Instantiate(BaconClone, sheepPos, Quaternion.identity);
-            print("cloned bacon");
-        } else if(rand >= 6 && rand <= 10)
-        {
-            Instantiate(CupcakeClone, sheepPos, Quaternion.identity);
-            print("cloned cupcake");
-        } else if(rand >= 11 && rand <= 15)
-        {
-            Instantiate(ToxicWasteClone, sheepPos, Quaternion.identity);
-            print("cloned toxicwaste");
-        } else if(rand >= 16 && rand <= 20)
-        {
-            Instantiate(PepperClone, sheepPos, Quaternion.identity);
-            print("cloned pepper");
-        } /*else if(rand >=25 && rand <= 30)
-        {
-            Instantiate(SwordClone, sheepPos, Quaternion.identity);
-            print("cloned sword");
-        } else if(rand >= 35 && rand <= 40)
-        {
-            Instantiate(PitchforkClone, sheepPos, Quaternion.identity);
-            print("cloned pchfork");
-        }*/
-        
+        OpeningLevel.Bacon.transform.position = gameObject.transform.position;
         Destroy(this.gameObject);
 	}
 	IEnumerator waitsleep(Transform transform, Vector3 go) {
