@@ -20,6 +20,7 @@ public class EnemyAi : MonoBehaviour {
 	bool ifThereIsAnything = false;
 	RaycastHit2D hit;
 	public AudioSource hurt;
+	public AudioSource death;
 
 
     int firstRunUpdate = 0;
@@ -88,7 +89,6 @@ public class EnemyAi : MonoBehaviour {
             Instantiate(PitchforkClone, sheepPos, Quaternion.identity);
             print("cloned pchfork");
         }*/
-        
         Destroy(this.gameObject);
 	}
 	IEnumerator waitsleep(Transform transform, Vector3 go) {
@@ -107,7 +107,11 @@ public class EnemyAi : MonoBehaviour {
         print("enemyHealth = " + enemyHealth);
         locked = 0;
         // anim.SetBool("ifHit", false);
-		hurt.Play();
+		if (enemyHealth <= 0) {
+			death.Play ();
+		} else {
+			hurt.Play ();
+		}
         yield return null;
 	} 
 
