@@ -50,7 +50,7 @@ public class OpeningLevel : MonoBehaviour {
     }
     static int density;
     static int maxWallLength = 4;
-    Point[] positions = new Point[density * maxWallLength];
+    Point[] positions;
     int pointIndex = 0;
 
     // Use this for initialization
@@ -62,6 +62,7 @@ public class OpeningLevel : MonoBehaviour {
             difficulty = 2;
         }
         density = 60 / difficulty;
+        positions = new Point[density * maxWallLength];
         spawnRate = 300;
         Time.timeScale = 1;
         PerkMenu.inPerkMenu = false;
