@@ -27,6 +27,7 @@ public class EnemyAi : MonoBehaviour {
     public static int totalScore = 0;
     float locked;
     public static int gold = 100000;
+    public static int goldBonus = 0;
 
 
     public void Start () {
@@ -40,7 +41,7 @@ public class EnemyAi : MonoBehaviour {
 
 	IEnumerator wait() {
 		yield return new WaitForSeconds (0.3f);
-        gold += 10;
+        gold += (10 + goldBonus);
         numEnemiesDestroyed++;
         totalScore += 10;
         Destroy(this.gameObject);

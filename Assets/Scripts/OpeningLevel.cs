@@ -62,6 +62,9 @@ public class OpeningLevel : MonoBehaviour {
 				walls [i,j] = 0;
 			}
 		}
+        if (PlayerHealth.perks[0] == 1) {
+            EnemyAi.goldBonus = 3;
+        }
 		loadLevel ();
 
 
