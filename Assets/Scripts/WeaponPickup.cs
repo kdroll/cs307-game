@@ -4,7 +4,6 @@ using System.Collections;
 public class WeaponPickup : MonoBehaviour {
 
 	static bool pitchfork = false;
-	static bool nunchuck = false;
 	static bool hands = true;
 	static bool pickedUp = false;
 	static bool sword = false;
@@ -18,12 +17,7 @@ public class WeaponPickup : MonoBehaviour {
 	void Update () {
 		
 	}
-	public static bool getNunchuck() {
-		return nunchuck;
-	}
-	public static void setNunchuck(bool input) {
-		nunchuck = input;
-	}
+
 	public static bool getSword() {
 		return sword;
 	}
@@ -53,28 +47,17 @@ public class WeaponPickup : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D collision) {
-		if (collision.gameObject.tag == "Pitchfork" && sword != true && nunchuck != true) {
+		if (collision.gameObject.tag == "Pitchfork" && sword != true) {
 			pickedUp = true;
 			pitchfork = true;
 			hands = false;
-			nunchuck = false;
-			sword = false;
 			GameObject.FindGameObjectWithTag ("Pitchfork").transform.position = new Vector2 (-20f, -20f);
-		} else if (collision.gameObject.tag == "Sword" && pitchfork != true && nunchuck != true) {
+		} else if (collision.gameObject.tag == "Sword" && pitchfork != true) {
 			pickedUp = true;
 			sword = true;
 			pitchfork = false;
-			nunchuck = false;
 			hands = false;
 			GameObject.FindGameObjectWithTag ("Sword").transform.position = new Vector2 (-40f, -40f);
 		}
-		else if (collision.gameObject.tag == "Nunchuck" && pitchfork != true && sword != true) {
-			pickedUp = true;
-			nunchuck = true;
-			pitchfork = false;
-			hands = false;
-			sword = false;
-			GameObject.FindGameObjectWithTag ("Nunchuck").transform.position = new Vector2 (-40f, -40f);
 	}
-}
 }

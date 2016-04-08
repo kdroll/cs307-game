@@ -14,8 +14,6 @@ TagManager:
   - Cupcake
   - ToxicWaste
   - Bacon
-  - Nunchuck
-  - NunchuckCollider
   layers:
   - Default
   - TransparentFX
