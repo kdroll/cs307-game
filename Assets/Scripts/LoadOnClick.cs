@@ -73,7 +73,7 @@ public class LoadOnClick : MonoBehaviour
 
         }
         else {
-            PlayerHealth.healthModifier += 10;
+            PlayerHealth.healthModifier += 5;
             EnemyAi.gold -= 50 + (50 * PlayerHealth.numHealthUpgrades);
             PlayerHealth.numHealthUpgrades++;
             print("Health modifier: " + PlayerHealth.healthModifier);

@@ -55,6 +55,7 @@ public class OpeningLevel : MonoBehaviour {
 		enemy = GameObject.FindGameObjectWithTag("Enemy");
         PlayerHealth.isDead = false;
         EnemyAi.numEnemiesDestroyed = 0;
+        EnemyAi.goldBonus = 0;
 		levelHeight = levelTexture.height;
 		levelWidth = levelTexture.width;
 		for (int i = 0; i < 64; i++) {
@@ -63,7 +64,7 @@ public class OpeningLevel : MonoBehaviour {
 			}
 		}
         if (PlayerHealth.perks[0] == 1) {
-            EnemyAi.goldBonus = 3;
+            EnemyAi.goldBonus += 3;
         }
 		loadLevel ();
 
