@@ -19,7 +19,6 @@ public class PerkMenu : MonoBehaviour {
 	void Update () {
         if (inPerkMenu == true) {
 			perkMenuCanvas.SetActive (true);
-            Time.timeScale = 0f;
 		} else {
             perkMenuCanvas.SetActive(false);
         }
