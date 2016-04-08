@@ -8,7 +8,7 @@ public class EnemyAi : MonoBehaviour {
 	Transform enemyTransform;
 	public float speed = 3f;
 	public float rotationSpeed=3f;
-	public int distanceToAttack = 10;
+	public int distanceToAttack = 1000;
 	private int follow = 0;
     public static int damage = 10;
 	Vector3 oldPosition;
@@ -34,7 +34,7 @@ public class EnemyAi : MonoBehaviour {
         //obtain the game object Transform
 		enemyTransform = this.GetComponent<Transform>();
 		anim = this.GetComponent<Animator> ();
-		enemyHealth = 30;
+		enemyHealth = (6-OpeningLevel.difficulty) * 10;
 		enemy = GameObject.FindGameObjectWithTag ("Enemy");
 		locked = 0f;
 	}

@@ -47,7 +47,7 @@ public class PlayerHealth : MonoBehaviour {
 
     private IEnumerator takeDamage() {
         if (!PauseMenu.isPaused) {
-            health -= 10;
+            health -= ((5*(OpeningLevel.difficulty)*(OpeningLevel.difficulty)) - (30*OpeningLevel.difficulty) + 55);
             print(health);
             locked = 0;
             yield return null;
