@@ -57,11 +57,11 @@ public class OpeningLevel : MonoBehaviour {
     // Use this for initialization
     void Start () {
         time = Time.time;
-        //if (LoadOnClick.difficultySet) {
-        //
-        //} else {
+        if (LoadOnClick.difficultySet) {
+        
+        } else {
             difficulty = 2;
-        //}
+        }
         density = 60 / difficulty;
         positions = new Point[density * maxWallLength];
         spawnRate = 300;
