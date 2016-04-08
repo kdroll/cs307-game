@@ -8,7 +8,7 @@ public class EnemyAi : MonoBehaviour {
 	Transform enemyTransform;
 	public float speed = 3f;
 	public float rotationSpeed=3f;
-	public int distanceToAttack = 10;
+	public int distanceToAttack = 1000;
 	private int follow = 0;
     public static int damage = 10;
 	Vector3 oldPosition;
@@ -27,22 +27,24 @@ public class EnemyAi : MonoBehaviour {
     public static int totalScore = 0;
     float locked;
     public static int gold = 100000;
+    public static int goldBonus = 0;
 
 
     public void Start () {
         //obtain the game object Transform
 		enemyTransform = this.GetComponent<Transform>();
 		anim = this.GetComponent<Animator> ();
-		enemyHealth = 30;
+		enemyHealth = (6-OpeningLevel.difficulty) * 10;
 		enemy = GameObject.FindGameObjectWithTag ("Enemy");
 		locked = 0f;
 	}
 
 	IEnumerator wait() {
 		yield return new WaitForSeconds (0.3f);
-        gold += 10;
+        gold += (10 + goldBonus);
         numEnemiesDestroyed++;
         totalScore += 10;
+        OpeningLevel.Bacon.transform.position = gameObject.transform.position;
         Destroy(this.gameObject);
 	}
 	IEnumerator waitsleep(Transform transform, Vector3 go) {
@@ -60,8 +62,8 @@ public class EnemyAi : MonoBehaviour {
         enemyHealth -= 10 * PlayerAttack.damageModifier;
         print("enemyHealth = " + enemyHealth);
         locked = 0;
-       // anim.SetBool("ifHit", false);
-		yield return null;
+        // anim.SetBool("ifHit", false);
+        yield return null;
 	} 
 
 	void OnTriggerStay2D(Collider2D collision) {

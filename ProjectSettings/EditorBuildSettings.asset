@@ -15,3 +15,5 @@ EditorBuildSettings:
     path: Assets/Options.unity
   - enabled: 1
     path: Assets/HighScores.unity
+  - enabled: 1
+    path: Assets/Difficulty.unity

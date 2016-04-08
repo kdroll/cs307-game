@@ -22,14 +22,22 @@ public class OpeningLevel : MonoBehaviour {
 
 	public Texture2D levelTexture;
 
+    public static GameObject Bacon;
+    GameObject Cupcake;
+    GameObject Pepper;
+    GameObject ToxicWaste;
+
+
 	static public GameObject player;
 	GameObject pitchfork;
 	static public GameObject enemy;
 	GameObject sword;
 	public GameObject newEnemy;
-
+    float time;
 	GameObject[] amount;
-
+    int spawnRate;
+    int updateCountSpawnNum;
+    public static int difficulty; //3= easiest    1 = hardest
 	public static int[,] walls = new int[64, 64];
 
 
@@ -40,21 +48,34 @@ public class OpeningLevel : MonoBehaviour {
         public int X { get; set; }
         public int Y { get; set; }
     }
-    static int density = 200;
+    static int density;
     static int maxWallLength = 4;
-    Point[] positions = new Point[density * maxWallLength];
+    Point[] positions;
     int pointIndex = 0;
 
     // Use this for initialization
     void Start () {
+        time = Time.time;
+        if (LoadOnClick.difficultySet) {
+
+        } else {
+            difficulty = 2;
+        }
+        density = 60 / difficulty;
+        positions = new Point[density * maxWallLength];
+        spawnRate = 300;
         Time.timeScale = 1;
         PerkMenu.inPerkMenu = false;
 		player = GameObject.FindGameObjectWithTag("Player");
 		pitchfork = GameObject.FindGameObjectWithTag ("Pitchfork");
 		sword = GameObject.FindGameObjectWithTag ("Sword");
 		enemy = GameObject.FindGameObjectWithTag("Enemy");
-        PlayerHealth.isDead = false;
+        Pepper = GameObject.FindGameObjectWithTag("Pepper");
+        ToxicWaste = GameObject.FindGameObjectWithTag("ToxicWaste");
+        Bacon = GameObject.FindGameObjectWithTag("Bacon");
+        Cupcake = GameObject.FindGameObjectWithTag("Cupcake");        PlayerHealth.isDead = false;
         EnemyAi.numEnemiesDestroyed = 0;
+        EnemyAi.goldBonus = 0;
 		levelHeight = levelTexture.height;
 		levelWidth = levelTexture.width;
 		for (int i = 0; i < 64; i++) {
@@ -62,19 +83,82 @@ public class OpeningLevel : MonoBehaviour {
 				walls [i,j] = 0;
 			}
 		}
+        if (PlayerHealth.perks[0] == 1) {
+            EnemyAi.goldBonus += 3;
+        }
 		loadLevel ();
 
+        updateCountSpawnNum = 0;
+        //print("time = " + time + "   spawnRate " + spawnRate);
+        print("" + LoadOnClick.difficultySet);
 
-
-	}
+    }
 
 	// Update is called once per frame
 	void Update () {
 		System.Random randy = new System.Random();
 		amount = GameObject.FindGameObjectsWithTag ("Enemy");
-		if (amount.Length < 6) {
-			Instantiate (newEnemy, new Vector3 (10,10,0), Quaternion.identity);
-		}
+
+		if(Time.time - time > difficulty*3)
+        {
+            spawnRate -= 10;
+            time = Time.time;
+            //print("time = " + time + "   spawnRate " + spawnRate);
+            if(spawnRate <= (20*difficulty - 10))
+            {
+                spawnRate = (20 * difficulty - 10);
+            }
+        }
+        if(updateCountSpawnNum % spawnRate == 0)
+        {
+            int choice = 1;
+            float maxDist = Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, new Vector3(10, 54,0));
+            if(maxDist < Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, new Vector3(54, 54, 0)))
+            {
+                maxDist = Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, new Vector3(54, 54, 0));
+                choice = 2;
+            }
+            if (maxDist < Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, new Vector3(54, 10, 0)))
+            {
+                maxDist = Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, new Vector3(54, 10, 0));
+                choice = 3;
+            }
+            if (maxDist < Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, new Vector3(10, 10, 0)))
+            {
+                maxDist = Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, new Vector3(10, 10, 0));
+                choice = 4;
+            }
+            Vector3 playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
+            if (choice == 1)
+            {
+                //Instantiate(enemy, new Vector3(10,54,0), Quaternion.identity);
+                Instantiate(enemy, new Vector3(playerPos.x - 7, playerPos.y + 7, 0), Quaternion.identity);
+                //print("spawned enemy at top left");
+            } else if (choice == 2)
+            {
+                //Instantiate(enemy, new Vector3(54, 54, 0), Quaternion.identity);
+                Instantiate(enemy, new Vector3(playerPos.x + 7, playerPos.y + 7, 0), Quaternion.identity);
+                //print("spawned enemy at top right");
+            }
+            else if (choice == 3)
+            {
+                //Instantiate(enemy, new Vector3(54, 10, 0), Quaternion.identity);
+                Instantiate(enemy, new Vector3(playerPos.x + 7, playerPos.y - 7, 0), Quaternion.identity);
+                //print("spawned enemy at bottom right");
+            }
+            else if (choice == 4)
+            {
+                //Instantiate(enemy, new Vector3(10, 10, 0), Quaternion.identity);
+                Instantiate(enemy, new Vector3(playerPos.x - 7, playerPos.y - 7, 0), Quaternion.identity);
+                //print("spawned enemy at bottom left");
+            }
+        }
+
+        updateCountSpawnNum++;
+        if(updateCountSpawnNum > 3600)
+        {
+            updateCountSpawnNum = 0;
+        }
 
 	}
 
@@ -296,8 +380,22 @@ public class OpeningLevel : MonoBehaviour {
                     else
                         Instantiate(grassTile1, new Vector3(x, y), Quaternion.identity);
 
-                    Vector2 pos = new Vector2(x,y);
-					player.transform.position = pos;
+
+                    if (walls[x, y] == 0)
+                    {
+                        Vector2 pos = new Vector2(x, y);
+                        player.transform.position = pos;
+                    } else
+                    {
+                        int add = 1;
+                        while(walls[x+add,y] != 0)
+                        {
+                            add++;
+                        }
+                        Vector2 pos = new Vector2(x+add, y);
+                        player.transform.position = pos;
+
+                    }
 
 				}
 				else if (tileColors[x + y * levelWidth] == enemySpawnPointColor) {
@@ -315,14 +413,15 @@ public class OpeningLevel : MonoBehaviour {
 					enemy.transform.position = pos1;
 					pitchfork.transform.position = pos2;
 					sword.transform.position = pos3;
+
 				}
 			}
 		}
 
-        for(int i = 0; i < 5; i++)
-        {
-            Instantiate(enemy, new Vector3((levelWidth/2 + i*5), (levelHeight/2 + i*5)), Quaternion.identity);
-        }
+        //for(int i = 0; i < 5; i++)
+        //{
+        //    Instantiate(enemy, new Vector3((levelWidth/2 + i*5), (levelHeight/2 + i*5)), Quaternion.identity);
+        //}
 
 
 	}

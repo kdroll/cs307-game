@@ -6,7 +6,6 @@ public class GoldScript : MonoBehaviour {
 
     public Text goldAmount;
 
-
 	// Use this for initialization
 	void Start () {
         goldAmount = GameObject.Find("Gold Amount").GetComponent<Text>();
