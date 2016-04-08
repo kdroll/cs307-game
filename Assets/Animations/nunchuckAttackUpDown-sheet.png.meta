@@ -1,0 +1,363 @@
+fileFormatVersion: 2
+guid: b3c6a6851f8f34a93bce1dceb6b79d3f
+timeCreated: 1460096767
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: nunchuckAttackUpDown-sheet_0
+    21300002: nunchuckAttackUpDown-sheet_1
+    21300004: nunchuckAttackUpDown-sheet_2
+    21300006: nunchuckAttackUpDown-sheet_3
+    21300008: nunchuckAttackUpDown-sheet_4
+    21300010: nunchuckAttackUpDown-sheet_5
+    21300012: nunchuckAttackUpDown-sheet_6
+    21300014: nunchuckAttackUpDown-sheet_7
+    21300016: nunchuckAttackUpDown-sheet_8
+    21300018: nunchuckAttackUpDown-sheet_9
+    21300020: nunchuckAttackUpDown-sheet_10
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 30
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: nunchuckAttackUpDown-sheet_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 14
+        width: 95
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 31.5, y: 12}
+        - {x: 28.5, y: 11}
+        - {x: 14.5, y: -3}
+        - {x: 14.5, y: -9}
+        - {x: 15.5, y: -11}
+        - {x: 20.5, y: -11}
+        - {x: 37.5, y: 4}
+        - {x: 37.5, y: 12}
+      - - {x: -29.5, y: 11}
+        - {x: -36.5, y: 11}
+        - {x: -36.5, y: 3}
+        - {x: -26.5, y: -6}
+        - {x: -21.5, y: -10}
+        - {x: -19.5, y: -10}
+        - {x: -16.5, y: -7}
+        - {x: -16.5, y: -4}
+    - name: nunchuckAttackUpDown-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 12
+        width: 96
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: -5.5}
+        - {x: -30, y: -6.5}
+        - {x: -30, y: -11.5}
+        - {x: -20, y: -22.5}
+        - {x: -15, y: -26.5}
+        - {x: -11, y: -26.5}
+        - {x: -10, y: -23.5}
+        - {x: -10, y: -18.5}
+        - {x: -22, y: -5.5}
+      - - {x: 31, y: 30.5}
+        - {x: 19, y: 13.5}
+        - {x: 19, y: 7.5}
+        - {x: 27, y: 7.5}
+        - {x: 42, y: 22.5}
+        - {x: 42, y: 30.5}
+    - name: nunchuckAttackUpDown-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 13
+        width: 106
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: -20}
+        - {x: -26, y: -22}
+        - {x: -33, y: -31}
+        - {x: -33, y: -36}
+        - {x: -32, y: -37}
+        - {x: -24, y: -37}
+        - {x: -8, y: -31}
+        - {x: -8, y: -22}
+        - {x: -12, y: -20}
+      - - {x: 40, y: 34}
+        - {x: 34, y: 34}
+        - {x: 29, y: 29}
+        - {x: 23, y: 15}
+        - {x: 23, y: 8}
+        - {x: 31, y: 8}
+        - {x: 38, y: 12}
+        - {x: 42, y: 27}
+        - {x: 42, y: 33}
+    - name: nunchuckAttackUpDown-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 9
+        width: 105
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.5, y: -16.5}
+        - {x: -33.5, y: -21.5}
+        - {x: -33.5, y: -34.5}
+        - {x: -31.5, y: -36.5}
+        - {x: -25.5, y: -36.5}
+        - {x: -16.5, y: -33.5}
+        - {x: -8.5, y: -27.5}
+        - {x: -8.5, y: -22.5}
+        - {x: -13.5, y: -16.5}
+      - - {x: 28.5, y: 41.5}
+        - {x: 23.5, y: 36.5}
+        - {x: 16.5, y: 22.5}
+        - {x: 16.5, y: 18.5}
+        - {x: 18.5, y: 15.5}
+        - {x: 33.5, y: 15.5}
+        - {x: 38.5, y: 17.5}
+        - {x: 38.5, y: 41.5}
+    - name: nunchuckAttackUpDown-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 5
+        width: 93
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2.5, y: -19}
+        - {x: -14.5, y: -19}
+        - {x: -22.5, y: -24}
+        - {x: -22.5, y: -39}
+        - {x: -21.5, y: -43}
+        - {x: -13.5, y: -43}
+        - {x: -4.5, y: -33}
+        - {x: -1.5, y: -30}
+        - {x: -1.5, y: -22}
+      - - {x: 30.5, y: 45}
+        - {x: 24.5, y: 43}
+        - {x: 21.5, y: 29}
+        - {x: 21.5, y: 18}
+        - {x: 32.5, y: 18}
+        - {x: 39.5, y: 27}
+        - {x: 40.5, y: 40}
+        - {x: 34.5, y: 45}
+    - name: nunchuckAttackUpDown-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 5
+        width: 101
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.5, y: -39.5}
+        - {x: -15.5, y: -43.5}
+        - {x: -3.5, y: -43.5}
+        - {x: 5.5, y: -38.5}
+        - {x: 5.5, y: -21.5}
+        - {x: -11.5, y: -21.5}
+        - {x: -16.5, y: -28.5}
+      - - {x: 30.5, y: 47.5}
+        - {x: 26.5, y: 47.5}
+        - {x: 18.5, y: 32.5}
+        - {x: 18.5, y: 20.5}
+        - {x: 21.5, y: 18.5}
+        - {x: 27.5, y: 18.5}
+        - {x: 35.5, y: 25.5}
+        - {x: 36.5, y: 28.5}
+        - {x: 36.5, y: 43.5}
+    - name: nunchuckAttackUpDown-sheet_6
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 5
+        width: 115
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: -45}
+        - {x: -18.5, y: -49}
+        - {x: -9.5, y: -49}
+        - {x: -3.5, y: -43}
+        - {x: -3.5, y: -23}
+        - {x: -14.5, y: -23}
+        - {x: -20.5, y: -26}
+      - - {x: 11.5, y: 48}
+        - {x: 8.5, y: 45}
+        - {x: 3.5, y: 27}
+        - {x: 3.5, y: 19}
+        - {x: 18.5, y: 19}
+        - {x: 22.5, y: 32}
+        - {x: 22.5, y: 45}
+        - {x: 16.5, y: 48}
+    - name: nunchuckAttackUpDown-sheet_7
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 4
+        width: 96
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: -47}
+        - {x: -16, y: -50}
+        - {x: -4, y: -50}
+        - {x: -4, y: -29}
+        - {x: -5, y: -24}
+        - {x: -15, y: -24}
+        - {x: -22, y: -29}
+      - - {x: 9, y: 48}
+        - {x: 7, y: 49}
+        - {x: -1, y: 49}
+        - {x: -3, y: 46}
+        - {x: -3, y: 19}
+        - {x: 5, y: 19}
+        - {x: 12, y: 30}
+        - {x: 12, y: 43}
+    - name: nunchuckAttackUpDown-sheet_8
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 6
+        width: 108
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3, y: -24}
+        - {x: -10, y: -27}
+        - {x: -10, y: -45}
+        - {x: -4, y: -50}
+        - {x: 1, y: -50}
+        - {x: 7, y: -47}
+        - {x: 7, y: -31}
+        - {x: 4, y: -24}
+      - - {x: -5, y: 49}
+        - {x: -5, y: 19}
+        - {x: 8, y: 19}
+        - {x: 11, y: 21}
+        - {x: 11, y: 45}
+        - {x: 9, y: 49}
+    - name: nunchuckAttackUpDown-sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 1
+        width: 106
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: -21}
+        - {x: -3, y: -23}
+        - {x: -3, y: -43}
+        - {x: 3, y: -47}
+        - {x: 15, y: -47}
+        - {x: 15, y: -29}
+        - {x: 9, y: -21}
+      - - {x: -4, y: 51}
+        - {x: -10, y: 51}
+        - {x: -14, y: 48}
+        - {x: -14, y: 29}
+        - {x: -10, y: 21}
+        - {x: -1, y: 21}
+        - {x: 3, y: 29}
+        - {x: 3, y: 46}
+        - {x: 1, y: 48}
+    - name: nunchuckAttackUpDown-sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 2
+        width: 109
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 17.5, y: -20.5}
+        - {x: 6.5, y: -20.5}
+        - {x: 6.5, y: -44.5}
+        - {x: 8.5, y: -47.5}
+        - {x: 25.5, y: -47.5}
+        - {x: 25.5, y: -34.5}
+        - {x: 21.5, y: -25.5}
+      - - {x: -21.5, y: 45.5}
+        - {x: -22.5, y: 43.5}
+        - {x: -22.5, y: 33.5}
+        - {x: -15.5, y: 17.5}
+        - {x: -6.5, y: 17.5}
+        - {x: -1.5, y: 31.5}
+        - {x: -1.5, y: 38.5}
+        - {x: -9.5, y: 45.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
