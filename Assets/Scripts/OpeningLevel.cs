@@ -363,8 +363,22 @@ public class OpeningLevel : MonoBehaviour {
                     else
                         Instantiate(grassTile1, new Vector3(x, y), Quaternion.identity);
 
-                    Vector2 pos = new Vector2(x,y);
-					player.transform.position = pos;
+
+                    if (walls[x, y] == 0)
+                    {
+                        Vector2 pos = new Vector2(x, y);
+                        player.transform.position = pos;
+                    } else
+                    {
+                        int add = 1;
+                        while(walls[x+add,y] != 0)
+                        {
+                            add++;
+                        }
+                        Vector2 pos = new Vector2(x+add, y);
+                        player.transform.position = pos;
+
+                    }
 
 				}
 				else if (tileColors[x + y * levelWidth] == enemySpawnPointColor) {
