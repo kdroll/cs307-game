@@ -67,6 +67,7 @@ public class OpeningLevel : MonoBehaviour {
         spawnRate = 300;
         Time.timeScale = 1;
         PerkMenu.inPerkMenu = false;
+        StatsMenu.inStatsMenu = false;
 		player = GameObject.FindGameObjectWithTag("Player");
 		pitchfork = GameObject.FindGameObjectWithTag ("Pitchfork");
 		sword = GameObject.FindGameObjectWithTag ("Sword");
