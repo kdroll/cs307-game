@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿susing UnityEngine;
 using System.Collections;
 
 public class NunchuckWeapon : MonoBehaviour {
