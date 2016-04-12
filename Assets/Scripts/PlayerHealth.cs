@@ -72,6 +72,7 @@ public class PlayerHealth : MonoBehaviour {
         if (coll.gameObject.tag == "Enemy" && locked == 1 && !Input.GetButtonDown("attack") && !Input.GetButtonDown("B")) {
             StartCoroutine(takeDamage());
         }
+
     }
 
 }
