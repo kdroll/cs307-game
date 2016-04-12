@@ -4645,9 +4645,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 1.1844755, y: 0.06633043}
+  m_Offset: {x: 1.1844755, y: -0.062781565}
   serializedVersion: 2
-  m_Size: {x: 1.7391112, y: 1.4358864}
+  m_Size: {x: 1.7391112, y: 1.9200568}
 --- !u!61 &1262098797
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4659,9 +4659,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: -1.2413287, y: 0.056854486}
+  m_Offset: {x: -1.1687028, y: -0.039979927}
   serializedVersion: 2
-  m_Size: {x: 1.7391126, y: 1.4548383}
+  m_Size: {x: 1.5938611, y: 1.9067307}
 --- !u!1 &1313614559
 GameObject:
   m_ObjectHideFlags: 0
@@ -7276,7 +7276,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 7
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -8092,9 +8092,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0.6, y: 0}
+  m_Offset: {x: 0.8824322, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1.835114, y: 1.5}
+  m_Size: {x: 2.3999796, y: 1.5}
 --- !u!1001 &1835455920
 Prefab:
   m_ObjectHideFlags: 0
