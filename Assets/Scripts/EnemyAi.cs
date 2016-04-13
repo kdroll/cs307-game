@@ -147,7 +147,7 @@ public class EnemyAi : MonoBehaviour {
 			StartCoroutine(takeDamage ());
 			StartCoroutine(waitHit());
 		}
-		if (collision.tag == "NunchuckCollider" && (Input.GetButtonDown("attack") || Input.GetButtonDown("B")) && WeaponPickup.getHands() == false && locked == 1 && WeaponPickup.getNunchuck() == true) {
+		if (collision.tag == "NunchuckCollider" && (Input.GetButtonDown("attack") || Input.GetButtonDown("B")) && WeaponPickup.getHands() == false && WeaponPickup.getNunchuck() == true && locked == 1) {
 			anim.SetBool("ifHit", true);
 			if (anim.GetFloat("MoveY") == 1.0f) {
 				anim.SetFloat("HitY", 1.0f);
