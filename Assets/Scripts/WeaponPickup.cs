@@ -8,6 +8,8 @@ public class WeaponPickup : MonoBehaviour {
 	static bool pickedUp = false;
 	static bool sword = false;
 	Animator anim;
+	public GameObject grenade;
+	public Transform spawnGrenade;
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +17,9 @@ public class WeaponPickup : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetKeyDown (KeyCode.G)) {
+			Instantiate (grenade, spawnGrenade.position, Quaternion.identity);
+		}
 		
 	}
 	public static bool getNunchuck() {
