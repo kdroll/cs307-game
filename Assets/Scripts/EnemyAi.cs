@@ -22,6 +22,7 @@ public class EnemyAi : MonoBehaviour {
 	public AudioSource hurt;
 	public AudioSource death;
 	Rigidbody2D enemyRigid;
+	int grenadeTag = 0;
 
 
     int firstRunUpdate = 0;
@@ -105,7 +106,12 @@ public class EnemyAi : MonoBehaviour {
     }
 
     private IEnumerator takeDamage() {
-        enemyHealth -= 10 * PlayerAttack.damageModifier;
+		if (grenadeTag == 1) {
+			enemyHealth -= 30 * PlayerAttack.damageModifier;
+			grenadeTag = 0;
+		} else {
+			enemyHealth -= 10 * PlayerAttack.damageModifier;
+		}
         print("enemyHealth = " + enemyHealth);
         locked = 0;
         // anim.SetBool("ifHit", false);
@@ -122,8 +128,9 @@ public class EnemyAi : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D coll) {
 		if (coll.tag == "Grenade") {
 			StartCoroutine (takeDamage ());
-			Vector3 dir1 = -(GameObject.FindGameObjectWithTag("Grenade").transform.position - transform.position);
-			enemyRigid.AddForce (dir1 * 400f);
+			Vector3 dir1 = -(Grenade.position - enemyTransform.position);
+			grenadeTag = 1;
+			enemyRigid.AddForce (dir1 * 600f);
 		}
 	}
 	void OnTriggerStay2D(Collider2D collision) {
