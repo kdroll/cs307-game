@@ -18,6 +18,7 @@ TagManager:
   - NunchuckCollider
   - Grenade
   - Bow
+  - Arrow
   layers:
   - Default
   - TransparentFX
