@@ -7,6 +7,7 @@ public class WeaponPickup : MonoBehaviour {
 	static bool hands = true;
 	static bool pickedUp = false;
 	static bool sword = false;
+	static bool bow = false;
 	Animator anim;
 
 	// Use this for initialization
@@ -16,6 +17,12 @@ public class WeaponPickup : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+	}
+	public static bool getBow() {
+		return bow;
+	}
+	public static void setBow(bool input) {
+		bow = input;
 	}
 	public static bool getNunchuck() {
 		return nunchuck;
@@ -53,13 +60,13 @@ public class WeaponPickup : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D collision) {
-		if (collision.gameObject.tag == "Pitchfork" && sword != true && nunchuck != true) {
+		if (collision.gameObject.tag == "Pitchfork" && sword != true && nunchuck != true && bow != true) {
 			pickedUp = true;
 			pitchfork = true;
 			nunchuck = false;
 			hands = false;
 			GameObject.FindGameObjectWithTag ("Pitchfork").transform.position = new Vector2 (-20f, -20f);
-		} else if (collision.gameObject.tag == "Sword" && pitchfork != true && nunchuck != true) {
+		} else if (collision.gameObject.tag == "Sword" && pitchfork != true && nunchuck != true && bow != true) {
 			pickedUp = true;
 			sword = true;
 			nunchuck = false;
@@ -67,13 +74,22 @@ public class WeaponPickup : MonoBehaviour {
 			hands = false;
 			GameObject.FindGameObjectWithTag ("Sword").transform.position = new Vector2 (-40f, -40f);
 		}
-		else if (collision.gameObject.tag == "Nunchuck" && pitchfork != true && sword != true) {
+		else if (collision.gameObject.tag == "Nunchuck" && pitchfork != true && sword != true && bow != true) {
 			pickedUp = true;
 			sword = false;
 			nunchuck = true;
 			pitchfork = false;
 			hands = false;
 			GameObject.FindGameObjectWithTag ("Nunchuck").transform.position = new Vector2 (-40f, -40f);
+		}
+		else if (collision.gameObject.tag == "Bow" && pitchfork != true && sword != true && nunchuck != true) {
+			pickedUp = true;
+			sword = false;
+			nunchuck = false;
+			pitchfork = false;
+			bow = true;
+			hands = false;
+			GameObject.FindGameObjectWithTag ("Bow").transform.position = new Vector2 (-40f, -40f);
 		}
 	}
 }
