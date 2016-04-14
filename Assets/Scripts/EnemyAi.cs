@@ -21,6 +21,8 @@ public class EnemyAi : MonoBehaviour {
 	RaycastHit2D hit;
 	public AudioSource hurt;
 	public AudioSource death;
+	Rigidbody2D enemyRigid;
+	int grenadeTag = 0;
 
 
     int firstRunUpdate = 0;
@@ -42,6 +44,7 @@ public class EnemyAi : MonoBehaviour {
 		enemyHealth = (6-OpeningLevel.difficulty) * 10;
 		enemy = GameObject.FindGameObjectWithTag ("Enemy");
 		locked = 0f;
+		enemyRigid = this.GetComponent<Rigidbody2D> ();
 	}
 
 	IEnumerator wait() {
@@ -103,7 +106,12 @@ public class EnemyAi : MonoBehaviour {
     }
 
     private IEnumerator takeDamage() {
-        enemyHealth -= 10 * PlayerAttack.damageModifier;
+		if (grenadeTag == 1) {
+			enemyHealth -= 30 * PlayerAttack.damageModifier;
+			grenadeTag = 0;
+		} else {
+			enemyHealth -= 10 * PlayerAttack.damageModifier;
+		}
         print("enemyHealth = " + enemyHealth);
         locked = 0;
         // anim.SetBool("ifHit", false);
@@ -112,9 +120,19 @@ public class EnemyAi : MonoBehaviour {
 		} else {
 			hurt.Play ();
 		}
+		//Vector3 dir1 = -(target.position - transform.position);
+		//enemyRigid.AddForce (dir1 * 400f);
         yield return null;
 	} 
 
+	void OnTriggerEnter2D(Collider2D coll) {
+		if (coll.tag == "Grenade") {
+			StartCoroutine (takeDamage ());
+			Vector3 dir1 = -(Grenade.position - enemyTransform.position);
+			grenadeTag = 1;
+			enemyRigid.AddForce (dir1 * 600f);
+		}
+	}
 	void OnTriggerStay2D(Collider2D collision) {
         //print(Input.GetButtonDown("attack"));
 		if (collision.tag == "SwordCollider" && (Input.GetButtonDown("attack") || Input.GetButtonDown("B")) && WeaponPickup.getHands() == false && locked == 1 && WeaponPickup.getSword() == true) {
@@ -147,7 +165,7 @@ public class EnemyAi : MonoBehaviour {
 			StartCoroutine(takeDamage ());
 			StartCoroutine(waitHit());
 		}
-		if (collision.tag == "NunchuckCollider" && (Input.GetButtonDown("attack") || Input.GetButtonDown("B")) && WeaponPickup.getHands() == false && locked == 1 && WeaponPickup.getNunchuck() == true) {
+		if (collision.tag == "NunchuckCollider" && (Input.GetButtonDown("attack") || Input.GetButtonDown("B")) && WeaponPickup.getHands() == false && WeaponPickup.getNunchuck() == true && locked > 0.5f) {
 			anim.SetBool("ifHit", true);
 			if (anim.GetFloat("MoveY") == 1.0f) {
 				anim.SetFloat("HitY", 1.0f);
