@@ -37,7 +37,7 @@ public class BowWeapon : MonoBehaviour {
 			if (lastMovement == 1) {
 				anim.SetFloat ("MoveY", 1.0f);
 				anim.SetFloat ("MoveX", 0.0f);
-			//transform.position = new Vector3 (0, -0.3f, 0);
+			//gameObject.transform.position = new Vector3 (gameObject.transform.position.x, gameObject.transform.position.y -0.3f, 0);
 			} else if (lastMovement == 2) {
 				anim.SetFloat ("MoveY", -1.0f);
 				anim.SetFloat ("MoveX", 0.0f);

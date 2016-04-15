@@ -19,7 +19,7 @@ public class ArrowSpawn : MonoBehaviour {
 
 	void attack() {
 		if ((Input.GetButtonDown("attack") || Input.GetButtonDown("B")) && WeaponPickup.getBow() == true && numOfArrows == 0) {
-			projectile = (GameObject)Instantiate(arrow, bowPlacement.transform.position + dir, transform.rotation);
+			projectile = (GameObject)Instantiate(arrow, gameObject.transform.position + dir, transform.rotation);
 			numOfArrows = 1;
 			projectile.SetActive (true);
 			projectile.GetComponent<Rigidbody2D> ().AddForce (dir * 5000f);
@@ -36,19 +36,19 @@ public class ArrowSpawn : MonoBehaviour {
 		if (PlayerMovement.lastMovementDirection == 1) {
 			transform.rotation = Quaternion.Euler (0, 0, 90);
 			//transform.position = new Vector3 (transform.position.x, transform.position.y + 0.3f, 0);
-			dir = new Vector3 (0, 0.3f, 0);
+			dir = new Vector3 (0, 0.5f, 0);
 			attack ();
 		} else if (PlayerMovement.lastMovementDirection == 2) {
 			transform.rotation = Quaternion.Euler (0, 0, 270);
-			dir = new Vector3(0, -0.3f, 0);
+			dir = new Vector3(0, - 0.5f, 0);
 			attack ();
 		} else if (PlayerMovement.lastMovementDirection == 3) {
 			transform.rotation = Quaternion.Euler (0, 0, 180);
-			dir = new Vector3(-0.3f, 0, 0);
+			dir = new Vector3(-0.5f, 0, 0);
 			attack ();
 		} else {
 			transform.rotation = Quaternion.Euler (0, 0, 0);
-			dir = new Vector3 (0.3f, 0, 0);
+			dir = new Vector3 (0.5f, 0, 0);
 			attack ();
 		}
 	}
