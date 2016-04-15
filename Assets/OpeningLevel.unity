@@ -2799,7 +2799,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 173, y: 71}
-  m_SizeDelta: {x: 150, y: 60}
+  m_SizeDelta: {x: 200, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &703524281
 MonoBehaviour:
@@ -4539,6 +4539,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 044249efdff26d1498b28c2dcac32b59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireball: {fileID: 155158, guid: 90268544498dd2944aeac272680839cd, type: 2}
+  fireballPosition: {fileID: 1034681704}
+  explosionParticle: {fileID: 198156, guid: 30f3ce82e4fab6545aab3aa4d9390d7a, type: 2}
 --- !u!1 &1190815189
 GameObject:
   m_ObjectHideFlags: 0
@@ -6256,7 +6259,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 406276, guid: fd22869157df52f4ea07cbf0f2f95277, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd22869157df52f4ea07cbf0f2f95277, type: 2}
@@ -6782,7 +6785,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 461422, guid: 5e4ef80f176ea4cf6a8fb5615096d167, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5059778, guid: 5e4ef80f176ea4cf6a8fb5615096d167, type: 2}
       propertyPath: m_Mass
@@ -6836,6 +6839,10 @@ Prefab:
       propertyPath: m_LinearDrag
       value: 1.3
       objectReference: {fileID: 0}
+    - target: {fileID: 11402578, guid: 5e4ef80f176ea4cf6a8fb5615096d167, type: 2}
+      propertyPath: consumables.Array.data[4]
+      value: 
+      objectReference: {fileID: 101478, guid: 529ce6ec38c39704689b41c4f5473c95, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e4ef80f176ea4cf6a8fb5615096d167, type: 2}
   m_IsPrefabParent: 0
@@ -7950,7 +7957,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 486624, guid: 4eb7afdc16efecf4eacbe6c86dd4495b, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11451238, guid: 4eb7afdc16efecf4eacbe6c86dd4495b, type: 2}
       propertyPath: m_Text

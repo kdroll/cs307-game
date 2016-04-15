@@ -64,17 +64,20 @@ public class LoadOnClick : MonoBehaviour
 
         }
         else {
-            PlayerMovement.speedModifier += .02f;
-            EnemyAi.gold -= 50 + (50 * PlayerMovement.numSpeedUpgrades);
-            PlayerMovement.numSpeedUpgrades++;
-            print("Speed modifier: " + PlayerMovement.speedModifier);
-            print("Num speedUpgrades: " + PlayerMovement.numSpeedUpgrades);
+            if (PlayerMovement.speedModifier >= PlayerMovement.maxSpeedMod || PlayerMovement.speedModifier + .02f >= PlayerMovement.maxSpeedMod) {
+                PlayerMovement.speedModifier = PlayerMovement.maxSpeedMod;
+            } else {
+                PlayerMovement.speedModifier += .02f;
+                EnemyAi.gold -= 50 + (50 * PlayerMovement.numSpeedUpgrades);
+                PlayerMovement.numSpeedUpgrades++;
+                print("Speed modifier: " + PlayerMovement.speedModifier);
+                print("Num speedUpgrades: " + PlayerMovement.numSpeedUpgrades);
+            }
         }
     }
 
     public void increaseHealth()
     {
-
         if (EnemyAi.gold < 50 + (50 * PlayerHealth.numHealthUpgrades))
         {
 

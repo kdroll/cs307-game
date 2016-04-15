@@ -12,14 +12,6 @@ public class StatsMenu : MonoBehaviour {
 
     void Start() {
         statsMenuCanvas.SetActive(false);
-        timeStat = GameObject.Find("Time Value").GetComponent<Text>();
-        timeStat.text = "";
-        enemiesKilledStat = GameObject.Find("Enemies Value").GetComponent<Text>();
-        enemiesKilledStat.text = "";
-        timesHitStat = GameObject.Find("Hit Value").GetComponent<Text>();
-        timesHitStat.text = "";
-        totalScoreStat = GameObject.Find("Score Value").GetComponent<Text>();
-        totalScoreStat.text = "";
     }
 
     public void setTrue() {
@@ -37,6 +29,16 @@ public class StatsMenu : MonoBehaviour {
             Time.timeScale = 0f;
             truncatedTime = (float)(System.Math.Truncate((double)Time.timeSinceLevelLoad * 100.0) / 100.0);
             roundedTime = (float)(System.Math.Round((double)truncatedTime, 2));
+
+            timeStat = GameObject.Find("Time Value").GetComponent<Text>();
+            timeStat.text = "";
+            enemiesKilledStat = GameObject.Find("Enemies Value").GetComponent<Text>();
+            enemiesKilledStat.text = "";
+            timesHitStat = GameObject.Find("Times Hit Value").GetComponent<Text>();
+            timesHitStat.text = "";
+            totalScoreStat = GameObject.Find("Total Score Value").GetComponent<Text>();
+            totalScoreStat.text = "";
+
             timeStat.text = "" + roundedTime + " = " + (float)(System.Math.Truncate(Time.time));
             enemiesKilledStat.text = "" + EnemyAi.numEnemiesDestroyed;
             timesHitStat.text = "" + PlayerHealth.numTimesHit;

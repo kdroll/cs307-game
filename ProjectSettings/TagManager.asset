@@ -19,6 +19,8 @@ TagManager:
   - Grenade
   - Bow
   - Arrow
+  - Fireball
+  - FireballExplosion
   layers:
   - Default
   - TransparentFX

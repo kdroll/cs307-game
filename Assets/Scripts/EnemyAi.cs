@@ -23,6 +23,7 @@ public class EnemyAi : MonoBehaviour {
 	public AudioSource death;
 	Rigidbody2D enemyRigid;
 	int grenadeTag = 0;
+    int fireballTag = 0;
 
 
     int firstRunUpdate = 0;
@@ -34,7 +35,7 @@ public class EnemyAi : MonoBehaviour {
     public static int gold = 100000;
     public static int goldBonus = 0;
 
-    public GameObject[] consumables = new GameObject[4];
+    public GameObject[] consumables = new GameObject[5];
 
 
     public void Start () {
@@ -83,6 +84,10 @@ public class EnemyAi : MonoBehaviour {
             //GameObject PepperClone = GameObject.FindGameObjectWithTag("Pepper");
             Instantiate(consumables[3], sheepPos, Quaternion.identity);
             print("cloned pepper");
+        } else if (rand >= 21 && rand <= 95) {
+            //GameObject PepperClone = GameObject.FindGameObjectWithTag("Pepper");
+            Instantiate(consumables[4], sheepPos, Quaternion.identity);
+            print("cloned pepper");
         } /*else if(rand >=25 && rand <= 30)
         {
             Instantiate(SwordClone, sheepPos, Quaternion.identity);
@@ -109,7 +114,10 @@ public class EnemyAi : MonoBehaviour {
 		if (grenadeTag == 1) {
 			enemyHealth -= 30 * PlayerAttack.damageModifier;
 			grenadeTag = 0;
-		} else {
+		} else if (fireballTag == 1) {
+            enemyHealth -= 20 * PlayerAttack.damageModifier;
+            fireballTag = 0;
+        } else {
 			enemyHealth -= 10 * PlayerAttack.damageModifier;
 		}
         print("enemyHealth = " + enemyHealth);
@@ -140,8 +148,8 @@ public class EnemyAi : MonoBehaviour {
 			StartCoroutine (takeDamage ());
 			StartCoroutine(waitHit());
 
-		}
-	}
+		} 
+    }
 
 	void OnTriggerEnter2D(Collider2D coll) {
 		if (coll.tag == "Grenade") {
@@ -160,8 +168,24 @@ public class EnemyAi : MonoBehaviour {
 			Vector3 dir1 = -(Grenade.position - enemyTransform.position);
 			grenadeTag = 1;
 			enemyRigid.AddForce (dir1 * 600f);
-		}
-	}
+		} else if (coll.tag == "FireballExplosion") {
+            anim.SetBool("ifHit", true);
+            if (anim.GetFloat("MoveY") == 1.0f) {
+                anim.SetFloat("HitY", 1.0f);
+            } else if (anim.GetFloat("MoveY") == -1.0f) {
+                anim.SetFloat("HitY", -1.0f);
+            } else if (anim.GetFloat("MoveX") == 1.0f) {
+                anim.SetFloat("HitX", 1.0f);
+            } else if (anim.GetFloat("MoveX") == -1.0f) {
+                anim.SetFloat("HitX", -1.0f);
+            }
+            StartCoroutine(takeDamage());
+            StartCoroutine(waitHit());
+            Vector3 dir1 = -(GameObject.FindGameObjectWithTag("Player").transform.position - enemyTransform.position);
+            fireballTag = 1;
+            enemyRigid.AddForce(dir1 * 600f);
+        }
+    }
 	void OnTriggerStay2D(Collider2D collision) {
         //print(Input.GetButtonDown("attack"));
 		if (collision.tag == "SwordCollider" && (Input.GetButtonDown("attack") || Input.GetButtonDown("B")) && WeaponPickup.getHands() == false && locked == 1 && WeaponPickup.getSword() == true) {
