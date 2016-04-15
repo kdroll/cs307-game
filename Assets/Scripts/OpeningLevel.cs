@@ -453,6 +453,7 @@ public class OpeningLevel : MonoBehaviour {
 					pitchfork.transform.position = pos2;
 					sword.transform.position = pos3;
 
+
 				}
 			}
 		}

@@ -124,10 +124,39 @@ public class EnemyAi : MonoBehaviour {
 		//enemyRigid.AddForce (dir1 * 400f);
         yield return null;
 	} 
+	void OnCollisionEnter2D(Collision2D col) {
+		if (col.gameObject.tag == "Arrow") {
+			anim.SetBool("ifHit", true);
+			if (anim.GetFloat("MoveY") == 1.0f) {
+				anim.SetFloat("HitY", 1.0f);
+			} else if (anim.GetFloat("MoveY") == -1.0f) {
+				anim.SetFloat("HitY", -1.0f);
+			} else if (anim.GetFloat("MoveX") == 1.0f) {
+				anim.SetFloat("HitX", 1.0f);
+			} else if (anim.GetFloat("MoveX") == -1.0f) {
+				anim.SetFloat("HitX", -1.0f);
+			}
+			print ("in collision field");
+			StartCoroutine (takeDamage ());
+			StartCoroutine(waitHit());
+
+		}
+	}
 
 	void OnTriggerEnter2D(Collider2D coll) {
 		if (coll.tag == "Grenade") {
+			anim.SetBool("ifHit", true);
+			if (anim.GetFloat("MoveY") == 1.0f) {
+				anim.SetFloat("HitY", 1.0f);
+			} else if (anim.GetFloat("MoveY") == -1.0f) {
+				anim.SetFloat("HitY", -1.0f);
+			} else if (anim.GetFloat("MoveX") == 1.0f) {
+				anim.SetFloat("HitX", 1.0f);
+			} else if (anim.GetFloat("MoveX") == -1.0f) {
+				anim.SetFloat("HitX", -1.0f);
+			}
 			StartCoroutine (takeDamage ());
+			StartCoroutine(waitHit());
 			Vector3 dir1 = -(Grenade.position - enemyTransform.position);
 			grenadeTag = 1;
 			enemyRigid.AddForce (dir1 * 600f);
