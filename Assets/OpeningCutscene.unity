@@ -112,7 +112,8 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 6.1254663, y: 3.4499996, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1845965352}
   m_Father: {fileID: 767063721}
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -132,14 +133,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 727f5324dd34940ca865b8476b0e758b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -166,6 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   images:
   - {fileID: 2800000, guid: 727f5324dd34940ca865b8476b0e758b, type: 3}
+  canvas: {fileID: 767063720}
 --- !u!1 &291830649
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,8 +258,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 42561026}
-  m_Father: {fileID: 1711612360}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -290,10 +292,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 610, y: 450}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -402,8 +404,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 767063721}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!1 &1845965351
@@ -431,16 +432,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1845965351}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.2046398, y: 0.2555091, z: 1.0604585}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 42561026}
+  m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 311.5, y: 172.5}
-  m_SizeDelta: {x: 160, y: 500}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 6.2, y: -112.64908}
+  m_SizeDelta: {x: 302.6, y: 1249}
+  m_Pivot: {x: 0.5, y: 0.5240481}
 --- !u!114 &1845965353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,7 +453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec7a6711cd2c35646b933774761f19fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
+  speed: 1
 --- !u!114 &1845965354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,7 +466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.8993914, b: 0.08823532, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -485,23 +486,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'H
-
-
-
-    E
-
-
-
-    L
-
-
-
-    L
-
-
-
-    O'
+  m_Text: "EVERY GREAT HERO'S JOURNEY HAS HUMBLE BEGINNINGS, OURS IS NO DIFFERENT.
+    \n\nBORN IN THE SMALL TOWN OF GAYNOR, ON THE NIGHT THAT IS NOW KNOWN AS THE RETURN
+    OF THE PHOENIX. ON THAT FATEFUL NIGHT, A RECLAIMER KNOWN AS THE PHOENIX RETURNED
+    AFTER A 2000 YEAR ABSENCE FOR UNKOWN REASONS AND ATTACKED THE SMALL TOWN OF GAYNOR.
+    \n\nTHE TOWN WAS LEVELED AND THERE WERE ONLY TWO SURVIVORS WHO LIVED TO TELL THE
+    TALE. OUR HERO, AND A MYSTERIOUS OLD MAN WHO GOES BY THE NAME OF GRANDOLF...\n\nNOW
+    OUR HERO HAS RETURNED TO FACE A THREAT THAT ONLY HE CAN DEFEAT"
 --- !u!222 &1845965355
 CanvasRenderer:
   m_ObjectHideFlags: 0
