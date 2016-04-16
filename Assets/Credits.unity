@@ -244,6 +244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  length: 0
 --- !u!1 &975279818
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,6 +365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
+  length: 1.2
 --- !u!114 &1208806401
 MonoBehaviour:
   m_ObjectHideFlags: 0
