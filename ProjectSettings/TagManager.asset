@@ -22,6 +22,7 @@ TagManager:
   - Fireball
   - FireballExplosion
   - Coin
+  - OilSpill
   layers:
   - Default
   - TransparentFX

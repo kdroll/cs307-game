@@ -118,7 +118,12 @@ public class ConsumablePickup : MonoBehaviour {
             EnemyAi.gold += 100;
             //Destroy(GameObject.FindGameObjectWithTag("Coin"));
             Destroy(collision.gameObject);
-            print("Picked up: Coin -- +10 Max Health");
+            print("Picked up: Coin -- +100 Gold");
+        } else if (collision.gameObject.tag == "OilSpill") {
+            PlayerMovement.speedModifier *= .75f;
+            //Destroy(GameObject.FindGameObjectWithTag("Coin"));
+            Destroy(collision.gameObject);
+            print("Picked up: Oil Spill -- .75x Speed");
         }
     }
 }

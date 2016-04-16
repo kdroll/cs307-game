@@ -35,7 +35,7 @@ public class EnemyAi : MonoBehaviour {
     public static int gold = 100000;
     public static int goldBonus = 0;
 
-    public GameObject[] consumables = new GameObject[6];
+    public GameObject[] consumables = new GameObject[7];
 
 
     public void Start () {
@@ -92,6 +92,10 @@ public class EnemyAi : MonoBehaviour {
             //GameObject PepperClone = GameObject.FindGameObjectWithTag("Pepper");
             Instantiate(consumables[5], sheepPos, Quaternion.identity);
             print("cloned coin");
+        } else if (rand >= 31 && rand <= 90) {
+            //GameObject PepperClone = GameObject.FindGameObjectWithTag("Pepper");
+            Instantiate(consumables[6], sheepPos, Quaternion.identity);
+            print("cloned oil spill");
         } /*else if(rand >=25 && rand <= 30)
         {
             Instantiate(SwordClone, sheepPos, Quaternion.identity);
