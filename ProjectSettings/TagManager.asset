@@ -16,6 +16,13 @@ TagManager:
   - Bacon
   - Nunchuck
   - NunchuckCollider
+  - Grenade
+  - Bow
+  - Arrow
+  - Fireball
+  - FireballExplosion
+  - Coin
+  - OilSpill
   layers:
   - Default
   - TransparentFX

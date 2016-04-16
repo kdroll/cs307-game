@@ -7,7 +7,8 @@ public class PlayerMovement : MonoBehaviour {
 
     public static float speedModifier = 1;
     public static int numSpeedUpgrades = 0;
-    public float sprintModifier; 
+    public static int maxSpeedMod = 2;
+    public float sprintModifier;
 	private int currentSpeed;
 	Animator anim;
 	private bool sprinting;

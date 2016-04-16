@@ -7,10 +7,13 @@ public class PlayerHealth : MonoBehaviour {
     public static float health;
     public static float healthModifier = 0;
     public static int numHealthUpgrades = 0;
+    public static int numTimesHit = 0;
     double locked = 0f;
     public static bool isDead = false;
     GameObject player;
     GameObject[] enemy;
+	public AudioSource audio;
+
 
     // perks array has size of the total number of perks
     // perks[i] = 0 means player does not have the 'i'th perk
@@ -19,6 +22,7 @@ public class PlayerHealth : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
+        numTimesHit = 0;
         startHealth = 100 + healthModifier;
         health = 100 + healthModifier;
         player = GameObject.FindGameObjectWithTag("Player");
@@ -49,7 +53,9 @@ public class PlayerHealth : MonoBehaviour {
         if (!PauseMenu.isPaused) {
             health -= ((5*(OpeningLevel.difficulty)*(OpeningLevel.difficulty)) - (30*OpeningLevel.difficulty) + 55);
             print(health);
+            numTimesHit++;
             locked = 0;
+			audio.Play();
             yield return null;
         }
     }
@@ -66,6 +72,7 @@ public class PlayerHealth : MonoBehaviour {
         if (coll.gameObject.tag == "Enemy" && locked == 1 && !Input.GetButtonDown("attack") && !Input.GetButtonDown("B")) {
             StartCoroutine(takeDamage());
         }
+
     }
 
 }

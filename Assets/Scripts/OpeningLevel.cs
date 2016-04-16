@@ -138,6 +138,7 @@ public class OpeningLevel : MonoBehaviour {
                 {
                     //Instantiate(enemy, new Vector3(10,54,0), Quaternion.identity);
                     GameObject enemyClone = GameObject.FindGameObjectWithTag("Enemy");
+                    
                     Instantiate(enemyClone, new Vector3(playerPos.x - 7, playerPos.y + 7, 0), Quaternion.identity);
                     print("spawned enemy at top left");
                 }
@@ -145,6 +146,7 @@ public class OpeningLevel : MonoBehaviour {
                 {
                     //Instantiate(enemy, new Vector3(54, 54, 0), Quaternion.identity);
                     GameObject enemyClone = GameObject.FindGameObjectWithTag("Enemy");
+                   
                     Instantiate(enemyClone, new Vector3(playerPos.x + 7, playerPos.y + 7, 0), Quaternion.identity);
                     print("spawned enemy at top right");
                 }
@@ -152,13 +154,15 @@ public class OpeningLevel : MonoBehaviour {
                 {
                     //Instantiate(enemy, new Vector3(54, 10, 0), Quaternion.identity);
                     GameObject enemyClone = GameObject.FindGameObjectWithTag("Enemy");
+                 
                     Instantiate(enemyClone, new Vector3(playerPos.x + 7, playerPos.y - 7, 0), Quaternion.identity);
                     print("spawned enemy at bottom right");
                 }
                 else if (choice == 4)
                 {
                     //Instantiate(enemy, new Vector3(10, 10, 0), Quaternion.identity);
-                    GameObject enemyClone = GameObject.FindGameObjectWithTag("Enemy");
+                   GameObject enemyClone = GameObject.FindGameObjectWithTag("Enemy");
+                  
                     Instantiate(enemyClone, new Vector3(playerPos.x - 7, playerPos.y - 7, 0), Quaternion.identity);
                     print("spawned enemy at bottom left");
                 }
@@ -236,6 +240,8 @@ public class OpeningLevel : MonoBehaviour {
 		for (int a = 0; a < density; a++) { 
 			randx = rand.Next (levelWidth / divisor, ((divisor - 1) * levelWidth) / divisor);
 			randy = rand.Next (levelWidth / divisor, ((divisor - 1) * levelWidth) / divisor);
+            if (randx <= 9 || randx >= 55 || randy <= 9 || randy >= 55)
+                continue;
 			adjacent = rand.Next (0, 3);
 			howMany = rand.Next (1, maxWallLength);
             int placeMore = 0;
@@ -247,17 +253,19 @@ public class OpeningLevel : MonoBehaviour {
                 && checkIfPosEmpty(new Vector3(randx + 2, randy + 1)) && checkIfPosEmpty(new Vector3(randx - 2, randy + 1)) && checkIfPosEmpty(new Vector3(randx + 1, randy - 2)) && checkIfPosEmpty(new Vector3(randx + 1, randy + 2))
                 && checkIfPosEmpty(new Vector3(randx, randy)))
             {
-                Instantiate(stoneTile, new Vector3(randx, randy), Quaternion.identity);
+                /*Instantiate(stoneTile, new Vector3(randx, randy), Quaternion.identity);
 				walls [(int)randx,(int)randy] = 1;
                 Point p = new Point();
                 p.X = randx;
                 p.Y = randy;
                 positions[pointIndex] = p;
-                pointIndex++;
+                pointIndex++;*/
                 placeMore = 1;
             }
             if (placeMore == 1)
             {
+                Point p = new Point();
+                int atLeastPlacedOne = 0;
                 if (adjacent == 0)
                 {
                     //left
@@ -270,11 +278,12 @@ public class OpeningLevel : MonoBehaviour {
                             && checkIfPosEmpty(new Vector3(randx - 1, randy + 2)) && checkIfPosEmpty(new Vector3(randx - 1, randy - 2))
                             && checkIfPosEmpty(new Vector3(randx - i, randy)))
                         {
-                            Point p = new Point();
+                            p = new Point(); //Point p = new Point();
                             p.X = randx;
                             p.Y = randy;
                             positions[pointIndex] = p;
                             pointIndex++;
+                            atLeastPlacedOne++;
                             Instantiate(stoneTile, new Vector3(randx - i, randy), Quaternion.identity);
 							walls [(int)(randx - i),(int)randy] = 1;
                         }
@@ -292,11 +301,12 @@ public class OpeningLevel : MonoBehaviour {
                             && checkIfPosEmpty(new Vector3(randx + 1, randy + 2)) && checkIfPosEmpty(new Vector3(randx + 1, randy - 2))
                             && checkIfPosEmpty(new Vector3(randx + i, randy)))
                         {
-                            Point p = new Point();
+                            p = new Point();
                             p.X = randx;
                             p.Y = randy;
                             positions[pointIndex] = p;
                             pointIndex++;
+                            atLeastPlacedOne++;
                             Instantiate(stoneTile, new Vector3(randx + i, randy), Quaternion.identity);
 							walls [(int)(randx + i),(int)randy] = 1;
                         }
@@ -314,11 +324,12 @@ public class OpeningLevel : MonoBehaviour {
                             && checkIfPosEmpty(new Vector3(randx - 2, randy - 1)) && checkIfPosEmpty(new Vector3(randx + 2, randy - 1))
                             && checkIfPosEmpty(new Vector3(randx, randy - i)))
                         {
-                            Point p = new Point();
+                            p = new Point();
                             p.X = randx;
                             p.Y = randy;
                             positions[pointIndex] = p;
                             pointIndex++;
+                            atLeastPlacedOne++;
                             Instantiate(stoneTile, new Vector3(randx, randy - i), Quaternion.identity);
 							walls [(int)randx,(int)(randy - i)] = 1;
                         }
@@ -336,18 +347,30 @@ public class OpeningLevel : MonoBehaviour {
                             && checkIfPosEmpty(new Vector3(randx - 2, randy + 1)) && checkIfPosEmpty(new Vector3(randx + 2, randy + 1))
                             && checkIfPosEmpty(new Vector3(randx, randy + i)))
                         {
-                            Point p = new Point();
+                            p = new Point();
                             p.X = randx;
                             p.Y = randy;
                             positions[pointIndex] = p;
                             pointIndex++;
+                            atLeastPlacedOne++;
                             Instantiate(stoneTile, new Vector3(randx, randy + i), Quaternion.identity);
 							walls [(int)randx,(int)(randy + i)] = 1;
                         }
                     }
                 }
+                if (atLeastPlacedOne > 0)
+                {
+                    Instantiate(stoneTile, new Vector3(randx, randy), Quaternion.identity);
+                    walls[(int)randx, (int)randy] = 1;
+                    p = new Point();
+                    p.X = randx;
+                    p.Y = randy;
+                    positions[pointIndex] = p;
+                    pointIndex++;
+                }
             }
 		}
+        
 
         /*for(int i = 0; i < pointIndex; i++)
         {
@@ -426,9 +449,10 @@ public class OpeningLevel : MonoBehaviour {
                     Vector2 pos1 = new Vector2(x,y);
 					Vector2 pos2 = new Vector2 (x + 2f, y + 2f);
 					Vector2 pos3 = new Vector2 (x + 3f, y + 3f);
-					enemy.transform.position = pos1;
+					enemy.transform.position = new Vector3(0,0,0);  //before was equal to pos1
 					pitchfork.transform.position = pos2;
 					sword.transform.position = pos3;
+
 
 				}
 			}
