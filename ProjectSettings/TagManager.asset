@@ -19,6 +19,10 @@ TagManager:
   - Grenade
   - Bow
   - Arrow
+  - Fireball
+  - FireballExplosion
+  - Coin
+  - OilSpill
   layers:
   - Default
   - TransparentFX
