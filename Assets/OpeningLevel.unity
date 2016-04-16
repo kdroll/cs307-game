@@ -4540,7 +4540,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireball: {fileID: 155158, guid: 90268544498dd2944aeac272680839cd, type: 2}
-  fireballPosition: {fileID: 1034681704}
   explosionParticle: {fileID: 198156, guid: 30f3ce82e4fab6545aab3aa4d9390d7a, type: 2}
 --- !u!1 &1190815189
 GameObject:
@@ -6755,6 +6754,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11402578, guid: 5e4ef80f176ea4cf6a8fb5615096d167, type: 2}
+      propertyPath: consumables.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 461422, guid: 5e4ef80f176ea4cf6a8fb5615096d167, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -6843,6 +6846,10 @@ Prefab:
       propertyPath: consumables.Array.data[4]
       value: 
       objectReference: {fileID: 101478, guid: 529ce6ec38c39704689b41c4f5473c95, type: 2}
+    - target: {fileID: 11402578, guid: 5e4ef80f176ea4cf6a8fb5615096d167, type: 2}
+      propertyPath: consumables.Array.data[5]
+      value: 
+      objectReference: {fileID: 177874, guid: 0e57cb8b03fc5ff46b5e201761633411, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e4ef80f176ea4cf6a8fb5615096d167, type: 2}
   m_IsPrefabParent: 0

@@ -21,6 +21,7 @@ TagManager:
   - Arrow
   - Fireball
   - FireballExplosion
+  - Coin
   layers:
   - Default
   - TransparentFX
