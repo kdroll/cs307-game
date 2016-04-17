@@ -140,7 +140,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 727f5324dd34940ca865b8476b0e758b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f0ed8d15fc62441abb54ef895ede3a1a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   images:
-  - {fileID: 2800000, guid: 727f5324dd34940ca865b8476b0e758b, type: 3}
+  - {fileID: 0}
   canvas: {fileID: 767063720}
 --- !u!1 &169916187
 GameObject:
@@ -249,7 +249,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 8
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -584,11 +584,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1845965351}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec7a6711cd2c35646b933774761f19fd, type: 3}
+  m_Script: {fileID: 11500000, guid: 87498fa0540b741ed8ef1f90c9b77536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  length: 2.5
+  length: 1
 --- !u!114 &1845965354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -621,13 +621,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "EVERY GREAT HERO'S JOURNEY HAS HUMBLE BEGINNINGS, OURS IS NO DIFFERENT.
-    \n\nBORN IN THE SMALL TOWN OF GAYNOR, ON THE NIGHT THAT IS NOW KNOWN AS THE RETURN
-    OF THE PHOENIX. ON THAT FATEFUL NIGHT, A RECLAIMER KNOWN AS THE PHOENIX RETURNED
-    AFTER A 2000 YEAR ABSENCE FOR UNKOWN REASONS AND ATTACKED THE SMALL TOWN OF GAYNOR.
-    \n\nTHE TOWN WAS LEVELED AND THERE WERE ONLY TWO SURVIVORS WHO LIVED TO TELL THE
-    TALE. OUR HERO, AND A MYSTERIOUS OLD MAN WHO GOES BY THE NAME OF GRANDOLF...\n\nNOW
-    OUR HERO HAS RETURNED TO FACE A THREAT THAT ONLY HE CAN DEFEAT"
+  m_Text: 'HE LIVED AN AVERAGE AND TOUGH LIFE AS HE LEARNED TO FISH AND FARM TO HELP
+    HIS MOTHER PROVIDE FOR HIS SICK FATHER. HE SAVED EVERY PENNY HE MADE TO HELP PAY
+    FOR AN EXPERIMENTAL SURGERY ON HIS FATHER BY THE LOCAL WIZARD, GRANDOLF. THE NIGHT
+    BEFORE THE SURGERY, THE WORLD WAS INTRODUCED TO A NEW EVIL.
+
+'
 --- !u!222 &1845965355
 CanvasRenderer:
   m_ObjectHideFlags: 0
