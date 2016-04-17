@@ -62,7 +62,7 @@ public class OpeningLevel : MonoBehaviour {
         } else {
             difficulty = 2;
         }
-        density = 60 / difficulty;
+        density = 30 / difficulty;
         positions = new Point[density * maxWallLength];
         spawnRate = 300;
         Time.timeScale = 1;
@@ -191,7 +191,6 @@ public class OpeningLevel : MonoBehaviour {
         }
         if(hit == 1) 
         {
-
             return false;
         }
         return true;
@@ -245,12 +244,11 @@ public class OpeningLevel : MonoBehaviour {
 			adjacent = rand.Next (0, 3);
 			howMany = rand.Next (1, maxWallLength);
             int placeMore = 0;
-            if (checkIfPosEmpty(new Vector3(randx + 1, randy)) && checkIfPosEmpty(new Vector3(randx - 1, randy)) && checkIfPosEmpty(new Vector3(randx, randy - 1)) && checkIfPosEmpty(new Vector3(randx, randy + 1))
-                && checkIfPosEmpty(new Vector3(randx + 2, randy)) && checkIfPosEmpty(new Vector3(randx - 2, randy)) && checkIfPosEmpty(new Vector3(randx, randy - 2)) && checkIfPosEmpty(new Vector3(randx, randy + 2))
-                && checkIfPosEmpty(new Vector3(randx + 1, randy - 1)) && checkIfPosEmpty(new Vector3(randx - 1, randy - 1)) && checkIfPosEmpty(new Vector3(randx - 1, randy - 1)) && checkIfPosEmpty(new Vector3(randx - 1, randy + 1))
-                && checkIfPosEmpty(new Vector3(randx + 2, randy - 1)) && checkIfPosEmpty(new Vector3(randx - 2, randy - 1)) && checkIfPosEmpty(new Vector3(randx - 1, randy - 2)) && checkIfPosEmpty(new Vector3(randx - 1, randy + 2))
-                && checkIfPosEmpty(new Vector3(randx + 1, randy + 1)) && checkIfPosEmpty(new Vector3(randx - 1, randy + 1)) && checkIfPosEmpty(new Vector3(randx + 1, randy - 1)) && checkIfPosEmpty(new Vector3(randx + 1, randy + 1))
-                && checkIfPosEmpty(new Vector3(randx + 2, randy + 1)) && checkIfPosEmpty(new Vector3(randx - 2, randy + 1)) && checkIfPosEmpty(new Vector3(randx + 1, randy - 2)) && checkIfPosEmpty(new Vector3(randx + 1, randy + 2))
+            if (checkIfPosEmpty(new Vector3(randx - 1, randy)) && checkIfPosEmpty(new Vector3(randx + 1, randy)) && checkIfPosEmpty(new Vector3(randx, randy - 1)) && checkIfPosEmpty(new Vector3(randx, randy + 1))
+                && checkIfPosEmpty(new Vector3(randx + 1, randy + 1)) && checkIfPosEmpty(new Vector3(randx + 1, randy - 1)) && checkIfPosEmpty(new Vector3(randx - 1, randy + 1)) && checkIfPosEmpty(new Vector3(randx - 1, randy - 1))
+                && checkIfPosEmpty(new Vector3(randx + 2, randy + 2)) && checkIfPosEmpty(new Vector3(randx + 2, randy + 1)) && checkIfPosEmpty(new Vector3(randx + 2, randy)) && checkIfPosEmpty(new Vector3(randx + 2, randy - 1)) && checkIfPosEmpty(new Vector3(randx + 2, randy - 2))
+                && checkIfPosEmpty(new Vector3(randx + 1, randy + 2)) && checkIfPosEmpty(new Vector3(randx + 1, randy - 2)) && checkIfPosEmpty(new Vector3(randx, randy + 2)) && checkIfPosEmpty(new Vector3(randx, randy - 2)) && checkIfPosEmpty(new Vector3(randx - 1, randy + 2)) && checkIfPosEmpty(new Vector3(randx - 1, randy - 2))
+                && checkIfPosEmpty(new Vector3(randx - 2, randy + 2)) && checkIfPosEmpty(new Vector3(randx - 2, randy + 1)) && checkIfPosEmpty(new Vector3(randx - 2, randy)) && checkIfPosEmpty(new Vector3(randx - 2, randy - 1)) && checkIfPosEmpty(new Vector3(randx - 2, randy - 2))
                 && checkIfPosEmpty(new Vector3(randx, randy)))
             {
                 /*Instantiate(stoneTile, new Vector3(randx, randy), Quaternion.identity);
@@ -269,14 +267,13 @@ public class OpeningLevel : MonoBehaviour {
                 if (adjacent == 0)
                 {
                     //left
-                    for (int i = 1; i <= howMany; i++)
+                    for (int i = 0; i <= howMany; i++)
                     {
-                        if (checkIfPosEmpty(new Vector3(randx - i - 1, randy)) && checkIfPosEmpty(new Vector3(randx - i - 2, randy))
-                            && checkIfPosEmpty(new Vector3(randx, randy + 1)) && checkIfPosEmpty(new Vector3(randx, randy - 1))
-                            && checkIfPosEmpty(new Vector3(randx, randy + 2)) && checkIfPosEmpty(new Vector3(randx, randy - 2))
-                            && checkIfPosEmpty(new Vector3(randx - 1, randy + 1)) && checkIfPosEmpty(new Vector3(randx - 1, randy - 1))
-                            && checkIfPosEmpty(new Vector3(randx - 1, randy + 2)) && checkIfPosEmpty(new Vector3(randx - 1, randy - 2))
-                            && checkIfPosEmpty(new Vector3(randx - i, randy)))
+                        if (checkIfPosEmpty(new Vector3(randx - i, randy + 2)) && checkIfPosEmpty(new Vector3(randx - i, randy + 1)) && checkIfPosEmpty(new Vector3(randx - i, randy - 1)) && checkIfPosEmpty(new Vector3(randx - i, randy -2))
+                            && checkIfPosEmpty(new Vector3(randx - i - 1, randy + 2)) && checkIfPosEmpty(new Vector3(randx - i - 1, randy + 1)) && checkIfPosEmpty(new Vector3(randx - i - 1, randy)) && checkIfPosEmpty(new Vector3(randx - i - 1, randy - 1)) && checkIfPosEmpty(new Vector3(randx - i - 1, randy -2))
+                            && checkIfPosEmpty(new Vector3(randx - i - 2, randy + 2)) && checkIfPosEmpty(new Vector3(randx - i - 2, randy + 1)) && checkIfPosEmpty(new Vector3(randx - i - 2, randy)) && checkIfPosEmpty(new Vector3(randx - i - 2, randy - 1)) && checkIfPosEmpty(new Vector3(randx - i - 2, randy - 2))
+                            && checkIfPosEmpty(new Vector3(randx - i - 3, randy + 2)) && checkIfPosEmpty(new Vector3(randx - i - 3, randy + 1)) && checkIfPosEmpty(new Vector3(randx - i - 3, randy)) && checkIfPosEmpty(new Vector3(randx - i - 3, randy - 1)) && checkIfPosEmpty(new Vector3(randx - i - 3, randy - 2))
+                            && checkIfPosEmpty(new Vector3(randx - i - 4, randy)) && checkIfPosEmpty(new Vector3(randx - i - 5, randy)))
                         {
                             p = new Point(); //Point p = new Point();
                             p.X = randx;
@@ -284,22 +281,21 @@ public class OpeningLevel : MonoBehaviour {
                             positions[pointIndex] = p;
                             pointIndex++;
                             atLeastPlacedOne++;
-                            Instantiate(stoneTile, new Vector3(randx - i, randy), Quaternion.identity);
-							walls [(int)(randx - i),(int)randy] = 1;
+                            Instantiate(stoneTile, new Vector3(randx - (i+1), randy), Quaternion.identity);
+							walls [(int)(randx - (i+1)),(int)randy] = 1;
                         }
                     }
                 }
                 else if (adjacent == 1)
                 {
                     //right
-                    for (int i = 1; i <= howMany; i++)
+                    for (int i = 0; i <= howMany; i++)
                     {
-                        if (checkIfPosEmpty(new Vector3(randx + i + 1, randy)) && checkIfPosEmpty(new Vector3(randx + i + 2, randy))
-                            && checkIfPosEmpty(new Vector3(randx, randy + 1)) && checkIfPosEmpty(new Vector3(randx, randy - 1))
-                            && checkIfPosEmpty(new Vector3(randx, randy + 2)) && checkIfPosEmpty(new Vector3(randx, randy - 2))
-                            && checkIfPosEmpty(new Vector3(randx + 1, randy + 1)) && checkIfPosEmpty(new Vector3(randx + 1, randy - 1))
-                            && checkIfPosEmpty(new Vector3(randx + 1, randy + 2)) && checkIfPosEmpty(new Vector3(randx + 1, randy - 2))
-                            && checkIfPosEmpty(new Vector3(randx + i, randy)))
+                        if (checkIfPosEmpty(new Vector3(randx + i, randy + 2)) && checkIfPosEmpty(new Vector3(randx + i, randy + 1)) && checkIfPosEmpty(new Vector3(randx + i, randy - 1)) && checkIfPosEmpty(new Vector3(randx + i, randy - 2))
+                            && checkIfPosEmpty(new Vector3(randx + i + 1, randy + 2)) && checkIfPosEmpty(new Vector3(randx + i + 1, randy + 1)) && checkIfPosEmpty(new Vector3(randx + i + 1, randy)) && checkIfPosEmpty(new Vector3(randx + i + 1, randy - 1)) && checkIfPosEmpty(new Vector3(randx + i + 1, randy - 2))
+                            && checkIfPosEmpty(new Vector3(randx + i + 2, randy + 2)) && checkIfPosEmpty(new Vector3(randx + i + 2, randy + 1)) && checkIfPosEmpty(new Vector3(randx + i + 2, randy)) && checkIfPosEmpty(new Vector3(randx + i + 2, randy - 1)) && checkIfPosEmpty(new Vector3(randx + i + 2, randy - 2))
+                            && checkIfPosEmpty(new Vector3(randx + i + 3, randy + 2)) && checkIfPosEmpty(new Vector3(randx + i + 3, randy + 1)) && checkIfPosEmpty(new Vector3(randx + i + 3, randy)) && checkIfPosEmpty(new Vector3(randx + i + 3, randy - 1)) && checkIfPosEmpty(new Vector3(randx + i + 3, randy - 2))
+                            && checkIfPosEmpty(new Vector3(randx + i - 4, randy)) && checkIfPosEmpty(new Vector3(randx - i - 5, randy)))
                         {
                             p = new Point();
                             p.X = randx;
@@ -307,22 +303,21 @@ public class OpeningLevel : MonoBehaviour {
                             positions[pointIndex] = p;
                             pointIndex++;
                             atLeastPlacedOne++;
-                            Instantiate(stoneTile, new Vector3(randx + i, randy), Quaternion.identity);
-							walls [(int)(randx + i),(int)randy] = 1;
+                            Instantiate(stoneTile, new Vector3(randx + (i+1), randy), Quaternion.identity);
+							walls [(int)(randx + (i+1)),(int)randy] = 1;
                         }
                     }
                 }
                 else if (adjacent == 2)
                 {
                     //down
-                    for (int i = 1; i <= howMany; i++)
+                    for (int i = 0; i <= howMany; i++)
                     {
-                        if (checkIfPosEmpty(new Vector3(randx, randy - i - 1)) && checkIfPosEmpty(new Vector3(randx, randy - i - 2))
-                            && checkIfPosEmpty(new Vector3(randx - 1, randy)) && checkIfPosEmpty(new Vector3(randx + 1, randy))
-                            && checkIfPosEmpty(new Vector3(randx - 2, randy)) && checkIfPosEmpty(new Vector3(randx + 2, randy))
-                            && checkIfPosEmpty(new Vector3(randx - 1, randy - 1)) && checkIfPosEmpty(new Vector3(randx + 1, randy - 1))
-                            && checkIfPosEmpty(new Vector3(randx - 2, randy - 1)) && checkIfPosEmpty(new Vector3(randx + 2, randy - 1))
-                            && checkIfPosEmpty(new Vector3(randx, randy - i)))
+                        if (checkIfPosEmpty(new Vector3(randx + 2, randy - i)) && checkIfPosEmpty(new Vector3(randx + 1, randy - i)) && checkIfPosEmpty(new Vector3(randx - 1, randy - i)) && checkIfPosEmpty(new Vector3(randx - 2, randy - i))
+                            && checkIfPosEmpty(new Vector3(randx + 2, randy - i - 1)) && checkIfPosEmpty(new Vector3(randx + 1, randy - i - 1)) && checkIfPosEmpty(new Vector3(randx, randy - i - 1)) && checkIfPosEmpty(new Vector3(randx - 1, randy - i - 1)) && checkIfPosEmpty(new Vector3(randx - 2, randy - i - 1))
+                            && checkIfPosEmpty(new Vector3(randx + 2, randy - i - 2)) && checkIfPosEmpty(new Vector3(randx + 1, randy - i - 2)) && checkIfPosEmpty(new Vector3(randx, randy - i - 2)) && checkIfPosEmpty(new Vector3(randx - 1, randy - i - 2)) && checkIfPosEmpty(new Vector3(randx - 2, randy - i - 2))
+                            && checkIfPosEmpty(new Vector3(randx + 2, randy - i - 3)) && checkIfPosEmpty(new Vector3(randx + 1, randy - i - 3)) && checkIfPosEmpty(new Vector3(randx, randy - i - 3)) && checkIfPosEmpty(new Vector3(randx - 1, randy - i - 3)) && checkIfPosEmpty(new Vector3(randx - 2, randy - i - 3))
+                            && checkIfPosEmpty(new Vector3(randx, randy - i - 4)) && checkIfPosEmpty(new Vector3(randx, randy - i - 5)))
                         {
                             p = new Point();
                             p.X = randx;
@@ -330,22 +325,21 @@ public class OpeningLevel : MonoBehaviour {
                             positions[pointIndex] = p;
                             pointIndex++;
                             atLeastPlacedOne++;
-                            Instantiate(stoneTile, new Vector3(randx, randy - i), Quaternion.identity);
-							walls [(int)randx,(int)(randy - i)] = 1;
+                            Instantiate(stoneTile, new Vector3(randx, randy - (i+1)), Quaternion.identity);
+							walls [(int)randx,(int)(randy - (i+1))] = 1;
                         }
                     }
                 }
                 else if (adjacent == 3)
                 {
                     //up
-                    for (int i = 1; i <= howMany; i++)
+                    for (int i = 0; i <= howMany; i++)
                     {
-                        if (checkIfPosEmpty(new Vector3(randx, randy + i + 1)) && checkIfPosEmpty(new Vector3(randx, randy + i + 2))
-                            && checkIfPosEmpty(new Vector3(randx - 1, randy)) && checkIfPosEmpty(new Vector3(randx + 1, randy))
-                            && checkIfPosEmpty(new Vector3(randx - 2, randy)) && checkIfPosEmpty(new Vector3(randx + 2, randy))
-                            && checkIfPosEmpty(new Vector3(randx - 1, randy + 1)) && checkIfPosEmpty(new Vector3(randx + 1, randy + 1))
-                            && checkIfPosEmpty(new Vector3(randx - 2, randy + 1)) && checkIfPosEmpty(new Vector3(randx + 2, randy + 1))
-                            && checkIfPosEmpty(new Vector3(randx, randy + i)))
+                        if (checkIfPosEmpty(new Vector3(randx + 2, randy + i)) && checkIfPosEmpty(new Vector3(randx + 1, randy + i)) && checkIfPosEmpty(new Vector3(randx - 1, randy + i)) && checkIfPosEmpty(new Vector3(randx - 2, randy + i))
+                            && checkIfPosEmpty(new Vector3(randx + 2, randy + i + 1)) && checkIfPosEmpty(new Vector3(randx + 1, randy + i + 1)) && checkIfPosEmpty(new Vector3(randx, randy + i + 1)) && checkIfPosEmpty(new Vector3(randx - 1, randy + i + 1)) && checkIfPosEmpty(new Vector3(randx - 2, randy + i + 1))
+                            && checkIfPosEmpty(new Vector3(randx + 2, randy + i + 2)) && checkIfPosEmpty(new Vector3(randx + 1, randy + i + 2)) && checkIfPosEmpty(new Vector3(randx, randy + i + 2)) && checkIfPosEmpty(new Vector3(randx - 1, randy + i + 2)) && checkIfPosEmpty(new Vector3(randx - 2, randy + i + 2))
+                            && checkIfPosEmpty(new Vector3(randx + 2, randy + i + 3)) && checkIfPosEmpty(new Vector3(randx + 1, randy + i + 3)) && checkIfPosEmpty(new Vector3(randx, randy + i + 3)) && checkIfPosEmpty(new Vector3(randx - 1, randy + i + 3)) && checkIfPosEmpty(new Vector3(randx - 2, randy + i + 3))
+                            && checkIfPosEmpty(new Vector3(randx, randy + i + 4)) && checkIfPosEmpty(new Vector3(randx, randy + i + 5)))
                         {
                             p = new Point();
                             p.X = randx;
@@ -353,8 +347,8 @@ public class OpeningLevel : MonoBehaviour {
                             positions[pointIndex] = p;
                             pointIndex++;
                             atLeastPlacedOne++;
-                            Instantiate(stoneTile, new Vector3(randx, randy + i), Quaternion.identity);
-							walls [(int)randx,(int)(randy + i)] = 1;
+                            Instantiate(stoneTile, new Vector3(randx, randy + (i+1)), Quaternion.identity);
+							walls [(int)randx,(int)(randy + (i+1))] = 1;
                         }
                     }
                 }
