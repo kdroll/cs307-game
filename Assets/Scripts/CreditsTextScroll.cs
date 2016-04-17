@@ -3,6 +3,7 @@
 public class CreditsTextScroll : MonoBehaviour
 {
 	public float speed;
+	public float length;
 
 	private void Start()
 	{
@@ -13,7 +14,7 @@ public class CreditsTextScroll : MonoBehaviour
 	{
 		// print (transform.position.y);
 		// print (Screen.height + 150);
-		if (transform.position.y - Screen.height * 1.2 > 3) {
+		if (transform.position.y - Screen.height * length > 3) {
 			// print ("RESET");
 			// print (transform.position.y - Screen.height + 150);
 			transform.Translate(0, (float) -1 * (Screen.height + 500), 0);
