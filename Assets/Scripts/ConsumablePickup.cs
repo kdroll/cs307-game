@@ -51,7 +51,7 @@ public class ConsumablePickup : MonoBehaviour {
         waffle.SetActive(false);
 
         waffle.GetComponent<CircleCollider2D>().enabled = false;
-
+        Destroy(waffle);
 
         effect.SetActive(false);
     }
@@ -95,8 +95,10 @@ public class ConsumablePickup : MonoBehaviour {
             Destroy(collision.gameObject);
             print("Picked up: Bacon -- +10 Max Health");
         } else if (collision.gameObject.tag == "Fireball") {
-            
-            fireballPosition = GameObject.FindGameObjectWithTag("Fireball").transform;
+
+            //fireballPosition = GameObject.FindGameObjectWithTag("Fireball").transform;
+            fireballPosition = collision.transform;
+
             //Destroy(GameObject.FindGameObjectWithTag("Fireball"));
             Destroy(collision.gameObject);
             effect = (GameObject)Instantiate(explosionParticle, fireballPosition.position, Quaternion.identity);
