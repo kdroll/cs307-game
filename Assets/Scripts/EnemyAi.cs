@@ -46,6 +46,7 @@ public class EnemyAi : MonoBehaviour {
 		enemy = GameObject.FindGameObjectWithTag ("Enemy");
 		locked = 0f;
 		enemyRigid = this.GetComponent<Rigidbody2D> ();
+        Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
 	}
 
 	IEnumerator wait() {
@@ -92,7 +93,7 @@ public class EnemyAi : MonoBehaviour {
             //GameObject PepperClone = GameObject.FindGameObjectWithTag("Pepper");
             Instantiate(consumables[5], sheepPos, Quaternion.identity);
             print("cloned coin");
-        } else if (rand >= 31 && rand <= 90) {
+        } else if (rand >= 31 && rand <= 35) {
             //GameObject PepperClone = GameObject.FindGameObjectWithTag("Pepper");
             Instantiate(consumables[6], sheepPos, Quaternion.identity);
             print("cloned oil spill");
