@@ -6796,7 +6796,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 122210, guid: 5e4ef80f176ea4cf6a8fb5615096d167, type: 2}
       propertyPath: m_Layer
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 11402578, guid: 5e4ef80f176ea4cf6a8fb5615096d167, type: 2}
       propertyPath: hurt
@@ -6854,6 +6854,10 @@ Prefab:
       propertyPath: consumables.Array.data[6]
       value: 
       objectReference: {fileID: 100106, guid: 935cf0d7b35c3f64fbd09537bfcd26a3, type: 2}
+    - target: {fileID: 5059778, guid: 5e4ef80f176ea4cf6a8fb5615096d167, type: 2}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e4ef80f176ea4cf6a8fb5615096d167, type: 2}
   m_IsPrefabParent: 0

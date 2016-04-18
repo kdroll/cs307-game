@@ -46,7 +46,7 @@ public class EnemyAi : MonoBehaviour {
 		enemy = GameObject.FindGameObjectWithTag ("Enemy");
 		locked = 0f;
 		enemyRigid = this.GetComponent<Rigidbody2D> ();
-        Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+        Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>());
 	}
 
 	IEnumerator wait() {

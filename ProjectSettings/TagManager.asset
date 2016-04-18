@@ -24,6 +24,7 @@ TagManager:
   - Coin
   - OilSpill
   - SkipText
+  - TheBoss
   layers:
   - Default
   - TransparentFX
@@ -33,7 +34,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Enemies
   - 
   - 
   - 
