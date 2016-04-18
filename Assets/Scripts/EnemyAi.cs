@@ -46,6 +46,7 @@ public class EnemyAi : MonoBehaviour {
 		enemy = GameObject.FindGameObjectWithTag ("Enemy");
 		locked = 0f;
 		enemyRigid = this.GetComponent<Rigidbody2D> ();
+        Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
 	}
 
 	IEnumerator wait() {
@@ -92,7 +93,7 @@ public class EnemyAi : MonoBehaviour {
             //GameObject PepperClone = GameObject.FindGameObjectWithTag("Pepper");
             Instantiate(consumables[5], sheepPos, Quaternion.identity);
             print("cloned coin");
-        } else if (rand >= 31 && rand <= 90) {
+        } else if (rand >= 31 && rand <= 35) {
             //GameObject PepperClone = GameObject.FindGameObjectWithTag("Pepper");
             Instantiate(consumables[6], sheepPos, Quaternion.identity);
             print("cloned oil spill");
@@ -299,20 +300,23 @@ public class EnemyAi : MonoBehaviour {
 				Vector3 dir = target.position - transform.position;
 				//print((Physics2D.Raycast (transform.position, dir,hit, 100f)));
 				hit = Physics2D.Raycast (transform.position, dir.normalized, 100f);
-				//print ("enemypos = " + transform.position + " hit = " + hit.point);
-				if (hit.collider != null) {
-					//print (hit.point);
-					//print ("hello");
-					//Debug.DrawRay (hit.transform.position, transform.position, Color.red);
-					Vector3 debugLine = transform.position - new Vector3(hit.point.x, hit.point.y, 0);
-					Debug.DrawRay (hit.point, debugLine, Color.red);
-					if (hit.collider.gameObject.CompareTag ("Obstacle")) {
-						
-						ifThereIsAnything = true;
-						//transform.position = Vector2.MoveTowards (transform.position, new Vector2(transform.position.x + 7f, transform.position.y), speed * Time.deltaTime);
-						//transform.position = Vector2.MoveTowards (transform.position, target.position, speed * Time.deltaTime);
-						Vector3 go = transform.position;
-                       
+                //print ("enemypos = " + transform.position + " hit = " + hit.point);
+                if (hit.collider != null)
+                {
+                    //print (hit.point);
+                    //print ("hello");
+                    //Debug.DrawRay (hit.transform.position, transform.position, Color.red);
+                    Vector3 debugLine = transform.position - new Vector3(hit.point.x, hit.point.y, 0);
+                    Debug.DrawRay(hit.point, debugLine, Color.red);
+                    if (hit.collider.gameObject.CompareTag("Obstacle"))
+                    {
+
+                        ifThereIsAnything = true;
+                        //transform.position = Vector2.MoveTowards (transform.position, new Vector2(transform.position.x + 7f, transform.position.y), speed * Time.deltaTime);
+                        //transform.position = Vector2.MoveTowards (transform.position, target.position, speed * Time.deltaTime);
+                        Vector3 go = transform.position;
+                        Vector3 goOriginal = transform.position;
+
                         float hitx = (float)Math.Round(hit.point.x, 0, MidpointRounding.AwayFromZero);
                         float hity = (float)Math.Round(hit.point.y, 0, MidpointRounding.AwayFromZero);
                         //print(hitx + " " + hity);
@@ -324,9 +328,10 @@ public class EnemyAi : MonoBehaviour {
                         //print("------------------------------------angle = " + angle);
 
                         //if (hity <= transform.position.y) {
-                        if(angle >= 45 && angle <= 135) { // above
-							int left = 0;
-							int right = 0;
+                        if (angle >= 45 && angle <= 135)
+                        { // above
+                            int left = 0;
+                            int right = 0;
                             int i;
                             for (i = (int)hitx; OpeningLevel.walls[i, (int)hity] != 0; i++)
                             {
@@ -346,29 +351,35 @@ public class EnemyAi : MonoBehaviour {
                             {
                                 left = 100;
                             }
-                          //  print ("right = " + right + " left = " + left);
-							if (left > right-1) {
-								go.Set (go.x + 10, go.y, go.z);
-							//	print ("moving right");
-							} else if (right > left-1) {
-								go.Set (go.x - 10, go.y, go.z);
-							//	print ("moving left");
-							} else {
+                            //  print ("right = " + right + " left = " + left);
+                            if (left > right - 1)
+                            {
+                                go.Set(go.x + 10, go.y, go.z);
+                                //	print ("moving right");
+                            }
+                            else if (right > left - 1)
+                            {
+                                go.Set(go.x - 10, go.y, go.z);
+                                //	print ("moving left");
+                            }
+                            else {
                                 System.Random rnd = new System.Random();
                                 int month = rnd.Next(1, 2);
                                 if (month == 1)
                                 {
                                     go.Set(go.x + 10, go.y, go.z);
-                              //      print("going right");
-                                } else
+                                    //      print("going right");
+                                }
+                                else
                                 {
                                     go.Set(go.x - 10, go.y, go.z);
-                                //    print("going left");
+                                    //    print("going left");
                                 }
-							}
-						}
+                            }
+                        }
                         //if (hity >= transform.position.y) {
-                        if(angle <= -45 && angle >= -135) {//below
+                        if (angle <= -45 && angle >= -135)
+                        {//below
                             int left = 0;
                             int right = 0;
                             int i;
@@ -378,7 +389,7 @@ public class EnemyAi : MonoBehaviour {
                             }
                             //print("enemy pos = " + transform.position.x + "," + transform.position.y + "  wall at that pos and up one = " + ((int)(transform.position.x + 1)) + "," + ((int)(hity - 1)));
                             //print("wall = " + OpeningLevel.walls[(int)transform.position.x + 1, (int)hity - 1]);
-                            if (OpeningLevel.walls[(int)transform.position.x+1, (int)hity - 1] == 1)
+                            if (OpeningLevel.walls[(int)transform.position.x + 1, (int)hity - 1] == 1)
                             {
                                 right = 100;
                             }
@@ -395,7 +406,7 @@ public class EnemyAi : MonoBehaviour {
                             if (left > right - 1)
                             {
                                 go.Set(go.x + 10, go.y, go.z);
-                              //  print("moving right");
+                                //  print("moving right");
                             }
                             else if (right > left - 1)
                             {
@@ -408,7 +419,7 @@ public class EnemyAi : MonoBehaviour {
                                 if (month == 1)
                                 {
                                     go.Set(go.x + 10, go.y, go.z);
-                                  //  print("going right");
+                                    //  print("going right");
                                 }
                                 else
                                 {
@@ -418,7 +429,8 @@ public class EnemyAi : MonoBehaviour {
                             }
                         }
                         //if (hitx <= transform.position.x) {
-                        if( angle < 45 && angle > -45) { //right
+                        if (angle < 45 && angle > -45)
+                        { //right
                             int left = 0;
                             int right = 0;
                             int i;
@@ -432,7 +444,7 @@ public class EnemyAi : MonoBehaviour {
                             {
                                 right = 100;
                             }
-                            for (i = (int)hity; OpeningLevel.walls[(int)hitx,i] != 0; i--)
+                            for (i = (int)hity; OpeningLevel.walls[(int)hitx, i] != 0; i--)
                             {
                                 left++;
                             }
@@ -440,16 +452,16 @@ public class EnemyAi : MonoBehaviour {
                             {
                                 left = 100;
                             }
-                           // print("right = " + right + " left = " + left);
+                            // print("right = " + right + " left = " + left);
                             if (left > right - 1)
                             {
                                 go.Set(go.x, go.y + 10, go.z);
-                             //   print("moving right");
+                                //   print("moving right");
                             }
                             else if (right > left - 1)
                             {
                                 go.Set(go.x, go.y - 10, go.z);
-                              //  print("moving left");
+                                //  print("moving left");
                             }
                             else {
                                 System.Random rnd = new System.Random();
@@ -457,17 +469,18 @@ public class EnemyAi : MonoBehaviour {
                                 if (month == 1)
                                 {
                                     go.Set(go.x, go.y + 10, go.z);
-                                //    print("going right");
+                                    //    print("going right");
                                 }
                                 else
                                 {
                                     go.Set(go.x, go.y - 10, go.z);
-                                  //  print("going left");
+                                    //  print("going left");
                                 }
                             }
                         }
                         //if (hitx >= transform.position.x) {
-                        if(angle > 135 || angle < -135) { //left
+                        if (angle > 135 || angle < -135)
+                        { //left
                             int left = 0;
                             int right = 0;
                             int i;
@@ -493,7 +506,7 @@ public class EnemyAi : MonoBehaviour {
                             if (left > right - 1)
                             {
                                 go.Set(go.x, go.y + 10, go.z);
-                              //  print("moving right");
+                                //  print("moving right");
                             }
                             else if (right > left - 1)
                             {
@@ -506,7 +519,7 @@ public class EnemyAi : MonoBehaviour {
                                 if (month == 1)
                                 {
                                     go.Set(go.x, go.y + 10, go.z);
-                                  //  print("going right");
+                                    //  print("going right");
                                 }
                                 else
                                 {
@@ -515,54 +528,68 @@ public class EnemyAi : MonoBehaviour {
                                 }
                             }
                         }
-                        if(angle == 45)
+                        /*if (angle == 45)
                         {
-                            go.Set(go.x, -64, 0);
-                        } else if(angle == -45)
+                            go.Set(goOriginal.x, goOriginal.y - 64, 0);
+                            print("angle == 45");
+                        }
+                        else if (angle == -45)
                         {
-                            go.Set(go.x, 64, 0);
-                        } else if(angle == -135)
+                            go.Set(goOriginal.x, goOriginal.y + 64, 0);
+                            print("angle == -45");
+                        }
+                        else if (angle == -135)
                         {
-                            go.Set(go.x, 64, 0);
-                        } else if(angle == 135)
+                            go.Set(goOriginal.x, goOriginal.y + 64, 0);
+                            print("angle == -135");
+                        }
+                        else if (angle == 135)
                         {
-                            go.Set(go.x, -64, 0);
-                        }                    
-                        transform.position = Vector2.MoveTowards (transform.position, go, speed/40);
-
-					}
-				}
-                //StartCoroutine(wait());
-                newPosition = enemyTransform.position;
-                if (((newPosition.y - oldPosition.y) < -0.0001f) && (newPosition.y - oldPosition.y) > -0.1f)
-                {
-                    anim.SetFloat("MoveX", 0.0f);
-                    anim.SetFloat("MoveY", -1.0f);
-                }
-                else if ((((newPosition.x - oldPosition.x) > 0.01f) && (newPosition.x - oldPosition.x) < 0.1f) || ((newPosition.x - oldPosition.x) > -0.1f && (newPosition.x - oldPosition.x) < -0.001f))
-                {
-                    if ((newPosition.x - oldPosition.x) > -0.1f && (newPosition.x - oldPosition.x) < -0.0001f)
-                    {
-                        anim.SetFloat("MoveX", -1.0f);
-                        anim.SetFloat("MoveY", 0.0f);
-                    }
-                    else {
-                        anim.SetFloat("MoveX", 1.0f);
-                        anim.SetFloat("MoveY", 0.0f);
+                            go.Set(goOriginal.x, goOriginal.y - 64, 0);
+                            print("angle == 135");
+                        }*/
+                        if (debugLine.magnitude < 2)
+                        {
+                            transform.position = Vector2.MoveTowards(transform.position, go, speed / 20);
+                        }
+                        else {
+                            transform.position = Vector2.MoveTowards(transform.position, go, speed / 40);
+                        }
                     }
                 }
-                else if ((((newPosition.y - oldPosition.y) > 0.0001f) && (newPosition.y - oldPosition.y) < 0.1f) || ((newPosition.y - oldPosition.y) > -0.1f) && ((newPosition.y - oldPosition.y)) > -0.0001f)
-                {
-                    if ((newPosition.y - oldPosition.y) > -0.1f && (newPosition.y - oldPosition.y) > -0.0001f)
+        
+                    //StartCoroutine(wait());
+                    newPosition = enemyTransform.position;
+                    if (((newPosition.y - oldPosition.y) < -0.0001f) && (newPosition.y - oldPosition.y) > -0.1f)
                     {
-                        anim.SetFloat("MoveX", 0.0f);
-                        anim.SetFloat("MoveY", 1.0f);
-                    }
-                    else {
                         anim.SetFloat("MoveX", 0.0f);
                         anim.SetFloat("MoveY", -1.0f);
                     }
-                }
+                    else if ((((newPosition.x - oldPosition.x) > 0.01f) && (newPosition.x - oldPosition.x) < 0.1f) || ((newPosition.x - oldPosition.x) > -0.1f && (newPosition.x - oldPosition.x) < -0.001f))
+                    {
+                        if ((newPosition.x - oldPosition.x) > -0.1f && (newPosition.x - oldPosition.x) < -0.0001f)
+                        {
+                            anim.SetFloat("MoveX", -1.0f);
+                            anim.SetFloat("MoveY", 0.0f);
+                        }
+                        else {
+                            anim.SetFloat("MoveX", 1.0f);
+                            anim.SetFloat("MoveY", 0.0f);
+                        }
+                    }
+                    else if ((((newPosition.y - oldPosition.y) > 0.0001f) && (newPosition.y - oldPosition.y) < 0.1f) || ((newPosition.y - oldPosition.y) > -0.1f) && ((newPosition.y - oldPosition.y)) > -0.0001f)
+                    {
+                        if ((newPosition.y - oldPosition.y) > -0.1f && (newPosition.y - oldPosition.y) > -0.0001f)
+                        {
+                            anim.SetFloat("MoveX", 0.0f);
+                            anim.SetFloat("MoveY", 1.0f);
+                        }
+                        else {
+                            anim.SetFloat("MoveX", 0.0f);
+                            anim.SetFloat("MoveY", -1.0f);
+                        }
+                    }
+                
             }
 
         }
