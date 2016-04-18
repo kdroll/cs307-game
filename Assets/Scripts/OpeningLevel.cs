@@ -17,7 +17,7 @@ public class OpeningLevel : MonoBehaviour {
     public Transform grassTile4;
 	public Transform stoneTile;
     public Transform wallTile;
-
+    public static string spawnRateString;
 	private Color[] tileColors;
 
 	public Texture2D levelTexture;
@@ -40,10 +40,11 @@ public class OpeningLevel : MonoBehaviour {
     int updateCountSpawnNum;
     public static int difficulty; //3= easiest    1 = hardest
 	public static int[,] walls = new int[64, 64];
+    float truncatedspawn;
+    float roundedspawn;
 
+    // Use this for initialization
 
-	// Use this for initialization
-	
     public struct Point
     {
         public int X { get; set; }
@@ -65,6 +66,7 @@ public class OpeningLevel : MonoBehaviour {
         density = 30 / difficulty;
         positions = new Point[density * maxWallLength];
         spawnRate = 300;
+        spawnRateString = (3600 / spawnRate) + " enemies/min";
         Time.timeScale = 1;
         PerkMenu.inPerkMenu = false;
         StatsMenu.inStatsMenu = false;
@@ -100,9 +102,10 @@ public class OpeningLevel : MonoBehaviour {
 	void Update () {
 		System.Random randy = new System.Random();
 		amount = GameObject.FindGameObjectsWithTag ("Enemy");
-
+        
 		if(Time.time - time > difficulty*3)
         {
+
             spawnRate -= 10;
             time = Time.time;
             //print("time = " + time + "   spawnRate " + spawnRate);
@@ -110,6 +113,16 @@ public class OpeningLevel : MonoBehaviour {
             {
                 spawnRate = (20 * difficulty - 10);
             }
+            if (spawnRate > 60)
+            {
+                spawnRateString = ((int)(3600 / spawnRate)) + " enemies/min";
+            } else
+            {
+                truncatedspawn = (float)(System.Math.Truncate((double)((3600.0/(60.0* spawnRate))) * 100.0) / 100.0);
+                roundedspawn = (float)(System.Math.Round((double)truncatedspawn, 2));
+                spawnRateString = roundedspawn + " enemies/sec";
+            }
+            print(spawnRateString);
         }
         if(updateCountSpawnNum % spawnRate == 0)
         {
@@ -140,7 +153,7 @@ public class OpeningLevel : MonoBehaviour {
                     GameObject enemyClone = GameObject.FindGameObjectWithTag("Enemy");
                     
                     Instantiate(enemyClone, new Vector3(playerPos.x - 7, playerPos.y + 7, 0), Quaternion.identity);
-                    print("spawned enemy at top left");
+                    //print("spawned enemy at top left");
                 }
                 else if (choice == 2)
                 {
@@ -148,7 +161,7 @@ public class OpeningLevel : MonoBehaviour {
                     GameObject enemyClone = GameObject.FindGameObjectWithTag("Enemy");
                    
                     Instantiate(enemyClone, new Vector3(playerPos.x + 7, playerPos.y + 7, 0), Quaternion.identity);
-                    print("spawned enemy at top right");
+                    //print("spawned enemy at top right");
                 }
                 else if (choice == 3)
                 {
@@ -156,7 +169,7 @@ public class OpeningLevel : MonoBehaviour {
                     GameObject enemyClone = GameObject.FindGameObjectWithTag("Enemy");
                  
                     Instantiate(enemyClone, new Vector3(playerPos.x + 7, playerPos.y - 7, 0), Quaternion.identity);
-                    print("spawned enemy at bottom right");
+                    //print("spawned enemy at bottom right");
                 }
                 else if (choice == 4)
                 {
@@ -164,7 +177,7 @@ public class OpeningLevel : MonoBehaviour {
                    GameObject enemyClone = GameObject.FindGameObjectWithTag("Enemy");
                   
                     Instantiate(enemyClone, new Vector3(playerPos.x - 7, playerPos.y - 7, 0), Quaternion.identity);
-                    print("spawned enemy at bottom left");
+                    //print("spawned enemy at bottom left");
                 }
             }
         }
@@ -201,8 +214,8 @@ public class OpeningLevel : MonoBehaviour {
 		tileColors = levelTexture.GetPixels ();
 		System.Random rand = new System.Random ();
 
-		print ("levelHeight = " + levelHeight);
-		print ("levelWidth = " + levelWidth);
+		//print ("levelHeight = " + levelHeight);
+		//print ("levelWidth = " + levelWidth);
 
 
 		//boundary left

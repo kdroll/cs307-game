@@ -64,39 +64,39 @@ public class EnemyAi : MonoBehaviour {
 
         System.Random rnd = new System.Random();
         int rand = rnd.Next(1, (100 - (10 * PlayerHealth.perks[1])));
-        print(100 - (10 * PlayerHealth.perks[1]));
+        //print(100 - (10 * PlayerHealth.perks[1]));
         if (rand >= 1 && rand <= 5)
         {
             //GameObject BaconClone = GameObject.FindGameObjectWithTag("Bacon"); //1-5
             Instantiate(consumables[0], sheepPos, Quaternion.identity);
-            print("cloned bacon");
+            //print("cloned bacon");
         } else if(rand >= 6 && rand <= 10)
         {
             //GameObject CupcakeClone = GameObject.FindGameObjectWithTag("Cupcake");
             Instantiate(consumables[1], sheepPos, Quaternion.identity);
-            print("cloned cupcake");
+            //print("cloned cupcake");
         } else if(rand >= 11 && rand <= 15)
         {
             //GameObject ToxicWasteClone = GameObject.FindGameObjectWithTag("ToxicWaste");
             Instantiate(consumables[2], sheepPos, Quaternion.identity);
-            print("cloned toxicwaste");
+            //print("cloned toxicwaste");
         } else if(rand >= 16 && rand <= 20)
         {
             //GameObject PepperClone = GameObject.FindGameObjectWithTag("Pepper");
             Instantiate(consumables[3], sheepPos, Quaternion.identity);
-            print("cloned pepper");
+            //print("cloned pepper");
         } else if (rand >= 21 && rand <= 25) {
             //GameObject PepperClone = GameObject.FindGameObjectWithTag("Pepper");
             Instantiate(consumables[4], sheepPos, Quaternion.identity);
-            print("cloned fireball");
+            //print("cloned fireball");
         } else if (rand >= 26 && rand <= 30) {
             //GameObject PepperClone = GameObject.FindGameObjectWithTag("Pepper");
             Instantiate(consumables[5], sheepPos, Quaternion.identity);
-            print("cloned coin");
+            //print("cloned coin");
         } else if (rand >= 31 && rand <= 35) {
             //GameObject PepperClone = GameObject.FindGameObjectWithTag("Pepper");
             Instantiate(consumables[6], sheepPos, Quaternion.identity);
-            print("cloned oil spill");
+            //print("cloned oil spill");
         } /*else if(rand >=25 && rand <= 30)
         {
             Instantiate(SwordClone, sheepPos, Quaternion.identity);
