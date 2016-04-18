@@ -97,7 +97,11 @@ public class EnemyAi : MonoBehaviour {
             //GameObject PepperClone = GameObject.FindGameObjectWithTag("Pepper");
             Instantiate(consumables[6], sheepPos, Quaternion.identity);
             print("cloned oil spill");
-        } /*else if(rand >=25 && rand <= 30)
+        } else if (rand >= 33 && rand <= 230) {
+            //GameObject PepperClone = GameObject.FindGameObjectWithTag("Pepper");
+            Instantiate(consumables[7], sheepPos, Quaternion.identity);
+            print("cloned lightning");
+        }/*else if(rand >=25 && rand <= 30)
         {
             Instantiate(SwordClone, sheepPos, Quaternion.identity);
             print("cloned sword");
