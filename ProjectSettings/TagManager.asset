@@ -24,6 +24,7 @@ TagManager:
   - Coin
   - OilSpill
   - SkipText
+  - Lightning
   layers:
   - Default
   - TransparentFX
