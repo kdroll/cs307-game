@@ -1,11 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class ConsumablePickup : MonoBehaviour {
 
+    public Text buffTimer, buffTimerDescription;
     static bool nothing = true;
     static bool pepper = false;
     static bool pickedUp = false;
+    bool isLightningBuffed = false;
+    public float buffTime = 0f;
+    float truncatedTime, roundedTime;
+    public float buffTimeLeft = 0f;
+    public float time;
 
     CircleCollider2D blastRadius;
     public GameObject fireball;
@@ -19,11 +26,22 @@ public class ConsumablePickup : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
+        buffTimer = GameObject.Find("Buff Time Amount").GetComponent<Text>();
+        buffTimerDescription = GameObject.Find("Buff Time Description").GetComponent<Text>();
+        buffTimer.GetComponent<Text>().enabled = false;
+        buffTimerDescription.GetComponent<Text>().enabled = false;
     }
 
     // Update is called once per frame
     void Update() {
-
+        //buffTimeLeft = (buffTime - Mathf.Abs(time - Time.time));
+        truncatedTime = (float)(System.Math.Truncate(((double)buffTime - Mathf.Abs(time - Time.time)) * 100.0) / 100.0);
+        buffTimeLeft = (float)(System.Math.Round((double)truncatedTime, 2));
+        if (buffTimeLeft < 0f) {
+            buffTimer.text = "" + 0;
+        } else {
+            buffTimer.text = "" + (buffTimeLeft);
+        }
     }
 
     public static bool getPepper() {
@@ -46,18 +64,47 @@ public class ConsumablePickup : MonoBehaviour {
         return nothing;
     }
 
+    private IEnumerator lightningBuffTimer(float oldSpeed) {
+        if (PlayerMovement.speedModifier >= PlayerMovement.maxSpeedMod || PlayerMovement.speedModifier * 1.75f >= PlayerMovement.maxSpeedMod) {
+            isLightningBuffed = true;
+            PlayerMovement.speedModifier = PlayerMovement.maxSpeedMod;
+        } else {
+            isLightningBuffed = true;
+            PlayerMovement.speedModifier *= 1.75f;
+        }
+        time = Time.time;
+        buffTimer.GetComponent<Text>().enabled = true;
+        buffTimerDescription.GetComponent<Text>().enabled = true;
+
+        buffTime = 3f;
+        yield return new WaitForSeconds(3f);
+
+        buffTimer.GetComponent<Text>().enabled = false;
+        buffTimerDescription.GetComponent<Text>().enabled = false;
+
+        if (oldSpeed >= PlayerMovement.maxSpeedMod) {
+            PlayerMovement.speedModifier = PlayerMovement.maxSpeedMod;
+            isLightningBuffed = false;
+        } else {
+            PlayerMovement.speedModifier = oldSpeed;
+            isLightningBuffed = false;
+        }
+    }
+
     private IEnumerator fireballExplosionTimer() {
         yield return new WaitForSeconds(0.01f);
         waffle.SetActive(false);
 
         waffle.GetComponent<CircleCollider2D>().enabled = false;
-
+        Destroy(waffle);
 
         effect.SetActive(false);
     }
 
     void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag == "Pepper") {
+            ItemDisplayScript.pepperDisplay.GetComponent<Text>().enabled = true;
+            ItemDisplayScript.pepperDisplay.CrossFadeAlpha(0.0f, 1.0f, false);
             if (PlayerMovement.speedModifier >= PlayerMovement.maxSpeedMod || PlayerMovement.speedModifier * 1.04f >= PlayerMovement.maxSpeedMod) {
                 PlayerMovement.speedModifier = PlayerMovement.maxSpeedMod;
             } else {
@@ -67,6 +114,8 @@ public class ConsumablePickup : MonoBehaviour {
             Destroy(collision.gameObject);
             print("Picked up: Chili Pepper -- 1.04x Speed");
         } else if (collision.gameObject.tag == "Cupcake") {
+            ItemDisplayScript.cupcakeDisplay.GetComponent<Text>().enabled = true;
+            ItemDisplayScript.cupcakeDisplay.CrossFadeAlpha(0.0f, 1.0f, false);
             PlayerMovement.speedModifier *= .95f;
             PlayerAttack.damageModifier *= 1.02f;
             if ((PlayerHealth.health + 20) > PlayerHealth.startHealth) {
@@ -78,6 +127,8 @@ public class ConsumablePickup : MonoBehaviour {
             Destroy(collision.gameObject);
             print("Picked up: Cupcake -- .95x Speed, 1.02x Damage, +20 Health");
         } else if (collision.gameObject.tag == "ToxicWaste") {
+            ItemDisplayScript.toxicWasteDisplay.GetComponent<Text>().enabled = true;
+            ItemDisplayScript.toxicWasteDisplay.CrossFadeAlpha(0.0f, 1.0f, false);
             if (PlayerMovement.speedModifier >= PlayerMovement.maxSpeedMod || PlayerMovement.speedModifier * 1.03f >= PlayerMovement.maxSpeedMod) {
                 PlayerMovement.speedModifier = PlayerMovement.maxSpeedMod;
             } else {
@@ -88,6 +139,8 @@ public class ConsumablePickup : MonoBehaviour {
             Destroy(collision.gameObject);
             print("Picked up: ToxicWaste -- 1.03x Speed, 1.03x Damage");
         } else if (collision.gameObject.tag == "Bacon") {
+            ItemDisplayScript.baconDisplay.GetComponent<Text>().enabled = true;
+            ItemDisplayScript.baconDisplay.CrossFadeAlpha(0.0f, 1.0f, false);
             PlayerHealth.healthModifier += 10;
             PlayerHealth.startHealth += 10;
             PlayerHealth.health += 10;
@@ -95,13 +148,14 @@ public class ConsumablePickup : MonoBehaviour {
             Destroy(collision.gameObject);
             print("Picked up: Bacon -- +10 Max Health");
         } else if (collision.gameObject.tag == "Fireball") {
-            
-            fireballPosition = GameObject.FindGameObjectWithTag("Fireball").transform;
-            //Destroy(GameObject.FindGameObjectWithTag("Fireball"));
+            ItemDisplayScript.fireballDisplay.GetComponent<Text>().enabled = true;
+            ItemDisplayScript.fireballDisplay.CrossFadeAlpha(0.0f, 1.0f, false);
+
+            fireballPosition = collision.transform;
+
             Destroy(collision.gameObject);
             effect = (GameObject)Instantiate(explosionParticle, fireballPosition.position, Quaternion.identity);
             waffle = (GameObject)Instantiate(fireball, fireballPosition.position, Quaternion.identity);
-            //waffle.GetComponent<CircleCollider2D>().enabled = false;
 
             waffle.transform.position = fireballPosition.position;
             effect.transform.position = fireballPosition.position;
@@ -115,15 +169,34 @@ public class ConsumablePickup : MonoBehaviour {
 
             print("Picked up: Fireball -- Explosion!!!");
         } else if (collision.gameObject.tag == "Coin") {
+            ItemDisplayScript.coinDisplay.GetComponent<Text>().enabled = true;
+            ItemDisplayScript.coinDisplay.CrossFadeAlpha(0.0f, 1.0f, false);
             EnemyAi.gold += 100;
-            //Destroy(GameObject.FindGameObjectWithTag("Coin"));
             Destroy(collision.gameObject);
             print("Picked up: Coin -- +100 Gold");
         } else if (collision.gameObject.tag == "OilSpill") {
+            ItemDisplayScript.oilSpillDisplay.GetComponent<Text>().enabled = true;
+            ItemDisplayScript.oilSpillDisplay.CrossFadeAlpha(0.0f, 1.0f, false);
             PlayerMovement.speedModifier *= .75f;
-            //Destroy(GameObject.FindGameObjectWithTag("Coin"));
             Destroy(collision.gameObject);
             print("Picked up: Oil Spill -- .75x Speed");
+        } else if (collision.gameObject.tag == "Lightning") {
+            ItemDisplayScript.lightningDisplay.GetComponent<Text>().enabled = true;
+            ItemDisplayScript.lightningDisplay.CrossFadeAlpha(0.0f, 1.0f, false);
+            Destroy(collision.gameObject);
+            float oldSpeedMod = PlayerMovement.speedModifier;
+            if (isLightningBuffed == false) {
+                StartCoroutine(lightningBuffTimer(oldSpeedMod));
+            }
+
+            print("Picked up: Lightning -- 1.75x Speed for 3 Seconds");
+        }
+        else if (collision.gameObject.tag == "Grenades") {
+            ItemDisplayScript.grenadesDisplay.GetComponent<Text>().enabled = true;
+            ItemDisplayScript.grenadesDisplay.CrossFadeAlpha(0.0f, 1.0f, false);
+            Grenade.numOfGrenades += 3;
+            Destroy(collision.gameObject);
+            print("Picked up: Grenades -- +3 Grenades");
         }
     }
 }

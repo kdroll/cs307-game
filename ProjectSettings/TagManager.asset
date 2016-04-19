@@ -24,7 +24,12 @@ TagManager:
   - Coin
   - OilSpill
   - SkipText
+<<<<<<< HEAD
   - TheBoss
+=======
+  - Lightning
+  - Grenades
+>>>>>>> master
   layers:
   - Default
   - TransparentFX
