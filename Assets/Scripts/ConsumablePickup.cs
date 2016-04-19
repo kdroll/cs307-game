@@ -103,6 +103,8 @@ public class ConsumablePickup : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag == "Pepper") {
+            ItemDisplayScript.pepperDisplay.GetComponent<Text>().enabled = true;
+            ItemDisplayScript.pepperDisplay.CrossFadeAlpha(0.0f, 1.0f, false);
             if (PlayerMovement.speedModifier >= PlayerMovement.maxSpeedMod || PlayerMovement.speedModifier * 1.04f >= PlayerMovement.maxSpeedMod) {
                 PlayerMovement.speedModifier = PlayerMovement.maxSpeedMod;
             } else {
@@ -112,6 +114,8 @@ public class ConsumablePickup : MonoBehaviour {
             Destroy(collision.gameObject);
             print("Picked up: Chili Pepper -- 1.04x Speed");
         } else if (collision.gameObject.tag == "Cupcake") {
+            ItemDisplayScript.cupcakeDisplay.GetComponent<Text>().enabled = true;
+            ItemDisplayScript.cupcakeDisplay.CrossFadeAlpha(0.0f, 1.0f, false);
             PlayerMovement.speedModifier *= .95f;
             PlayerAttack.damageModifier *= 1.02f;
             if ((PlayerHealth.health + 20) > PlayerHealth.startHealth) {
@@ -123,6 +127,8 @@ public class ConsumablePickup : MonoBehaviour {
             Destroy(collision.gameObject);
             print("Picked up: Cupcake -- .95x Speed, 1.02x Damage, +20 Health");
         } else if (collision.gameObject.tag == "ToxicWaste") {
+            ItemDisplayScript.toxicWasteDisplay.GetComponent<Text>().enabled = true;
+            ItemDisplayScript.toxicWasteDisplay.CrossFadeAlpha(0.0f, 1.0f, false);
             if (PlayerMovement.speedModifier >= PlayerMovement.maxSpeedMod || PlayerMovement.speedModifier * 1.03f >= PlayerMovement.maxSpeedMod) {
                 PlayerMovement.speedModifier = PlayerMovement.maxSpeedMod;
             } else {
@@ -133,6 +139,8 @@ public class ConsumablePickup : MonoBehaviour {
             Destroy(collision.gameObject);
             print("Picked up: ToxicWaste -- 1.03x Speed, 1.03x Damage");
         } else if (collision.gameObject.tag == "Bacon") {
+            ItemDisplayScript.baconDisplay.GetComponent<Text>().enabled = true;
+            ItemDisplayScript.baconDisplay.CrossFadeAlpha(0.0f, 1.0f, false);
             PlayerHealth.healthModifier += 10;
             PlayerHealth.startHealth += 10;
             PlayerHealth.health += 10;
@@ -140,6 +148,8 @@ public class ConsumablePickup : MonoBehaviour {
             Destroy(collision.gameObject);
             print("Picked up: Bacon -- +10 Max Health");
         } else if (collision.gameObject.tag == "Fireball") {
+            ItemDisplayScript.fireballDisplay.GetComponent<Text>().enabled = true;
+            ItemDisplayScript.fireballDisplay.CrossFadeAlpha(0.0f, 1.0f, false);
 
             fireballPosition = collision.transform;
 
@@ -159,14 +169,20 @@ public class ConsumablePickup : MonoBehaviour {
 
             print("Picked up: Fireball -- Explosion!!!");
         } else if (collision.gameObject.tag == "Coin") {
+            ItemDisplayScript.coinDisplay.GetComponent<Text>().enabled = true;
+            ItemDisplayScript.coinDisplay.CrossFadeAlpha(0.0f, 1.0f, false);
             EnemyAi.gold += 100;
             Destroy(collision.gameObject);
             print("Picked up: Coin -- +100 Gold");
         } else if (collision.gameObject.tag == "OilSpill") {
+            ItemDisplayScript.oilSpillDisplay.GetComponent<Text>().enabled = true;
+            ItemDisplayScript.oilSpillDisplay.CrossFadeAlpha(0.0f, 1.0f, false);
             PlayerMovement.speedModifier *= .75f;
             Destroy(collision.gameObject);
             print("Picked up: Oil Spill -- .75x Speed");
         } else if (collision.gameObject.tag == "Lightning") {
+            ItemDisplayScript.lightningDisplay.GetComponent<Text>().enabled = true;
+            ItemDisplayScript.lightningDisplay.CrossFadeAlpha(0.0f, 1.0f, false);
             Destroy(collision.gameObject);
             float oldSpeedMod = PlayerMovement.speedModifier;
             if (isLightningBuffed == false) {
@@ -175,9 +191,9 @@ public class ConsumablePickup : MonoBehaviour {
 
             print("Picked up: Lightning -- 1.75x Speed for 3 Seconds");
         }
-        else if (collision.gameObject.tag == "Grenades")
-        {
-            //putstuff
+        else if (collision.gameObject.tag == "Grenades") {
+            ItemDisplayScript.grenadesDisplay.GetComponent<Text>().enabled = true;
+            ItemDisplayScript.grenadesDisplay.CrossFadeAlpha(0.0f, 1.0f, false);
             Grenade.numOfGrenades += 3;
             Destroy(collision.gameObject);
             print("picked up grenades");
