@@ -64,13 +64,13 @@ public class PlayerHealth : MonoBehaviour {
 
 
     public void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.tag == "Enemy" && locked == 1 && !Input.GetButtonDown("attack") && !Input.GetButtonDown("B")) {
+		if ((collision.gameObject.tag == "Enemy"  || collision.gameObject.tag == "PenguinEnemy" )&& locked == 1 && !Input.GetButtonDown("attack") && !Input.GetButtonDown("B")) {
             StartCoroutine(takeDamage());
         }
 
     }
     public void OnCollisionStay2D(Collision2D coll) {
-        if (coll.gameObject.tag == "Enemy" && locked == 1 && !Input.GetButtonDown("attack") && !Input.GetButtonDown("B")) {
+		if ((coll.gameObject.tag == "Enemy"  || coll.gameObject.tag == "PenguinEnemy" )&& locked == 1 && !Input.GetButtonDown("attack") && !Input.GetButtonDown("B")) {
             StartCoroutine(takeDamage());
         }
 
