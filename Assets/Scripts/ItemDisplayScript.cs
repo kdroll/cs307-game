@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class ItemDisplayScript : MonoBehaviour {
 
     public static Text baconDisplay, cupcakeDisplay, pepperDisplay, toxicWasteDisplay, fireballDisplay, coinDisplay,
-        oilSpillDisplay, lightningDisplay, grenadesDisplay;
+        oilSpillDisplay, lightningDisplay, grenadesDisplay, swordDisplay, pitchforkDisplay, nunchuckDisplay, bowDisplay;
 
 	// Use this for initialization
 	void Start () {
@@ -27,6 +27,14 @@ public class ItemDisplayScript : MonoBehaviour {
         lightningDisplay.GetComponent<Text>().enabled = false;
         grenadesDisplay = GameObject.Find("Grenades Description").GetComponent<Text>();
         grenadesDisplay.GetComponent<Text>().enabled = false;
+        swordDisplay = GameObject.Find("Sword Description").GetComponent<Text>();
+        swordDisplay.GetComponent<Text>().enabled = false;
+        pitchforkDisplay = GameObject.Find("Pitchfork Description").GetComponent<Text>();
+        pitchforkDisplay.GetComponent<Text>().enabled = false;
+        nunchuckDisplay = GameObject.Find("Nunchuck Description").GetComponent<Text>();
+        nunchuckDisplay.GetComponent<Text>().enabled = false;
+        bowDisplay = GameObject.Find("Bow Description").GetComponent<Text>();
+        bowDisplay.GetComponent<Text>().enabled = false;
     }
 	
 	// Update is called once per frame
@@ -57,6 +65,18 @@ public class ItemDisplayScript : MonoBehaviour {
         }
         if (grenadesDisplay.GetComponent<Text>().enabled == true) {
             StartCoroutine(waitForFadeOut(grenadesDisplay));
+        }
+        if (swordDisplay.GetComponent<Text>().enabled == true) {
+            StartCoroutine(waitForFadeOut(swordDisplay));
+        }
+        if (pitchforkDisplay.GetComponent<Text>().enabled == true) {
+            StartCoroutine(waitForFadeOut(pitchforkDisplay));
+        }
+        if (nunchuckDisplay.GetComponent<Text>().enabled == true) {
+            StartCoroutine(waitForFadeOut(nunchuckDisplay));
+        }
+        if (bowDisplay.GetComponent<Text>().enabled == true) {
+            StartCoroutine(waitForFadeOut(bowDisplay));
         }
     }
 

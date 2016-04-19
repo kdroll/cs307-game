@@ -196,7 +196,7 @@ public class ConsumablePickup : MonoBehaviour {
             ItemDisplayScript.grenadesDisplay.CrossFadeAlpha(0.0f, 1.0f, false);
             Grenade.numOfGrenades += 3;
             Destroy(collision.gameObject);
-            print("picked up grenades");
+            print("Picked up: Grenades -- +3 Grenades");
         }
     }
 }
