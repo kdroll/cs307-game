@@ -48,7 +48,7 @@ public class Grenade : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey (KeyCode.G) && isThereAGrenade == 0 && numOfGrenades > 0) {
+		if ((Input.GetKey (KeyCode.G) || Input.GetKey(KeyCode.JoystickButton2)) && isThereAGrenade == 0 && numOfGrenades > 0) {
             numOfGrenades--;
 			waffle.transform.position = spawnGrenade.position;
 			effect.transform.position = spawnGrenade.position;
