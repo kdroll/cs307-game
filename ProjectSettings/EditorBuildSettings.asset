@@ -6,26 +6,26 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Opening Menu.unity
+    path: Assets/Scenes/Opening Menu.unity
   - enabled: 1
-    path: Assets/OpeningLevel.unity
+    path: Assets/Scenes/OpeningLevel.unity
   - enabled: 1
-    path: Assets/Credits.unity
+    path: Assets/Scenes/Credits.unity
   - enabled: 1
-    path: Assets/Options.unity
+    path: Assets/Scenes/Options.unity
   - enabled: 1
-    path: Assets/HighScores.unity
+    path: Assets/Scenes/HighScores.unity
   - enabled: 1
-    path: Assets/Difficulty.unity
+    path: Assets/Scenes/Difficulty.unity
   - enabled: 0
     path: Assets/SecondLevel.unity
   - enabled: 0
     path: Assets/ThirdLevel.unity
   - enabled: 1
-    path: Assets/OpeningCutscenePart1.unity
+    path: Assets/Scenes/OpeningCutscenePart1.unity
   - enabled: 1
-    path: Assets/OpeningCutscenePart2.unity
+    path: Assets/Scenes/OpeningCutscenePart2.unity
   - enabled: 1
-    path: Assets/OpeningCutscenePart3.unity
+    path: Assets/Scenes/OpeningCutscenePart3.unity
   - enabled: 1
-    path: Assets/OpeningCutscenePart4.unity
+    path: Assets/Scenes/OpeningCutscenePart4.unity
