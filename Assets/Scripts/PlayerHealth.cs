@@ -8,11 +8,11 @@ public class PlayerHealth : MonoBehaviour {
     public static float healthModifier = 0;
     public static int numHealthUpgrades = 0;
     public static int numTimesHit = 0;
-    public static double locked = 0f;
+    double locked = 0f;
     public static bool isDead = false;
     GameObject player;
     GameObject[] enemy;
-	public static AudioSource audio;
+	public AudioSource audio;
 
 
     // perks array has size of the total number of perks
@@ -43,20 +43,17 @@ public class PlayerHealth : MonoBehaviour {
             locked += .02;
         }
         if (health <= 0) {
-			print ("player is dead");
             isDead = true;
             EnemyAi.totalScore += (int)(System.Math.Truncate(TimeScript.roundedTime));
             PlayerPrefs.SetInt("Score", EnemyAi.totalScore);
             Destroy(OpeningLevel.player);
-			Destroy (BossLevelManager.player);
         }
     }
 
-	public static IEnumerator takeDamage() {
+    private IEnumerator takeDamage() {
         if (!PauseMenu.isPaused) {
-            //health -= ((5*(OpeningLevel.difficulty)*(OpeningLevel.difficulty)) - (30*OpeningLevel.difficulty) + 55);
-			health -=10;
-			print(health);
+            health -= ((5*(OpeningLevel.difficulty)*(OpeningLevel.difficulty)) - (30*OpeningLevel.difficulty) + 55);
+            print(health);
             numTimesHit++;
             locked = 0;
 			audio.Play();
