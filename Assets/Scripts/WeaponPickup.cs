@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class WeaponPickup : MonoBehaviour {
 	static bool nunchuck = false;
@@ -61,35 +62,45 @@ public class WeaponPickup : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D collision) {
 		if (collision.gameObject.tag == "Pitchfork" && sword != true && nunchuck != true && bow != true) {
-			pickedUp = true;
+            pickedUp = true;
 			pitchfork = true;
 			nunchuck = false;
 			hands = false;
 			GameObject.FindGameObjectWithTag ("Pitchfork").transform.position = new Vector2 (-20f, -20f);
-		} else if (collision.gameObject.tag == "Sword" && pitchfork != true && nunchuck != true && bow != true) {
-			pickedUp = true;
+            ItemDisplayScript.pitchforkDisplay.GetComponent<Text>().enabled = true;
+            ItemDisplayScript.pitchforkDisplay.CrossFadeAlpha(0.0f, 1.0f, false);
+        } else if (collision.gameObject.tag == "Sword" && pitchfork != true && nunchuck != true && bow != true) {
+            pickedUp = true;
 			sword = true;
 			nunchuck = false;
 			pitchfork = false;
 			hands = false;
 			GameObject.FindGameObjectWithTag ("Sword").transform.position = new Vector2 (-40f, -40f);
-		}
+            ItemDisplayScript.swordDisplay.GetComponent<Text>().enabled = true;
+            ItemDisplayScript.swordDisplay.CrossFadeAlpha(0.0f, 1.0f, false);
+        }
 		else if (collision.gameObject.tag == "Nunchuck" && pitchfork != true && sword != true && bow != true) {
-			pickedUp = true;
+            pickedUp = true;
 			sword = false;
 			nunchuck = true;
 			pitchfork = false;
 			hands = false;
 			GameObject.FindGameObjectWithTag ("Nunchuck").transform.position = new Vector2 (-40f, -40f);
-		}
+            ItemDisplayScript.nunchuckDisplay.GetComponent<Text>().enabled = true;
+            ItemDisplayScript.nunchuckDisplay.CrossFadeAlpha(0.0f, 1.0f, false);
+        }
 		else if (collision.gameObject.tag == "Bow" && pitchfork != true && sword != true && nunchuck != true) {
-			pickedUp = true;
+            if (GameObject.FindGameObjectWithTag("Bow").GetComponent<Collider2D>().isTrigger == true) {
+                ItemDisplayScript.bowDisplay.GetComponent<Text>().enabled = true;
+                ItemDisplayScript.bowDisplay.CrossFadeAlpha(0.0f, 1.0f, false);
+            }
+            pickedUp = true;
 			sword = false;
 			nunchuck = false;
 			pitchfork = false;
 			bow = true;
 			hands = false;
 			GameObject.FindGameObjectWithTag ("Bow").transform.position = new Vector2 (-40f, -40f);
-		}
+        }
 	}
 }
