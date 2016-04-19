@@ -175,5 +175,12 @@ public class ConsumablePickup : MonoBehaviour {
 
             print("Picked up: Lightning -- 1.75x Speed for 3 Seconds");
         }
+        else if (collision.gameObject.tag == "Grenades")
+        {
+            //putstuff
+            Grenade.numOfGrenades += 3;
+            Destroy(collision.gameObject);
+            print("picked up grenades");
+        }
     }
 }

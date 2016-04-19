@@ -11,6 +11,7 @@ public class Grenade : MonoBehaviour {
 	public GameObject explosionParticle;
 	public static Vector3 position;
 	int isThereAGrenade = 0;
+    public static int numOfGrenades;
 	// Use this for initialization
 
 	private IEnumerator grenadeTimer() {
@@ -38,6 +39,7 @@ public class Grenade : MonoBehaviour {
 		waffle = (GameObject)Instantiate (grenade, spawnGrenade.position, Quaternion.identity);
 		waffle.GetComponent<CircleCollider2D> ().enabled = false;
 		waffle.SetActive (false);
+        numOfGrenades = 5;
 	}
 
 	void Detonate() {
@@ -46,7 +48,8 @@ public class Grenade : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey (KeyCode.G) && isThereAGrenade == 0) {
+		if (Input.GetKey (KeyCode.G) && isThereAGrenade == 0 && numOfGrenades > 0) {
+            numOfGrenades--;
 			waffle.transform.position = spawnGrenade.position;
 			effect.transform.position = spawnGrenade.position;
 			waffle.SetActive (true);
