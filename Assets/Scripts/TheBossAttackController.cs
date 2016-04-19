@@ -50,7 +50,7 @@ public class TheBossAttackController : MonoBehaviour {
 			attackAnimator.SetBool ("IfIdle", true);
 			attackCoolodwnStart = Time.time;
 			//attack = Random.Range (1, 5);
-			attack = 1;
+			attack = 3;
 			print (attack);
 			if (attack == 1) {
 				attackAnimator.SetBool ("IfIdle", false);
