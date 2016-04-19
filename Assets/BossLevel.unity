@@ -1149,6 +1149,7 @@ Transform:
   m_Children:
   - {fileID: 1310229524}
   - {fileID: 75327018}
+  - {fileID: 825855815}
   m_Father: {fileID: 0}
   m_RootOrder: 17
 --- !u!95 &470171210
@@ -1852,6 +1853,46 @@ Transform:
   - {fileID: 568467353}
   m_Father: {fileID: 0}
   m_RootOrder: 13
+--- !u!1 &825855814
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 825855815}
+  - 114: {fileID: 825855816}
+  m_Layer: 0
+  m_Name: CircleAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &825855815
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 825855814}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 470171209}
+  m_RootOrder: 2
+--- !u!114 &825855816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 825855814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f2b3650d10184d38b0754d7f431cf71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  circleParticle: {fileID: 140644, guid: e1510a78bcc89477095214d7c37e4c5c, type: 2}
 --- !u!1 &858584060
 GameObject:
   m_ObjectHideFlags: 0
