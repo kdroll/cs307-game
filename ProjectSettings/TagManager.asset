@@ -26,6 +26,8 @@ TagManager:
   - SkipText
   - Lightning
   - Grenades
+  - TheBoss
+  - PenguinEnemy
   layers:
   - Default
   - TransparentFX
