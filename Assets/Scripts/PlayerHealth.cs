@@ -8,7 +8,7 @@ public class PlayerHealth : MonoBehaviour {
     public static float healthModifier = 0;
     public static int numHealthUpgrades = 0;
     public static int numTimesHit = 0;
-    double locked = 0f;
+    public static double locked = 0f;
     public static bool isDead = false;
     GameObject player;
     GameObject[] enemy;
@@ -50,13 +50,13 @@ public class PlayerHealth : MonoBehaviour {
         }
     }
 
-    private IEnumerator takeDamage() {
+	public static IEnumerator takeDamage() {
         if (!PauseMenu.isPaused) {
             health -= ((5*(OpeningLevel.difficulty)*(OpeningLevel.difficulty)) - (30*OpeningLevel.difficulty) + 55);
             print(health);
             numTimesHit++;
             locked = 0;
-			audio.Play();
+//			audio.Play();
             yield return null;
         }
     }
