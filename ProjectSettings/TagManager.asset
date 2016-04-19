@@ -25,6 +25,7 @@ TagManager:
   - OilSpill
   - SkipText
   - Lightning
+  - Grenades
   layers:
   - Default
   - TransparentFX

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class GoldScript : MonoBehaviour
 {
 
-    public Text goldAmount, EPS;
+    public Text goldAmount, EPS, Grenades;
 
     // Use this for initialization
     void Start()
@@ -13,7 +13,9 @@ public class GoldScript : MonoBehaviour
         goldAmount = GameObject.Find("Gold Amount").GetComponent<Text>();
         goldAmount.text = "";
         EPS = GameObject.Find("EPS").GetComponent<Text>();
-        goldAmount.text = "";
+        EPS.text = "";
+        Grenades = GameObject.Find("Grenades").GetComponent<Text>();
+        Grenades.text = "";
     }
 
     // Update is called once per frame
@@ -21,6 +23,7 @@ public class GoldScript : MonoBehaviour
     {
         handleGold();
         handleEPS();
+        handleGrenades();
     }
 
     void handleGold()
@@ -31,5 +34,9 @@ public class GoldScript : MonoBehaviour
     void handleEPS()
     {
         EPS.text = "" + OpeningLevel.spawnRateString;
+    }
+    void handleGrenades()
+    {
+        Grenades.text = "" + "Grenades: " + Grenade.numOfGrenades;
     }
 }

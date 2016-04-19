@@ -63,7 +63,7 @@ public class EnemyAi : MonoBehaviour {
         //GameObject PitchforkClone = GameObject.FindGameObjectWithTag("Pitchfork");//35-40
 
         System.Random rnd = new System.Random();
-        int rand = rnd.Next(1, (200 - (20 * PlayerHealth.perks[1])));
+        int rand = rnd.Next(1, (200 - ((OpeningLevel.difficulty-1)*20) - (20 * PlayerHealth.perks[1])));
         print(100 - (10 * PlayerHealth.perks[1]));
         if (rand >= 1 && rand <= 5)
         {
@@ -97,10 +97,16 @@ public class EnemyAi : MonoBehaviour {
             //GameObject PepperClone = GameObject.FindGameObjectWithTag("Pepper");
             Instantiate(consumables[6], sheepPos, Quaternion.identity);
             print("cloned oil spill");
-        } else if (rand >= 33 && rand <= 230) {
+        } else if (rand >= 33 && rand <= 40) {
             //GameObject PepperClone = GameObject.FindGameObjectWithTag("Pepper");
             Instantiate(consumables[7], sheepPos, Quaternion.identity);
             print("cloned lightning");
+        }
+        else if (rand >= 41 && rand <= 50)
+        {
+            //GameObject PepperClone = GameObject.FindGameObjectWithTag("Pepper");
+            Instantiate(consumables[8], sheepPos, Quaternion.identity);
+            print("cloned grenades");
         }/*else if(rand >=25 && rand <= 30)
         {
             Instantiate(SwordClone, sheepPos, Quaternion.identity);
