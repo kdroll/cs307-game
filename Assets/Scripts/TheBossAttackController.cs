@@ -18,6 +18,9 @@ public class TheBossAttackController : MonoBehaviour {
 		gameObject.GetComponent<BoxCollider2D> ().enabled = false;
 
 	}
+	IEnumerator wait() {
+		yield return new WaitForSeconds (1.5f);
+	}
 	IEnumerator waitVulnerable() {
 		gameObject.GetComponent<BoxCollider2D> ().enabled = true;
 		yield return new WaitForSeconds (vulnerable.length);
@@ -26,16 +29,25 @@ public class TheBossAttackController : MonoBehaviour {
 		attackAnimator.SetBool ("IfIdle", true);
 	}
 	IEnumerator waitLaser() {
+		//yield return new WaitForSeconds (1.5f);
+		attackAnimator.SetBool ("IfIdle", false);
+		attackAnimator.SetBool ("IfLaserAttack", true);
 		yield return new WaitForSeconds (laser.length);
 		attackAnimator.SetBool ("IfLaserAttack",false);
 		attackAnimator.SetBool ("IfIdle", true);
 	}
 	IEnumerator waitCircle() {
+		//yield return new WaitForSeconds (1.5f);
+		attackAnimator.SetBool ("IfIdle", false);
+		attackAnimator.SetBool ("IfCircleAttack", true);	
 		yield return new WaitForSeconds (circle.length);
 		attackAnimator.SetBool ("IfCircleAttack", false);
 		attackAnimator.SetBool ("IfIdle", true);
 	}
 	IEnumerator waitFire() {
+		//yield return new WaitForSeconds (1.5f);
+		attackAnimator.SetBool ("IfIdle", false);
+		attackAnimator.SetBool ("IfFireAttack", true);
 		yield return new WaitForSeconds (fire.length);
 		attackAnimator.SetBool ("IfFireAttack", false);
 		attackAnimator.SetBool ("IfIdle", true);
@@ -58,20 +70,20 @@ public class TheBossAttackController : MonoBehaviour {
 			attackAnimator.SetBool ("IfFireAttack", false);
 			attackAnimator.SetBool ("IfIdle", true);
 			attackCoolodwnStart = Time.time;
-			attack = Random.Range (1, 6);
-			//attack = 4;
+			//attack = Random.Range (1, 6);
+			attack = 3;
 			print (attack);
 			if (attack == 1) {
-				attackAnimator.SetBool ("IfIdle", false);
-				attackAnimator.SetBool ("IfLaserAttack", true);
+				//attackAnimator.SetBool ("IfIdle", false);
+				//attackAnimator.SetBool ("IfLaserAttack", true);
 				StartCoroutine (waitLaser ());
 			} else if (attack == 2) {
-				attackAnimator.SetBool ("IfIdle", false);
-				attackAnimator.SetBool ("IfCircleAttack", true);	
+				//attackAnimator.SetBool ("IfIdle", false);
+				//attackAnimator.SetBool ("IfCircleAttack", true);	
 				StartCoroutine (waitCircle ());
 			} else if (attack == 3) {
-				attackAnimator.SetBool ("IfIdle", false);
-				attackAnimator.SetBool ("IfFireAttack", true);
+				//attackAnimator.SetBool ("IfIdle", false);
+				//attackAnimator.SetBool ("IfFireAttack", true);
 				StartCoroutine (waitFire ());
 			} else if (attack == 4) {
 				attackAnimator.SetBool ("IfIdle", false);

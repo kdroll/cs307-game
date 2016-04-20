@@ -4,12 +4,14 @@ using System.Collections;
 public class TheBossHealth : MonoBehaviour {
 	int grenadeTag;
 	Animator anim;
-	float enemyHealth;
+	public static float enemyHealth;
+	public static float startHealth;
 	float locked;
 
 	void Start () {
 		grenadeTag = 0;
 		anim = gameObject.GetComponent<Animator> ();
+		startHealth = 500f;
 		enemyHealth = 500f;
 		locked = 0;
 

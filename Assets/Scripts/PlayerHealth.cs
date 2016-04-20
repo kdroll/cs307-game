@@ -47,6 +47,7 @@ public class PlayerHealth : MonoBehaviour {
             EnemyAi.totalScore += (int)(System.Math.Truncate(TimeScript.roundedTime));
             PlayerPrefs.SetInt("Score", EnemyAi.totalScore);
             Destroy(OpeningLevel.player);
+			Destroy (TheBossLevel.player);
         }
     }
 
