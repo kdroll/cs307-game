@@ -11,8 +11,8 @@ public class TheBossHealth : MonoBehaviour {
 	void Start () {
 		grenadeTag = 0;
 		anim = gameObject.GetComponent<Animator> ();
-		startHealth = 500f;
-		enemyHealth = 500f;
+		startHealth = 1000f;
+		enemyHealth = 1000f;
 		locked = 0;
 
 	}

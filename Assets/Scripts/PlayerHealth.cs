@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour {
     public static int numTimesHit = 0;
     public static double locked = 0f;
     public static bool isDead = false;
+	static int difficulty;
     GameObject player;
     GameObject[] enemy;
 	public AudioSource audio;
@@ -26,6 +27,8 @@ public class PlayerHealth : MonoBehaviour {
         startHealth = 100 + healthModifier;
         health = 100 + healthModifier;
         player = GameObject.FindGameObjectWithTag("Player");
+		//difficulty = OpeningLevel.difficulty;
+		difficulty = 2;
     }
 
     // Update is called once per frame
@@ -53,7 +56,7 @@ public class PlayerHealth : MonoBehaviour {
 
 	public static IEnumerator takeDamage() {
         if (!PauseMenu.isPaused) {
-            health -= ((5*(OpeningLevel.difficulty)*(OpeningLevel.difficulty)) - (30*OpeningLevel.difficulty) + 55);
+			health -= ((5*(difficulty)*(difficulty)) - (30*difficulty) + 55);
             print(health);
             numTimesHit++;
             locked = 0;
