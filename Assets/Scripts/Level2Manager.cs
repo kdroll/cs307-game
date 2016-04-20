@@ -529,17 +529,18 @@ public class Level2Manager : MonoBehaviour {
 		Vector2 pos = new Vector2(32 + add, 32);
 		Vector2 pospitchfork = new Vector2(32 + add, 32 + 3);
 		player.transform.position = pos;
-		//print("player put onto position " + (32 + add) + "," + 32);
-		//Instantiate(pitchforkclone, pospitchfork, Quaternion.identity);
-		//print("instatiated pitchfork");
-		//pitchfork.transform.position = pos1;
+        //print("player put onto position " + (32 + add) + "," + 32);
+        //Instantiate(pitchforkclone, pospitchfork, Quaternion.identity);
+        //print("instatiated pitchfork");
+        //pitchfork.transform.position = pos1;
 
 
-		//for(int i = 0; i < 5; i++)
-		//{
-		//    Instantiate(enemy, new Vector3((levelWidth/2 + i*5), (levelHeight/2 + i*5)), Quaternion.identity);
-		//}
+        //for(int i = 0; i < 5; i++)
+        //{
+        //    Instantiate(enemy, new Vector3((levelWidth/2 + i*5), (levelHeight/2 + i*5)), Quaternion.identity);
+        //}
 
-
-	}
+        Instantiate(grassTile2, new Vector3(44, 43), Quaternion.identity);
+        Instantiate(grassTile2, new Vector3(30, 24), Quaternion.identity);
+    }
 }
