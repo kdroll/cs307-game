@@ -75,7 +75,7 @@ public class PlayerHealth : MonoBehaviour {
 
     }
     public void OnCollisionStay2D(Collision2D coll) {
-		if ((coll.gameObject.tag == "Enemy"  || coll.gameObject.tag == "PenguinEnemy" )&& locked == 1 && !Input.GetButtonDown("attack") && !Input.GetButtonDown("B")) {
+		if ((coll.gameObject.tag == "Enemy"  || coll.gameObject.tag == "PenguinEnemy" || coll.gameObject.tag == "SkeletonEnemy")&& locked == 1 && !Input.GetButtonDown("attack") && !Input.GetButtonDown("B")) {
             StartCoroutine(takeDamage());
         }
 
