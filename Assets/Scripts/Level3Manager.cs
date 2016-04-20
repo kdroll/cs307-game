@@ -35,7 +35,7 @@ public class Level3Manager : MonoBehaviour {
 	GameObject sword;
 	public GameObject newEnemy;
 	float time;
-	public static int changeEnemyHealth;
+    public static int changeEnemyHealth;
 	GameObject[] amount;
 	int spawnRate;
 	int updateCountSpawnNum;
