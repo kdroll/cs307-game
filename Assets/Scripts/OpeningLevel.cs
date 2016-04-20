@@ -163,32 +163,59 @@ public class OpeningLevel : MonoBehaviour
                 {
                     //Instantiate(enemy, new Vector3(10,54,0), Quaternion.identity);
                     GameObject enemyClone = GameObject.FindGameObjectWithTag("Enemy");
-
-                    Instantiate(enemyClone, new Vector3(playerPos.x - 7, playerPos.y + 7, 0), Quaternion.identity);
+                    System.Random r = new System.Random();
+                    int pos = r.Next(1, 3);
+                    if(pos == 1)
+                        Instantiate(enemyClone, new Vector3(playerPos.x - 7, playerPos.y + 7, 0), Quaternion.identity);
+                    else if(pos == 2)
+                        Instantiate(enemyClone, new Vector3(playerPos.x - 14, playerPos.y, 0), Quaternion.identity);
+                    else if(pos == 3)
+                        Instantiate(enemyClone, new Vector3(playerPos.x, playerPos.y + 10, 0), Quaternion.identity);
                     //print("spawned enemy at top left");
                 }
                 else if (choice == 2)
                 {
                     //Instantiate(enemy, new Vector3(54, 54, 0), Quaternion.identity);
                     GameObject enemyClone = GameObject.FindGameObjectWithTag("Enemy");
-
-                    Instantiate(enemyClone, new Vector3(playerPos.x + 7, playerPos.y + 7, 0), Quaternion.identity);
+                    System.Random r = new System.Random();
+                    int pos = r.Next(1, 3);
+                    if (pos == 1)
+                        Instantiate(enemyClone, new Vector3(playerPos.x + 7, playerPos.y + 7, 0), Quaternion.identity);
+                    else if (pos == 2)
+                        Instantiate(enemyClone, new Vector3(playerPos.x + 14, playerPos.y, 0), Quaternion.identity);
+                    else if (pos == 3)
+                        Instantiate(enemyClone, new Vector3(playerPos.x, playerPos.y + 10, 0), Quaternion.identity);
+                    
                     //print("spawned enemy at top right");
                 }
                 else if (choice == 3)
                 {
                     //Instantiate(enemy, new Vector3(54, 10, 0), Quaternion.identity);
                     GameObject enemyClone = GameObject.FindGameObjectWithTag("Enemy");
-
-                    Instantiate(enemyClone, new Vector3(playerPos.x + 7, playerPos.y - 7, 0), Quaternion.identity);
+                    System.Random r = new System.Random();
+                    int pos = r.Next(1, 3);
+                    if (pos == 1)
+                        Instantiate(enemyClone, new Vector3(playerPos.x + 7, playerPos.y - 7, 0), Quaternion.identity);
+                    else if (pos == 2)
+                        Instantiate(enemyClone, new Vector3(playerPos.x + 14, playerPos.y, 0), Quaternion.identity);
+                    else if (pos == 3)
+                        Instantiate(enemyClone, new Vector3(playerPos.x, playerPos.y - 10, 0), Quaternion.identity);
+                    
                     //print("spawned enemy at bottom right");
                 }
                 else if (choice == 4)
                 {
                     //Instantiate(enemy, new Vector3(10, 10, 0), Quaternion.identity);
                     GameObject enemyClone = GameObject.FindGameObjectWithTag("Enemy");
-
-                    Instantiate(enemyClone, new Vector3(playerPos.x - 7, playerPos.y - 7, 0), Quaternion.identity);
+                    System.Random r = new System.Random();
+                    int pos = r.Next(1, 3);
+                    if (pos == 1)
+                        Instantiate(enemyClone, new Vector3(playerPos.x - 7, playerPos.y - 7, 0), Quaternion.identity);
+                    else if (pos == 2)
+                        Instantiate(enemyClone, new Vector3(playerPos.x - 14, playerPos.y, 0), Quaternion.identity);
+                    else if (pos == 3)
+                        Instantiate(enemyClone, new Vector3(playerPos.x, playerPos.y - 10, 0), Quaternion.identity);
+                    
                     //print("spawned enemy at bottom left");
                 }
             }

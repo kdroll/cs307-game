@@ -21,9 +21,9 @@ public class Grenade : MonoBehaviour {
 		effect.SetActive (true);
 		position = waffle.transform.position;
 		yield return new WaitForSeconds (0.01f);
+		waffle.GetComponent<CircleCollider2D> ().enabled = false;
 		waffle.SetActive (false);
 		effect.SetActive (false);
-		waffle.GetComponent<CircleCollider2D> ().enabled = false;
 		isThereAGrenade = 0;
 		//print ("made it past here");
 		//blastRadius.enabled = true;

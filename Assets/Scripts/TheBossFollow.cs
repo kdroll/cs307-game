@@ -16,7 +16,7 @@ public class TheBossFollow : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		target = player.transform;
-		if (gameObject.GetComponent<Animator> ().GetBool ("IfLaserAttack") == false && gameObject.GetComponent<Animator> ().GetBool ("IfCircleAttack") == false && gameObject.GetComponent<Animator> ().GetBool ("IfFireAttack") == false) {
+		if (gameObject.GetComponent<Animator> ().GetBool ("IfLaserAttack") == false && gameObject.GetComponent<Animator> ().GetBool ("IfCircleAttack") == false && gameObject.GetComponent<Animator> ().GetBool ("IfFireAttack") == false && gameObject.GetComponent<Animator> ().GetBool ("IfVulnerable") == false) {
 			Vector2 newPosition;
 			transform.position = Vector2.MoveTowards (transform.position, target.position, speed * Time.deltaTime);
 
