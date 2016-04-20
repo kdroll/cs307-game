@@ -36,6 +36,7 @@ public class OpeningLevel : MonoBehaviour
     GameObject sword;
     public GameObject newEnemy;
     float time;
+    public static int changeEnemyHealth;
     GameObject[] amount;
     int spawnRate;
     int updateCountSpawnNum;
@@ -59,6 +60,7 @@ public class OpeningLevel : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        changeEnemyHealth = 0;
         time = Time.time;
         if (LoadOnClick.difficultySet)
         {
@@ -113,6 +115,7 @@ public class OpeningLevel : MonoBehaviour
 
         if (Time.time - time > difficulty * 3)
         {
+            changeEnemyHealth++;
 
             spawnRate -= 10;
             time = Time.time;

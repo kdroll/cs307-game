@@ -420,7 +420,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 610, y: 450}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.3
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -601,7 +601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.8993914, b: 0.08823532, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -621,9 +621,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "EVERY GREAT HERO'S JOURNEY HAS HUMBLE BEGINNINGS, AND OURS IS NO DIFFERENT.
-    \n\nOUR HERO WAS BORN IN A SMALL FISHING VILLAGE CALLED GAYNOR. HIS FATHER BECAME
-    SICK AT A YOUNG AGE WHICH WOULD CHANGE HIS LIFE FOREVER. "
+  m_Text: "EVERY GREAT HERO'S JOURNEY HAS HUMBLE BEGINNINGS, AND OUR'S IS NO DIFFERENT.
+    \n\nOUR HERO WAS BORN IN A SMALL FISHING VILLAGE. HIS FATHER BECAME SICK AT A
+    YOUNG AGE WHICH WOULD CHANGE HIS LIFE FOREVER. "
 --- !u!222 &1845965355
 CanvasRenderer:
   m_ObjectHideFlags: 0
