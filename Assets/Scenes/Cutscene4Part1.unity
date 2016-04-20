@@ -140,7 +140,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 2395f32d1944f4aadaa36961ddd650b9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4cced2aaef4c8410296b5c27da3fa9de, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -249,7 +249,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 18
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -588,7 +588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  length: 1.9
+  length: 0.8
 --- !u!114 &1845965354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -601,7 +601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7794118, g: 0.028654827, b: 0.028654827, a: 1}
+  m_Color: {r: 1, g: 0.8993914, b: 0.08823532, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -621,13 +621,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "THAT NIGHT IS NOW KNOWN AS \"THE RETURN OF THE PHOENIX\". \n\nON THAT FATEFUL
-    NIGHT, A RECLAIMER, KNOWN AS THE PHOENIX, RETURNED AFTER A 2000 YEAR ABSENCE FOR
-    UNKOWN REASONS AND ATTACKED THE SMALL FISHING VILLAGE.\n\nOUR HERO DESPERATELY
-    TRIED TO SAVE HIS SICK FATHER BUT FAILED AS HIS FATHER DID NOT HAVE THE ENERGY
-    TO ESCAPE AND OUR HERO WAS NOT STRONG ENOUGH TO SAVE HIM. \n\nOUR HERO THOUGHT,
-    \"AT LEAST MY I HAVEN'T LOST BOTH OF MY PARENTS...\". BUT HE WAS MISTAKEN, HIS
-    MOTHER WAS LOST IN THE RESCUE ATTEMPT. \n"
+  m_Text: 'THE VILLAGE WAS LEVELED AND THERE WERE ONLY TWO SURVIVORS. OUR HERO, AND
+    THE MYSTERIOUS OLD MAN GRANDOLF...
+
+
+    NOW THE TWO STRANGERS JOIN FORCES TO MAKE AN ESCAPE THROUGH THE LOCAL FARMLAND
+    AND EXACT THEIR REVENGE ON THE EVIL PHOENIX.
+
+'
 --- !u!222 &1845965355
 CanvasRenderer:
   m_ObjectHideFlags: 0
