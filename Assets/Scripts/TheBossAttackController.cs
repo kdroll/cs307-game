@@ -9,12 +9,21 @@ public class TheBossAttackController : MonoBehaviour {
 	public AnimationClip circle;
 	public AnimationClip laser;
 	public AnimationClip fire;
+	public AnimationClip vulnerable;
 	// Use this for initialization
 	void Start () {
 		attackCoolodwnStart = 0f;
 		attackCooldown = 3f;
 		attackAnimator = gameObject.GetComponent<Animator> ();
+		gameObject.GetComponent<BoxCollider2D> ().enabled = false;
 
+	}
+	IEnumerator waitVulnerable() {
+		gameObject.GetComponent<BoxCollider2D> ().enabled = true;
+		yield return new WaitForSeconds (vulnerable.length);
+		gameObject.GetComponent<BoxCollider2D> ().enabled = false;
+		attackAnimator.SetBool ("IfVulnerable", false);
+		attackAnimator.SetBool ("IfIdle", true);
 	}
 	IEnumerator waitLaser() {
 		yield return new WaitForSeconds (laser.length);
@@ -49,8 +58,8 @@ public class TheBossAttackController : MonoBehaviour {
 			attackAnimator.SetBool ("IfFireAttack", false);
 			attackAnimator.SetBool ("IfIdle", true);
 			attackCoolodwnStart = Time.time;
-			//attack = Random.Range (1, 5);
-			attack = 2;
+			attack = Random.Range (1, 6);
+			//attack = 4;
 			print (attack);
 			if (attack == 1) {
 				attackAnimator.SetBool ("IfIdle", false);
@@ -64,6 +73,10 @@ public class TheBossAttackController : MonoBehaviour {
 				attackAnimator.SetBool ("IfIdle", false);
 				attackAnimator.SetBool ("IfFireAttack", true);
 				StartCoroutine (waitFire ());
+			} else if (attack == 4) {
+				attackAnimator.SetBool ("IfIdle", false);
+				attackAnimator.SetBool ("IfVulnerable", true);
+				StartCoroutine (waitVulnerable ());
 			} else {
 				attackAnimator.SetBool ("IfCircleAttack", false);
 				attackAnimator.SetBool ("IfLaserAttack",false);

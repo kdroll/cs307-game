@@ -1,0 +1,183 @@
+fileFormatVersion: 2
+guid: f89d94525b87e4d248f64cfbc0caab62
+timeCreated: 1461126607
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: BossRegen-sheet_0
+    21300002: BossRegen-sheet_1
+    21300004: BossRegen-sheet_2
+    21300006: BossRegen-sheet_3
+    21300008: BossRegen-sheet_4
+    21300010: BossRegen-sheet_5
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 25
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: BossRegen-sheet_0
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 78
+        width: 111
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.28231302}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9.5, y: 114.82992}
+        - {x: -14.5, y: 114.82992}
+        - {x: -28.5, y: 105.82992}
+        - {x: -55.5, y: 28.829918}
+        - {x: -55.5, y: -40.170082}
+        - {x: -42.5, y: -45.170082}
+        - {x: 55.5, y: -45.170082}
+        - {x: 55.5, y: 69.82992}
+        - {x: 41.5, y: 99.82992}
+    - name: BossRegen-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 78
+        width: 111
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.27194697}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9.5, y: 116.48849}
+        - {x: -14.5, y: 116.48849}
+        - {x: -28.5, y: 107.48849}
+        - {x: -55.5, y: 30.488487}
+        - {x: -55.5, y: -38.511513}
+        - {x: -42.5, y: -43.511513}
+        - {x: 55.5, y: -43.511513}
+        - {x: 55.5, y: 71.48849}
+        - {x: 41.5, y: 101.48849}
+    - name: BossRegen-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 78
+        width: 111
+        height: 160
+      alignment: 9
+      pivot: {x: 0.51494205, y: 0.26158088}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7.8414307, y: 118.14706}
+        - {x: -16.15857, y: 118.14706}
+        - {x: -30.15857, y: 109.14706}
+        - {x: -57.15857, y: 32.147057}
+        - {x: -57.15857, y: -36.852943}
+        - {x: -44.15857, y: -41.852943}
+        - {x: 53.84143, y: -41.852943}
+        - {x: 53.84143, y: 73.14706}
+        - {x: 39.84143, y: 103.14706}
+    - name: BossRegen-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 78
+        width: 111
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5149426, y: 0.27194697}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7.8413696, y: 116.48849}
+        - {x: -16.15863, y: 116.48849}
+        - {x: -30.15863, y: 107.48849}
+        - {x: -57.15863, y: 30.488487}
+        - {x: -57.15863, y: -38.511513}
+        - {x: -44.15863, y: -43.511513}
+        - {x: 53.84137, y: -43.511513}
+        - {x: 53.84137, y: 71.48849}
+        - {x: 39.84137, y: 101.48849}
+    - name: BossRegen-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 78
+        width: 111
+        height: 160
+      alignment: 9
+      pivot: {x: 0.51494205, y: 0.25121483}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7.8414307, y: 119.805626}
+        - {x: -16.15857, y: 119.805626}
+        - {x: -30.15857, y: 110.805626}
+        - {x: -57.15857, y: 33.805626}
+        - {x: -57.15857, y: -35.194374}
+        - {x: -44.15857, y: -40.194374}
+        - {x: 53.84143, y: -40.194374}
+        - {x: 53.84143, y: 74.805626}
+        - {x: 39.84143, y: 104.805626}
+    - name: BossRegen-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 78
+        width: 111
+        height: 160
+      alignment: 9
+      pivot: {x: 0.51494205, y: 0.25121483}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7.8414307, y: 119.805626}
+        - {x: -16.15857, y: 119.805626}
+        - {x: -30.15857, y: 110.805626}
+        - {x: -57.15857, y: 33.805626}
+        - {x: -57.15857, y: -35.194374}
+        - {x: -44.15857, y: -40.194374}
+        - {x: 53.84143, y: -40.194374}
+        - {x: 53.84143, y: 74.805626}
+        - {x: 39.84143, y: 104.805626}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
