@@ -47,7 +47,8 @@ public class PlayerHealth : MonoBehaviour {
         }
         if (health <= 0) {
             isDead = true;
-            EnemyAi.totalScore += (int)(System.Math.Truncate(TimeScript.roundedTime));
+            //EnemyAi.totalScore += (int)(System.Math.Truncate(TimeScript.roundedTime));
+            EnemyAi.totalScore = ((EnemyAi.numEnemiesDestroyed * 5) + EnemyAi.totalScore - (PlayerHealth.numTimesHit * 10));
             PlayerPrefs.SetInt("Score", EnemyAi.totalScore);
             Destroy(OpeningLevel.player);
 			Destroy (TheBossLevel.player);

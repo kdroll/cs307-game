@@ -23,9 +23,9 @@ public class ScoreScript : MonoBehaviour {
 
     void handleScore() {
         if (!Score.text.Equals("" + ((EnemyAi.numEnemiesDestroyed * 5) + EnemyAi.totalScore))) {
-            Score.text = "" + ((EnemyAi.numEnemiesDestroyed * 5) + EnemyAi.totalScore);
-            Score.text = "" + ((EnemyAi.numEnemiesDestroyed * 5) + EnemyAi.totalScore - (PlayerHealth.numTimesHit * 10));
-            wait();
+            Score.text = "" + EnemyAi.totalScore;
+            //Score.text = "" + ((EnemyAi.numEnemiesDestroyed * 5) + EnemyAi.totalScore);
+            //Score.text = "" + ((EnemyAi.numEnemiesDestroyed * 5) + EnemyAi.totalScore - (PlayerHealth.numTimesHit * 10));
         }
     }
 }
