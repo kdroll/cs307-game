@@ -1,0 +1,119 @@
+fileFormatVersion: 2
+guid: 69bcd5a4c2a1a49c7a5365ab1ce28c61
+timeCreated: 1461179803
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: TheBossWalk-sheet_0
+    21300002: TheBossWalk-sheet_1
+    21300004: TheBossWalk-sheet_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 25
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: TheBossWalk-sheet_0
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 64
+        width: 111
+        height: 160
+      alignment: 9
+      pivot: {x: 0.507471, y: 0.20456743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8.670715, y: 127.26921}
+        - {x: -15.329285, y: 127.26921}
+        - {x: -29.329285, y: 118.26921}
+        - {x: -56.329285, y: 41.26921}
+        - {x: -56.329285, y: -27.73079}
+        - {x: -43.329285, y: -32.73079}
+        - {x: 54.670715, y: -32.73079}
+        - {x: 54.670715, y: 82.26921}
+        - {x: 40.670715, y: 112.26921}
+    - name: TheBossWalk-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 64
+        width: 108
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5307143, y: 0.20456743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26.682861, y: 127.26921}
+        - {x: -14.317139, y: 127.26921}
+        - {x: -30.317139, y: 118.26921}
+        - {x: -57.31714, y: 41.26921}
+        - {x: -57.31714, y: -32.73079}
+        - {x: 50.68286, y: -32.73079}
+        - {x: 50.68286, y: 48.26921}
+        - {x: 35.68286, y: 97.26921}
+    - name: TheBossWalk-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 64
+        width: 108
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.20456743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 29, y: 127.26921}
+        - {x: -45, y: 127.26921}
+        - {x: -54, y: 60.26921}
+        - {x: -54, y: -6.730789}
+        - {x: -43, y: -32.73079}
+        - {x: 35, y: -32.73079}
+        - {x: 54, y: -7.730789}
+        - {x: 54, y: 77.26921}
+        - {x: 39, y: 110.26921}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

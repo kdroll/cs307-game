@@ -32,6 +32,7 @@ public class TheBossHealth : MonoBehaviour {
 		locked = 0;
 		// anim.SetBool("ifHit", false);
 		if (enemyHealth <= 0) {
+			gameObject.SetActive (false);
 			print ("is dead");
 			//death.Play ();
 		} else {

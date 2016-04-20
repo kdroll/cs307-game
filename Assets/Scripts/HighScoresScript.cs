@@ -4,12 +4,10 @@ using UnityEngine.UI;
 
 public class HighScoresScript : MonoBehaviour {
     public Text highScore1, highScore2, highScore3;
-    bool uploadedScore = false;
+    bool uploadedScore;
     // Use this for initialization
     void Start () {
-        PlayerPrefs.SetInt("1stHighScore", 0);
-        PlayerPrefs.SetInt("2ndHighScore", 0);
-        PlayerPrefs.SetInt("3rdHighScore", 0);
+        uploadedScore = false;
 
         highScore1 = GameObject.Find("1st High Scores Value").GetComponent<Text>();
         if (PlayerPrefs.HasKey("1stHighScore")) {
@@ -50,6 +48,7 @@ public class HighScoresScript : MonoBehaviour {
                 uploadedScore = true;
                 PlayerPrefs.SetInt("3rdHighScore", score);
             }
+            PlayerPrefs.DeleteKey("Score");
         }
 
         highScore1.text = "" + PlayerPrefs.GetInt("1stHighScore");
