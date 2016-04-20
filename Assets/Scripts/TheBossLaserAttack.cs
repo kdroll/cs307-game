@@ -35,6 +35,7 @@ public class TheBossLaserAttack : MonoBehaviour {
 	}
 
 	IEnumerator FireLaser() {
+		yield return new WaitForSeconds (0.5f);
 		line.enabled = true;
 		line2.enabled = true;
 		line3.enabled = true;

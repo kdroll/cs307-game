@@ -1,0 +1,120 @@
+fileFormatVersion: 2
+guid: e10f9a203e66b4e1288cda6cedde588a
+timeCreated: 1461127783
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: BossHurt-sheet_0
+    21300002: BossHurt-sheet_1
+    21300004: BossHurt-sheet_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 25
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: BossHurt-sheet_0
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 78
+        width: 111
+        height: 160
+      alignment: 9
+      pivot: {x: 0.49999994, y: 0.22011647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9.500008, y: 124.781364}
+        - {x: -14.499992, y: 124.781364}
+        - {x: -28.499992, y: 115.781364}
+        - {x: -55.499992, y: 38.781364}
+        - {x: -55.499992, y: -30.218636}
+        - {x: -42.499992, y: -35.218636}
+        - {x: 55.500008, y: -35.218636}
+        - {x: 55.500008, y: 79.781364}
+        - {x: 41.500008, y: 109.781364}
+    - name: BossHurt-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 78
+        width: 111
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.24084863}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9.5, y: 121.46422}
+        - {x: -14.5, y: 121.46422}
+        - {x: -28.5, y: 112.46422}
+        - {x: -55.5, y: 35.46422}
+        - {x: -55.5, y: -33.53578}
+        - {x: -42.5, y: -38.53578}
+        - {x: 55.5, y: -38.53578}
+        - {x: 55.5, y: 76.46422}
+        - {x: 41.5, y: 106.46422}
+    - name: BossHurt-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 78
+        width: 111
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5224131, y: 0.23048258}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7.012146, y: 123.12279}
+        - {x: -16.987854, y: 123.12279}
+        - {x: -30.987854, y: 114.12279}
+        - {x: -57.987854, y: 37.122787}
+        - {x: -57.987854, y: -31.877213}
+        - {x: -44.987854, y: -36.877213}
+        - {x: 53.012146, y: -36.877213}
+        - {x: 53.012146, y: 78.12279}
+        - {x: 39.012146, y: 108.12279}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

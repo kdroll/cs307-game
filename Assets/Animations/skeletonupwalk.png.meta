@@ -1,9 +1,12 @@
 fileFormatVersion: 2
 guid: 38fc922b77c6f4d7db52e3b321ca622f
-timeCreated: 1461111975
+timeCreated: 1461116598
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: skeletonupwalk_0
+    21300002: skeletonupwalk_1
+    21300004: skeletonupwalk_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,11 +29,11 @@ TextureImporter:
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -1
-  maxTextureSize: 2048
+  textureFormat: -3
+  maxTextureSize: 4096
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 0
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,18 +41,65 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 30
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: skeletonupwalk_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 0
+        width: 30
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: skeletonupwalk_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 0
+        width: 43
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17.5, y: 31.5}
+        - {x: -18.5, y: 28.5}
+        - {x: -21.5, y: 7.5}
+        - {x: -21.5, y: -31.5}
+        - {x: 12.5, y: -31.5}
+        - {x: 21.5, y: -29.5}
+        - {x: 21.5, y: 31.5}
+    - name: skeletonupwalk_2
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 0
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 31.5}
+        - {x: -13, y: 30.5}
+        - {x: -21, y: 13.5}
+        - {x: -21, y: -23.5}
+        - {x: -18, y: -31.5}
+        - {x: 21, y: -31.5}
+        - {x: 21, y: 31.5}
     outline: []
   spritePackingTag: 
   userData: 

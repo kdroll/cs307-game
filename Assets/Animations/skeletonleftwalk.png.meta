@@ -1,9 +1,13 @@
 fileFormatVersion: 2
 guid: 369441d7184f64274880d6fe998cae1f
-timeCreated: 1461111975
+timeCreated: 1461117016
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: skeletonleftwalk_0
+    21300002: skeletonleftwalk_1
+    21300004: skeletonleftwalk_2
+    21300006: skeletonleftwalk_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,11 +30,11 @@ TextureImporter:
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -1
-  maxTextureSize: 2048
+  textureFormat: -3
+  maxTextureSize: 4096
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 0
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,18 +42,91 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 30
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: skeletonleftwalk_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 0
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 31.5}
+        - {x: -21, y: 17.5}
+        - {x: -21, y: -19.5}
+        - {x: -19, y: -29.5}
+        - {x: -17, y: -31.5}
+        - {x: 21, y: -31.5}
+        - {x: 21, y: 31.5}
+    - name: skeletonleftwalk_1
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 0
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 31.5}
+        - {x: -16, y: 26.5}
+        - {x: -21, y: 16.5}
+        - {x: -21, y: -17.5}
+        - {x: -15, y: -31.5}
+        - {x: 21, y: -31.5}
+        - {x: 21, y: 26.5}
+        - {x: 18, y: 31.5}
+    - name: skeletonleftwalk_2
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 0
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 31.5}
+        - {x: -21, y: -31.5}
+        - {x: 21, y: -31.5}
+        - {x: 21, y: 29.5}
+        - {x: 16, y: 31.5}
+    - name: skeletonleftwalk_3
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 0
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 31.5}
+        - {x: -15, y: 25.5}
+        - {x: -21, y: 10.5}
+        - {x: -21, y: -7.5}
+        - {x: -10, y: -31.5}
+        - {x: 20, y: -31.5}
+        - {x: 21, y: -30.5}
+        - {x: 21, y: 29.5}
+        - {x: 16, y: 31.5}
     outline: []
   spritePackingTag: 
   userData: 
