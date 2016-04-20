@@ -182,10 +182,10 @@ public class EnemyAi : MonoBehaviour {
 			} else if (anim.GetFloat("MoveX") == -1.0f) {
 				anim.SetFloat("HitX", -1.0f);
 			}
+			grenadeTag = 1;
 			StartCoroutine (takeDamage ());
 			StartCoroutine(waitHit());
 			Vector3 dir1 = -(Grenade.position - enemyTransform.position);
-			grenadeTag = 1;
 			enemyRigid.AddForce (dir1 * 600f);
 		} else if (coll.tag == "FireballExplosion") {
             anim.SetBool("ifHit", true);

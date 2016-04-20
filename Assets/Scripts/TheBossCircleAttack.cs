@@ -17,19 +17,21 @@ public class TheBossCircleAttack : MonoBehaviour {
 	//	StartCoroutine (fireballs ());
 	//}
 	IEnumerator fireballs() {
-		circleAttack.SetActive (true);
 		times = 1;
+		circleAttack.SetActive (true);
 		yield return new WaitForSeconds (3f);
-		circleAttack.SetActive (false);
 		times = 0;
-		print ("its false");
+		circleAttack.SetActive (false);
+		//print ("its false");
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		//print (times);
 		if (GameObject.FindGameObjectWithTag ("TheBoss").GetComponent<Animator> ().GetBool ("IfCircleAttack") == true && times != 1) {
 			circleAttack.transform.position = gameObject.transform.position;
-			StopCoroutine (fireballs ());
+			//StopCoroutine (fireballs ());
+			//print("in if statement");
 			StartCoroutine (fireballs ());
 
 			//StopCoroutine (wait ());

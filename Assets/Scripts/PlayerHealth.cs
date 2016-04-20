@@ -75,5 +75,8 @@ public class PlayerHealth : MonoBehaviour {
         }
 
     }
+	public void OnParticleCollision(GameObject other) {
+		other.SetActive (false);
+	}
 
 }
