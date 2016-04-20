@@ -420,7 +420,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 610, y: 450}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.3
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -601,7 +601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.8993914, b: 0.08823532, a: 1}
+  m_Color: {r: 0.71323526, g: 0.03146625, b: 0.03146625, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -624,7 +624,7 @@ MonoBehaviour:
   m_Text: 'HE LIVED AN AVERAGE AND TOUGH LIFE AS HE LEARNED TO FISH AND FARM TO HELP
     HIS MOTHER PROVIDE FOR HIS SICK FATHER. HE SAVED EVERY PENNY HE MADE TO HELP PAY
     FOR AN EXPERIMENTAL SURGERY ON HIS FATHER BY THE LOCAL WIZARD, GRANDOLF. THE NIGHT
-    BEFORE THE SURGERY, THE WORLD WAS INTRODUCED TO A NEW EVIL.
+    BEFORE THE SURGERY, THE WORLD WAS INTRODUCED TO A NEW EVIL...
 
 '
 --- !u!222 &1845965355
