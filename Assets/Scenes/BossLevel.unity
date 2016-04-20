@@ -1459,6 +1459,8 @@ GameObject:
   - 50: {fileID: 470171213}
   - 114: {fileID: 470171214}
   - 114: {fileID: 470171212}
+  - 61: {fileID: 470171215}
+  - 114: {fileID: 470171216}
   m_Layer: 0
   m_Name: TheBoss
   m_TagString: TheBoss
@@ -1548,7 +1550,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 470171208}
   m_UseAutoMass: 1
-  m_Mass: 1
+  m_Mass: 38.988804
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -1571,6 +1573,32 @@ MonoBehaviour:
   circle: {fileID: 7400000, guid: d576d7a8f2c6349928f5333066feb48e, type: 2}
   laser: {fileID: 7400000, guid: e9b66d081bf91474ba1be3d4d9568abe, type: 2}
   fire: {fileID: 7400000, guid: 6e6af4b24ed5a4426a0b61c21a24050e, type: 2}
+  vulnerable: {fileID: 7400000, guid: 1345988c0fcc64dd5a60902868ebd90d, type: 2}
+--- !u!61 &470171215
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 470171208}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.2669525, y: 3.6037712}
+  serializedVersion: 2
+  m_Size: {x: 4.750366, y: 8.207537}
+--- !u!114 &470171216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 470171208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb314743ac06d45a2b8da227dc439713, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &563591367
 GameObject:
   m_ObjectHideFlags: 0
