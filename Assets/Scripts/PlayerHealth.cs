@@ -13,8 +13,7 @@ public class PlayerHealth : MonoBehaviour {
 	static int difficulty;
     GameObject player;
     GameObject[] enemy;
-	public AudioSource _clip;
-	static AudioSource _source;
+	public AudioSource audio;
 
 
     // perks array has size of the total number of perks
@@ -30,7 +29,6 @@ public class PlayerHealth : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag("Player");
 		//difficulty = OpeningLevel.difficulty;
 		difficulty = 2;
-		getAudio ();
     }
 
     // Update is called once per frame
@@ -63,14 +61,12 @@ public class PlayerHealth : MonoBehaviour {
             print(health);
             numTimesHit++;
             locked = 0;
-			_source.Play();
+//			audio.Play();
             yield return null;
         }
     }
 
-	void getAudio() {
-		_source = _clip;
-	}
+
 
     public void OnCollisionEnter2D(Collision2D collision) {
 		if ((collision.gameObject.tag == "Enemy"  || collision.gameObject.tag == "PenguinEnemy" )&& locked == 1 && !Input.GetButtonDown("attack") && !Input.GetButtonDown("B")) {
@@ -79,7 +75,7 @@ public class PlayerHealth : MonoBehaviour {
 
     }
     public void OnCollisionStay2D(Collision2D coll) {
-		if ((coll.gameObject.tag == "Enemy"  || coll.gameObject.tag == "PenguinEnemy" )&& locked == 1 && !Input.GetButtonDown("attack") && !Input.GetButtonDown("B")) {
+		if ((coll.gameObject.tag == "Enemy"  || coll.gameObject.tag == "PenguinEnemy" || coll.gameObject.tag == "SkeletonEnemy")&& locked == 1 && !Input.GetButtonDown("attack") && !Input.GetButtonDown("B")) {
             StartCoroutine(takeDamage());
         }
 
