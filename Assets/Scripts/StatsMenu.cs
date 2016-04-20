@@ -42,7 +42,7 @@ public class StatsMenu : MonoBehaviour {
             timeStat.text = "" + roundedTime + " = " + (float)(System.Math.Truncate(Time.time));
             enemiesKilledStat.text = "" + EnemyAi.numEnemiesDestroyed;
             timesHitStat.text = "" + PlayerHealth.numTimesHit;
-            totalScoreStat.text = "" + ((EnemyAi.numEnemiesDestroyed * 5) + EnemyAi.totalScore - (PlayerHealth.numTimesHit * 10));
+            totalScoreStat.text = "" + EnemyAi.totalScore;
         } else {
             statsMenuCanvas.SetActive(false);
         }
