@@ -17,6 +17,7 @@ public class TheBossLevel : MonoBehaviour
 	public Transform grassTile3;
 	public Transform grassTile4;
 	public Transform stoneTile;
+    public Transform lavaTile;
 	public Transform wallTile;
 	public static string spawnRateString;
 	private Color[] tileColors;
@@ -279,5 +280,27 @@ public class TheBossLevel : MonoBehaviour
 
         Instantiate(grassTile2, new Vector3(44, 43), Quaternion.identity);
         Instantiate(grassTile2, new Vector3(30, 24), Quaternion.identity);
+        int a = 0;
+        for(a = 0; a < 104; a++)
+        {
+            int b = 0;
+            for (b = 0; b < 40; b++)
+            {
+                Instantiate(lavaTile, new Vector3(0 - b, -20 + a), Quaternion.identity);
+                Instantiate(lavaTile, new Vector3(65 + b, -20 + a), Quaternion.identity);
+            }
+        }
+
+        for (a = 0; a <= 64; a++)
+        {
+            int b = 0;
+            for (b = 0; b < 20; b++)
+            {
+                Instantiate(lavaTile, new Vector3(0 + a, 64 + b), Quaternion.identity);
+                Instantiate(lavaTile, new Vector3(0 + a, 0 - b), Quaternion.identity);
+
+            }
+        }
+        
     }
 }
