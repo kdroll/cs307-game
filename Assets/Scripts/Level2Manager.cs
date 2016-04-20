@@ -509,8 +509,8 @@ public class Level2Manager : MonoBehaviour {
 					else
 						Instantiate(grassTile1, new Vector3(x, y), Quaternion.identity);
 					Vector2 pos1 = new Vector2(x, y);
-					Vector2 pos2 = new Vector2(x + 2f, y + 2f);
-					Vector2 pos3 = new Vector2(x + 3f, y + 3f);
+					Vector2 pos2 = new Vector2(x , y + 2f);
+					Vector2 pos3 = new Vector2(9f, 9f);
 					enemy.transform.position = new Vector3(0, 0, 0);  //before was equal to pos1
 					pitchfork.transform.position = pos2;
 					sword.transform.position = pos3;
