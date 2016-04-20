@@ -13,6 +13,7 @@ GameObject:
   - 61: {fileID: 6152478}
   - 114: {fileID: 11428584}
   - 50: {fileID: 5023892}
+  - 114: {fileID: 11485458}
   m_Layer: 0
   m_Name: PenguinEnemy
   m_TagString: PenguinEnemy
@@ -86,7 +87,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168054}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13ba73b04be1e8b44ab10143f67cfe24, type: 3}
   m_Name: 
@@ -106,6 +107,34 @@ MonoBehaviour:
   - {fileID: 101478, guid: 529ce6ec38c39704689b41c4f5473c95, type: 2}
   - {fileID: 177874, guid: 0e57cb8b03fc5ff46b5e201761633411, type: 2}
   - {fileID: 100106, guid: 935cf0d7b35c3f64fbd09537bfcd26a3, type: 2}
+  - {fileID: 177874, guid: b60e26062dab4734199a4ddae55fc36c, type: 2}
+  - {fileID: 177874, guid: 92a22b041b3cf214a98a1172e024d848, type: 2}
+--- !u!114 &11485458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e566acdf2c1bcc24780bc63d76be2328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  rotationSpeed: 0
+  distanceToAttack: 10
+  enemy: {fileID: 0}
+  hitAnimation: {fileID: 0}
+  hurt: {fileID: 0}
+  death: {fileID: 0}
+  consumables:
+  - {fileID: 177874, guid: d3d72184bfbf0fe42a64c6ef84d4848e, type: 2}
+  - {fileID: 101478, guid: fb56f091c4739d549b2aadd62ad62529, type: 2}
+  - {fileID: 193670, guid: 1917936818cc8b946aab694637392f86, type: 2}
+  - {fileID: 101478, guid: 529ce6ec38c39704689b41c4f5473c95, type: 2}
+  - {fileID: 177874, guid: 0e57cb8b03fc5ff46b5e201761633411, type: 2}
+  - {fileID: 100106, guid: 935cf0d7b35c3f64fbd09537bfcd26a3, type: 2}
+  - {fileID: 181718, guid: d5cf9913ad111b549aa1cf263d99f81e, type: 2}
   - {fileID: 177874, guid: b60e26062dab4734199a4ddae55fc36c, type: 2}
   - {fileID: 177874, guid: 92a22b041b3cf214a98a1172e024d848, type: 2}
 --- !u!212 &21295674
