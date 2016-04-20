@@ -12,8 +12,13 @@ public class PlayerHealth : MonoBehaviour {
     public static bool isDead = false;
     GameObject player;
     GameObject[] enemy;
-	public AudioSource audio;
+	public AudioSource _source;
+	public static AudioSource _clip;
 
+	void setAudioClip() {
+		_clip = _source;
+		return;
+	}
 
     // perks array has size of the total number of perks
     // perks[i] = 0 means player does not have the 'i'th perk
@@ -26,6 +31,7 @@ public class PlayerHealth : MonoBehaviour {
         startHealth = 100 + healthModifier;
         health = 100 + healthModifier;
         player = GameObject.FindGameObjectWithTag("Player");
+		setAudioClip ();
     }
 
     // Update is called once per frame
@@ -56,7 +62,7 @@ public class PlayerHealth : MonoBehaviour {
             print(health);
             numTimesHit++;
             locked = 0;
-//			audio.Play();
+			_clip.Play();
             yield return null;
         }
     }
