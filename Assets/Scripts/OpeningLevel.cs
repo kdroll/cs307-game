@@ -74,6 +74,7 @@ public class OpeningLevel : MonoBehaviour
         spawnRate = 300;
         spawnRateString = (3600 / spawnRate) + " enemies/min";
         Time.timeScale = 1;
+        PauseMenu.isPaused = false;
         PerkMenu.inPerkMenu = false;
         StatsMenu.inStatsMenu = false;
         player = GameObject.FindGameObjectWithTag("Player");
@@ -83,7 +84,8 @@ public class OpeningLevel : MonoBehaviour
         Pepper = GameObject.FindGameObjectWithTag("Pepper");
         ToxicWaste = GameObject.FindGameObjectWithTag("ToxicWaste");
         Bacon = GameObject.FindGameObjectWithTag("Bacon");
-        Cupcake = GameObject.FindGameObjectWithTag("Cupcake"); PlayerHealth.isDead = false;
+        Cupcake = GameObject.FindGameObjectWithTag("Cupcake");
+        PlayerHealth.isDead = false;
         EnemyAi.numEnemiesDestroyed = 0;
         EnemyAi.goldBonus = 0;
         levelHeight = levelTexture.height;
