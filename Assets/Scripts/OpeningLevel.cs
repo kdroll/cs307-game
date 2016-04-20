@@ -74,6 +74,7 @@ public class OpeningLevel : MonoBehaviour
         spawnRate = 300;
         spawnRateString = (3600 / spawnRate) + " enemies/min";
         Time.timeScale = 1;
+        PauseMenu.isPaused = false;
         PerkMenu.inPerkMenu = false;
         StatsMenu.inStatsMenu = false;
         player = GameObject.FindGameObjectWithTag("Player");
