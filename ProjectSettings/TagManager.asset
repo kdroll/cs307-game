@@ -28,6 +28,7 @@ TagManager:
   - Grenades
   - TheBoss
   - PenguinEnemy
+  - SkeletonEnemy
   layers:
   - Default
   - TransparentFX
