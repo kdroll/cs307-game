@@ -75,7 +75,7 @@ public class TheBossAttackController : MonoBehaviour {
 			attackCoolodwnStart = Time.time;
 			attack = Random.Range (1, 6);
 			//attack = 2;
-			print (attack);
+			//print (attack);
 			if (attack == 1 && attackAnimator.GetBool("IfVulnerable") == false) {
 				//attackAnimator.SetBool ("IfIdle", false);
 				//attackAnimator.SetBool ("IfLaserAttack", true);
