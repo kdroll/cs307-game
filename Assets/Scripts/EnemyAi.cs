@@ -8,8 +8,8 @@ public class EnemyAi : MonoBehaviour {
 	Transform enemyTransform;
 	public float speed = 3f;
 	public float rotationSpeed=3f;
-	public int distanceToAttack = 1000;
-	private int follow = 0;
+	public int distanceToAttack = 10000;
+	private int follow = 1;
     public static int damage = 10;
 	Vector3 oldPosition;
 	Vector3 newPosition;
@@ -295,7 +295,8 @@ public class EnemyAi : MonoBehaviour {
         if (playerDied == 0)
         {
             target = GameObject.FindWithTag("Player").transform;
-            if (Vector3.Distance(target.position, enemyTransform.position) <= distanceToAttack || follow == 1)
+            //if (Vector3.Distance(target.position, enemyTransform.position) <= distanceToAttack || follow == 1)
+            if(follow == 1)
             {
                 follow = 1;
                 anim.SetBool("ifFollowing", true);
