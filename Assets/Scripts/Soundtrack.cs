@@ -27,9 +27,7 @@ public class Soundtrack : MonoBehaviour {
 		DontDestroyOnLoad (gameObject);
 		if (Application.loadedLevel == 1) {
 			AudioSource audio = GetComponent<AudioSource> ();
-			if (!audio.clip.Equals(newClip)) {
-				audio.clip = newClip;
-			}
+			audio.clip = newClip;
 		}
 	}
 }
