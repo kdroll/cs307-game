@@ -8,7 +8,7 @@ public class FireCircleAttempt : MonoBehaviour {
 	Vector2 centerPosition;
 	// Use this for initialization
 	void Start () {
-		numberOfFireballs = 40;
+		numberOfFireballs = 30;
 	
 	}
 	
