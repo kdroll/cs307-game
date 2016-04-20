@@ -420,7 +420,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 610, y: 450}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.3
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -621,12 +621,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'THE TOWN WAS LEVELED AND THERE WERE ONLY TWO SURVIVORS. OUR HERO, AND THE
-    MYSTERIOUS OLD MAN GRANDOLF...
+  m_Text: 'THE VILLAGE WAS LEVELED AND THERE WERE ONLY TWO SURVIVORS. OUR HERO, AND
+    THE MYSTERIOUS OLD MAN GRANDOLF...
 
 
-    NOW THE TWO STRANGERS JOIN FORCES TO MAKE AN ESCAPE THROUGH LOCAL FARMLAND AND
-    EXACT THEIR REVENGE ON THE EVIL PHOENIX.
+    NOW THE TWO STRANGERS JOIN FORCES TO MAKE AN ESCAPE THROUGH THE LOCAL FARMLAND
+    AND EXACT THEIR REVENGE ON THE EVIL PHOENIX.
 
 '
 --- !u!222 &1845965355
