@@ -5787,7 +5787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7526126bf22324a31a33009ae84c05d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHurtAudio: {fileID: 0}
+  playerHurtAudio: {fileID: 1108588330}
 --- !u!50 &1569251449
 Rigidbody2D:
   serializedVersion: 2

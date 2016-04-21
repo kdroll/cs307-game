@@ -5,6 +5,8 @@ public class Soundtrack : MonoBehaviour {
 	public AudioClip level0Clip;
 	public AudioClip level1Clip;
 	public AudioClip level2Clip;
+	public AudioClip level3Clip;
+	public AudioClip bossFightClip;
 	static bool menuMusic = true;
 	private static Soundtrack instance = null;
 	public static Soundtrack GetInstance
@@ -32,6 +34,18 @@ public class Soundtrack : MonoBehaviour {
 		if (level == 10) {
 			AudioSource aud = GetComponent<AudioSource> ();
 			aud.clip = level2Clip;
+			aud.Play ();
+			singleton ();
+		}
+		if (level == 11) {
+			AudioSource aud = GetComponent<AudioSource> ();
+			aud.clip = bossFightClip;
+			aud.Play ();
+			singleton ();
+		}
+		if (level == 12) {
+			AudioSource aud = GetComponent<AudioSource> ();
+			aud.clip = bossFightClip;
 			aud.Play ();
 			singleton ();
 		}
