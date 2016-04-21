@@ -1231,6 +1231,8 @@ MonoBehaviour:
   level0Clip: {fileID: 8300000, guid: 02301fd94cf099e46869b3c8ae8e03de, type: 3}
   level1Clip: {fileID: 8300000, guid: d9c72403a8758654397508ac0f765009, type: 3}
   level2Clip: {fileID: 8300000, guid: 55c51123455d83044b9481b298de2b43, type: 3}
+  level3Clip: {fileID: 8300000, guid: 819a5eb8ad8712f44887f52f3d972695, type: 3}
+  bossFightClip: {fileID: 8300000, guid: 819a5eb8ad8712f44887f52f3d972695, type: 3}
 --- !u!1 &1788908995
 GameObject:
   m_ObjectHideFlags: 0
