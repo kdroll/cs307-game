@@ -8,7 +8,7 @@ public class BowWeapon : MonoBehaviour {
 	void Start () {
 		anim = this.transform.GetComponent<Animator> ();
 		anim.SetBool ("ifBowEquipped", false);
-		GameObject.FindGameObjectWithTag ("Bow").transform.position = new Vector3 (25, 25, 0);
+		GameObject.FindGameObjectWithTag ("Bow").transform.position = new Vector3 (10, 54, 0);
 	}
 
 	// Update is called once per frame
