@@ -4,8 +4,13 @@ using System.Collections;
 public class LoadOnClick : MonoBehaviour
 {
     public static bool difficultySet = false;
+	public static int karma = 0;
 
     // public GameObject loadingImage;
+
+	public void karmaChoice(int karmaChoice) {
+		karma = karma + karmaChoice;
+	}
 
     public void LoadScene(int level)
     {
