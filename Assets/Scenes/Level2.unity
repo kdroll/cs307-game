@@ -2829,9 +2829,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Gamblin'' Man
+  m_Text: 'Light Foot
 
-    (+3 extra gold per kill)'
+    (Increase max speed)'
 --- !u!222 &548408356
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4711,6 +4711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprintModifier: 1
+  changedMaxSpeed: 0
 --- !u!50 &1034681706
 Rigidbody2D:
   serializedVersion: 2
@@ -7544,7 +7545,7 @@ GameObject:
   - 114: {fileID: 1800641301}
   - 114: {fileID: 1800641300}
   m_Layer: 5
-  m_Name: Perk 1
+  m_Name: Perk 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7613,7 +7614,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -7833,9 +7834,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Loot Hoarder
+  m_Text: 'Turn the tables
 
-    (increased chance to drop consumables on kill)'
+    (Decrease enemy spawn rate)'
 --- !u!222 &1820410424
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8102,7 +8103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldAmount: {fileID: 1852178637}
-  EPS: {fileID: 0}
+  EPS: {fileID: 1852178637}
   Grenades: {fileID: 0}
 --- !u!114 &1852178637
 MonoBehaviour:
@@ -11102,7 +11103,7 @@ GameObject:
   - 114: {fileID: 2142704696}
   - 114: {fileID: 2142704695}
   m_Layer: 5
-  m_Name: Perk 0
+  m_Name: Perk 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11171,7 +11172,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

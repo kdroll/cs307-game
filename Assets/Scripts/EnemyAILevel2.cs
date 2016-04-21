@@ -33,8 +33,9 @@ public class EnemyAILevel2 : MonoBehaviour
     public static int numEnemiesDestroyed = 0;
     public static int totalScore = 0;
     float locked;
-    public static int gold = 100000;
+    public static int gold;
     public static int goldBonus = 0;
+    public bool firstEnemy = true;
 
     public GameObject[] consumables = new GameObject[7];
 
@@ -42,6 +43,12 @@ public class EnemyAILevel2 : MonoBehaviour
     public void Start()
     {
         //obtain the game object Transform
+        if(firstEnemy == true)
+        {
+            gold = EnemyAi.gold;
+            totalScore = EnemyAi.totalScore;
+            firstEnemy = false;
+        }
         enemyTransform = this.GetComponent<Transform>();
         anim = this.GetComponent<Animator>();
         enemyHealth = ((6 - Level2Manager.difficulty) * 10) + (Level2Manager.changeEnemyHealth) * 1;

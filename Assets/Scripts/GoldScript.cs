@@ -28,12 +28,33 @@ public class GoldScript : MonoBehaviour
 
     void handleGold()
     {
-        goldAmount.text = "" + EnemyAi.gold;
+        if (Application.loadedLevel == 10)
+        {
+            goldAmount.text = "" + EnemyAILevel2.gold;
+        }
+        else if (Application.loadedLevel == 1)
+        {
+            goldAmount.text = "" + EnemyAi.gold;
+        }
+        else if (Application.loadedLevel == 11)
+        {
+            goldAmount.text = "" + EnemyAILevel3.gold;
+        }
     }
 
     void handleEPS()
     {
-        EPS.text = "" + OpeningLevel.spawnRateString;
+        if (Application.loadedLevel == 10)
+        {
+            EPS.text = "" + Level2Manager.spawnRateString;
+        }
+        else if (Application.loadedLevel == 1)
+        {
+            EPS.text = "" + OpeningLevel.spawnRateString;
+        } else if (Application.loadedLevel == 11)
+        {
+            EPS.text = "" + Level3Manager.spawnRateString;
+        }
     }
     void handleGrenades()
     {
