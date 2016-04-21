@@ -117,16 +117,46 @@ public class LoadOnClick : MonoBehaviour
 
     public void increaseHealth()
     {
-        if (EnemyAi.gold < 50 + (50 * PlayerHealth.numHealthUpgrades))
+        if (Application.loadedLevel == 1)
         {
+            if (EnemyAi.gold < 50 + (50 * PlayerHealth.numHealthUpgrades))
+            {
 
+            }
+            else {
+                PlayerHealth.healthModifier += 5;
+                EnemyAi.gold -= 50 + (50 * PlayerHealth.numHealthUpgrades);
+                PlayerHealth.numHealthUpgrades++;
+                print("Health modifier: " + PlayerHealth.healthModifier);
+                print("Num healthUpgrades: " + PlayerHealth.numHealthUpgrades);
+            }
+        } else if (Application.loadedLevel == 10)
+        {
+            if (EnemyAILevel2.gold < 50 + (50 * PlayerHealth.numHealthUpgrades))
+            {
+
+            }
+            else {
+                PlayerHealth.healthModifier += 5;
+                EnemyAILevel2.gold -= 50 + (50 * PlayerHealth.numHealthUpgrades);
+                PlayerHealth.numHealthUpgrades++;
+                print("Health modifier: " + PlayerHealth.healthModifier);
+                print("Num healthUpgrades: " + PlayerHealth.numHealthUpgrades);
+            }
         }
-        else {
-            PlayerHealth.healthModifier += 5;
-            EnemyAi.gold -= 50 + (50 * PlayerHealth.numHealthUpgrades);
-            PlayerHealth.numHealthUpgrades++;
-            print("Health modifier: " + PlayerHealth.healthModifier);
-            print("Num healthUpgrades: " + PlayerHealth.numHealthUpgrades);
+        else if (Application.loadedLevel == 11)
+        {
+            if (EnemyAILevel3.gold < 50 + (50 * PlayerHealth.numHealthUpgrades))
+            {
+
+            }
+            else {
+                PlayerHealth.healthModifier += 5;
+                EnemyAILevel3.gold -= 50 + (50 * PlayerHealth.numHealthUpgrades);
+                PlayerHealth.numHealthUpgrades++;
+                print("Health modifier: " + PlayerHealth.healthModifier);
+                print("Num healthUpgrades: " + PlayerHealth.numHealthUpgrades);
+            }
         }
     }
 
