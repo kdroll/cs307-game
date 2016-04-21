@@ -31,7 +31,7 @@ public class EnemyAILevel2 : MonoBehaviour
     int playerDied = 0;
     float enemyHealth;
     public static int numEnemiesDestroyed = 0;
-    public static int totalScore = 0;
+    public static int totalScore;
     float locked;
     public static int gold;
     public static int goldBonus = 0;
