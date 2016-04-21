@@ -56,11 +56,14 @@ public class TheBossLevel : MonoBehaviour
 	static int maxWallLength = 4;
 	Point[] positions;
 	int pointIndex = 0;
+    public static int totalScore = 0;
 
-	// Use this for initialization
-	void Start()
+    // Use this for initialization
+    void Start()
 	{
-		time = Time.time;
+        totalScore = EnemyAILevel3.totalScore;
+
+        time = Time.time;
 		if (LoadOnClick.difficultySet)
 		{
 

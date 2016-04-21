@@ -23,7 +23,7 @@ public class TheBossHealth : MonoBehaviour {
 	}
 	private IEnumerator takeDamage() {
 		if (grenadeTag == 1) {
-			enemyHealth -= 30 * PlayerAttack.damageModifier;
+			enemyHealth -= 30 * PlayerAttack.damageModifier + (PlayerHealth.perks[5] * 20);
 			grenadeTag = 0;
 		} else {
 			enemyHealth -= 10 * PlayerAttack.damageModifier;

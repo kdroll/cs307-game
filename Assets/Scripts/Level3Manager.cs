@@ -114,14 +114,14 @@ public class Level3Manager : MonoBehaviour {
 		System.Random randy = new System.Random();
 		amount = GameObject.FindGameObjectsWithTag("SkeletonEnemy");
 
-		if (Time.time - time > difficulty * 3)
+		if (Time.time - time > ((difficulty * 3) + PlayerHealth.perks[3]*2))
 		{
 			changeEnemyHealth++;
 
 			spawnRate -= 10;
 			time = Time.time;
 			//print("time = " + time + "   spawnRate " + spawnRate);
-			if (spawnRate <= (20 * difficulty - 10))
+			if (spawnRate <= (20 * difficulty - 10) + PlayerHealth.perks[3]*10)
 			{
 				spawnRate = (20 * difficulty - 10);
 			}

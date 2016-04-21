@@ -15,15 +15,17 @@ public class PlayerHealth : MonoBehaviour {
     GameObject[] enemy;
 	public AudioSource playerHurtAudio;
 	static AudioSource _source;
+    public static bool regen;
 
 
     // perks array has size of the total number of perks
     // perks[i] = 0 means player does not have the 'i'th perk
     // perks[i] = 1 means player has the 'i'th perk
-    public static int[] perks = new int[2];
+    public static int[] perks = new int[6] { 0,0,0,0,0,0 };
 
     // Use this for initialization
     void Start() {
+        regen = false;
         numTimesHit = 0;
         startHealth = 100 + healthModifier;
         health = 100 + healthModifier;
@@ -35,6 +37,8 @@ public class PlayerHealth : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        if (regen == false && perks[4] == 1) 
+            StartCoroutine(healthRegen());
         enemy = GameObject.FindGameObjectsWithTag("Enemy");
         //print(Vector2.Distance(player.transform.position, enemy.transform.position));
         for (int i = 0; i < enemy.Length; i++) {
@@ -50,13 +54,32 @@ public class PlayerHealth : MonoBehaviour {
         if (health <= 0) {
             isDead = true;
             //EnemyAi.totalScore += (int)(System.Math.Truncate(TimeScript.roundedTime));
-            EnemyAi.totalScore = ((EnemyAi.numEnemiesDestroyed * 5) + EnemyAi.totalScore - (PlayerHealth.numTimesHit * 10) + (int)(System.Math.Truncate(TimeScript.roundedTime)));
-            PlayerPrefs.SetInt("Score", EnemyAi.totalScore);
+            if (Application.loadedLevel == 1)
+            {
+                EnemyAi.totalScore = ((EnemyAi.numEnemiesDestroyed * 5) + EnemyAi.totalScore - (PlayerHealth.numTimesHit * 10) + (int)(System.Math.Truncate(TimeScript.roundedTime)));
+                PlayerPrefs.SetInt("Score", EnemyAi.totalScore);
+            } else if (Application.loadedLevel == 10)
+            {
+                EnemyAILevel2.totalScore = ((EnemyAILevel2.numEnemiesDestroyed * 5) + EnemyAILevel2.totalScore - (PlayerHealth.numTimesHit * 10) + (int)(System.Math.Truncate(TimeScript.roundedTime)));
+                PlayerPrefs.SetInt("Score", EnemyAILevel2.totalScore);
+            }
+            else if (Application.loadedLevel == 11)
+            {
+                EnemyAILevel3.totalScore = ((EnemyAILevel3.numEnemiesDestroyed * 5) + EnemyAILevel3.totalScore - (PlayerHealth.numTimesHit * 10) + (int)(System.Math.Truncate(TimeScript.roundedTime)));
+                PlayerPrefs.SetInt("Score", EnemyAILevel3.totalScore);
+            }
+            else if (Application.loadedLevel == 12)
+            {
+                TheBossLevel.totalScore = (TheBossLevel.totalScore - (PlayerHealth.numTimesHit * 10) + (int)(System.Math.Truncate(TimeScript.roundedTime)));
+                PlayerPrefs.SetInt("Score", TheBossLevel.totalScore);
+            }
             OpeningLevel.changeEnemyHealth = 0;
             Level2Manager.changeEnemyHealth = 0;
             Level3Manager.changeEnemyHealth = 0;
             Destroy(OpeningLevel.player);
-			Destroy (TheBossLevel.player);
+            Destroy(Level2Manager.player);
+            Destroy(Level3Manager.player);
+            Destroy (TheBossLevel.player);
         }
     }
 
@@ -70,8 +93,17 @@ public class PlayerHealth : MonoBehaviour {
             yield return null;
         }
     }
-		
-	void getHurtAudio() {
+
+    public static IEnumerator healthRegen()
+    {
+        regen = true;
+        PlayerHealth.health += 1;
+        yield return new WaitForSeconds(1f);
+        regen = false;
+    }
+
+
+    void getHurtAudio() {
 		_source = playerHurtAudio;
 	}
 

@@ -140,7 +140,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 383517bfbd0b74c7891812a835861554, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5c33cf2c6247c4d9db7125a59e89c60a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -249,7 +249,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 16
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -621,10 +621,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: AFTER TRAINING WITH THE EVIL LAND BIRDS OF THE NORTH, OUR HERO WAS ONCE
-    AGAIN REVIVED BY GRANDOLF. GRANDOLF TELLS OUR HERO THAT HIS SECOND TRIAL IS COMPLETED.
-    WHILE RELAXING IN THE SUN, A STRANGER APPROACHES THE TWO AND PRESENTS THEM WITH
-    A DILEMMA.
+  m_Text: OUR HERO SAVED THE WORLD AND EVERYONE IS HAPPY!!!
 --- !u!222 &1845965355
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -697,9 +694,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Skip
-
-'
+  m_Text: END GAME
 --- !u!222 &2002058864
 CanvasRenderer:
   m_ObjectHideFlags: 0

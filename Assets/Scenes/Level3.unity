@@ -2767,9 +2767,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Gamblin'' Man
+  m_Text: 'Fast metabolism
 
-    (+3 extra gold per kill)'
+    (Regenerate health over time)'
 --- !u!222 &548408356
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4530,9 +4530,44 @@ Prefab:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11488594, guid: e0297705bc9d244efb037aa7f293397f, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0297705bc9d244efb037aa7f293397f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1018542399 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 138876, guid: e0297705bc9d244efb037aa7f293397f, type: 2}
+  m_PrefabInternal: {fileID: 1018542398}
+--- !u!114 &1018542400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1018542399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77fc9f2bc5617b74a8b8571bb6066e0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  rotationSpeed: 0
+  distanceToAttack: 10
+  enemy: {fileID: 0}
+  hitAnimation: {fileID: 0}
+  hurt: {fileID: 0}
+  death: {fileID: 0}
+  consumables:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  firstEnemy: 1
 --- !u!1 &1030654059
 GameObject:
   m_ObjectHideFlags: 0
@@ -4695,6 +4730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprintModifier: 1
+  changedMaxSpeed: 0
 --- !u!50 &1034681706
 Rigidbody2D:
   serializedVersion: 2
@@ -7528,7 +7564,7 @@ GameObject:
   - 114: {fileID: 1800641301}
   - 114: {fileID: 1800641300}
   m_Layer: 5
-  m_Name: Perk 1
+  m_Name: Perk 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7597,7 +7633,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -7817,9 +7853,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Loot Hoarder
+  m_Text: 'Grenades for days
 
-    (increased chance to drop consumables on kill)'
+    (Increased grenade damage)'
 --- !u!222 &1820410424
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9517,7 +9553,7 @@ GameObject:
   - 114: {fileID: 2142704696}
   - 114: {fileID: 2142704695}
   m_Layer: 5
-  m_Name: Perk 0
+  m_Name: Perk 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9586,7 +9622,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
