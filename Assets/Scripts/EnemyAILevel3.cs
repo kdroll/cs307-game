@@ -45,6 +45,7 @@ public class EnemyAILevel3 : MonoBehaviour
     {
 
         //obtain the game object Transform
+        print("enemy total score == " + EnemyAILevel2.totalScore);
         if (firstEnemy == true)
         {
             gold = EnemyAILevel2.gold;
