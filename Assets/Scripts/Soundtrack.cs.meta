@@ -1,10 +1,13 @@
 fileFormatVersion: 2
 guid: f78e30733945c9e41a16658183c34e51
-timeCreated: 1460097921
+timeCreated: 1461199849
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - level0Clip: {fileID: 8300000, guid: 02301fd94cf099e46869b3c8ae8e03de, type: 3}
+  - level1Clip: {fileID: 8300000, guid: d9c72403a8758654397508ac0f765009, type: 3}
+  - level2Clip: {fileID: 8300000, guid: 55c51123455d83044b9481b298de2b43, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
