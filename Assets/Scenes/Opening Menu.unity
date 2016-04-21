@@ -1125,7 +1125,7 @@ GameObject:
   - 82: {fileID: 1605614705}
   - 114: {fileID: 1605614706}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: Soundtrack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1228,7 +1228,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f78e30733945c9e41a16658183c34e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newClip: {fileID: 8300000, guid: d9c72403a8758654397508ac0f765009, type: 3}
+  level0Clip: {fileID: 8300000, guid: 02301fd94cf099e46869b3c8ae8e03de, type: 3}
+  level1Clip: {fileID: 8300000, guid: d9c72403a8758654397508ac0f765009, type: 3}
+  level2Clip: {fileID: 8300000, guid: 55c51123455d83044b9481b298de2b43, type: 3}
 --- !u!1 &1788908995
 GameObject:
   m_ObjectHideFlags: 0

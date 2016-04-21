@@ -40,9 +40,23 @@ public class StatsMenu : MonoBehaviour {
             totalScoreStat.text = "";
 
             timeStat.text = "" + roundedTime + " = " + (float)(System.Math.Truncate(Time.time));
-            enemiesKilledStat.text = "" + EnemyAi.numEnemiesDestroyed;
-            timesHitStat.text = "" + PlayerHealth.numTimesHit;
-            totalScoreStat.text = "" + EnemyAi.totalScore;
+            if (Application.loadedLevel == 1)
+            {
+                enemiesKilledStat.text = "" + EnemyAi.numEnemiesDestroyed;
+                timesHitStat.text = "" + PlayerHealth.numTimesHit;
+                totalScoreStat.text = "" + EnemyAi.totalScore;
+            } else if (Application.loadedLevel == 10)
+            {
+                enemiesKilledStat.text = "" + EnemyAILevel2.numEnemiesDestroyed;
+                timesHitStat.text = "" + PlayerHealth.numTimesHit;
+                totalScoreStat.text = "" + EnemyAILevel2.totalScore;
+            }
+            else if (Application.loadedLevel == 11)
+            {
+                enemiesKilledStat.text = "" + EnemyAILevel3.numEnemiesDestroyed;
+                timesHitStat.text = "" + PlayerHealth.numTimesHit;
+                totalScoreStat.text = "" + EnemyAILevel3.totalScore;
+            }
         } else {
             statsMenuCanvas.SetActive(false);
         }

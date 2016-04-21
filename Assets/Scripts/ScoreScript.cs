@@ -22,7 +22,21 @@ public class ScoreScript : MonoBehaviour {
 	}
 
     void handleScore() {
-        Score.text = "" + EnemyAi.totalScore;
+        if (Application.loadedLevel == 1)
+        {
+            Score.text = "" + EnemyAi.totalScore;
+        } else if (Application.loadedLevel == 10)
+        {
+            Score.text = "" + EnemyAILevel2.totalScore;
+        }
+        else if (Application.loadedLevel == 11)
+        {
+            Score.text = "" + EnemyAILevel3.totalScore;
+        }
+        else if (Application.loadedLevel == 12)
+        {
+            Score.text = "" + TheBossLevel.totalScore;
+        }
         //Score.text = "" + ((EnemyAi.numEnemiesDestroyed * 5) + EnemyAi.totalScore);
         //Score.text = "" + ((EnemyAi.numEnemiesDestroyed * 5) + EnemyAi.totalScore - (PlayerHealth.numTimesHit * 10));
     }
