@@ -1,0 +1,46 @@
+<trackboy_project >
+<point>
+<pages number="4" />
+<bpm number="90" />
+<track number= "0"volume="0" pan="0" highs="0" lows="0" echo="0" type="0" />
+<track number= "1"volume="0" pan="0" highs="0" lows="0" echo="0" type="0" />
+<track number= "2"volume="0" pan="0" highs="0" lows="0" echo="0" type="0" />
+<track number= "3"volume="0" pan="0" highs="0" lows="0" echo="0" type="0" />
+<track number= "4"volume="0" pan="0" highs="0" lows="0" echo="0" type="0" />
+<track number= "5"volume="0" pan="0" highs="0" lows="0" echo="0" type="0" />
+<track number= "6"volume="0" pan="0" highs="0" lows="0" echo="0" type="0" />
+<track number= "7"volume="0" pan="0" highs="0" lows="0" echo="0" type="0" />
+<track number= "8"volume="0" pan="0" highs="0" lows="0" echo="0" type="0" />
+<track number= "9"volume="0" pan="0" highs="0" lows="0" echo="0" type="0" />
+<track number= "10"volume="0" pan="0" highs="0" lows="0" echo="0" type="0" />
+<track number= "11"volume="0" pan="0" highs="0" lows="0" echo="0" type="0" />
+<track number= "12"volume="0" pan="0" highs="0" lows="0" echo="0" type="0" />
+<track number= "13"volume="0" pan="0" highs="0" lows="0" echo="0" type="0" />
+<track number= "14"volume="0" pan="0" highs="0" lows="0" echo="0" type="0" />
+<track number= "15"volume="0" pan="0" highs="0" lows="0" echo="0" type="0" />
+<note track="0" page="0" position= "0" originalNote="A2" currentPitch="110" pan="0" gain="0" />
+<note track="0" page="0" position= "12" originalNote="C3" currentPitch="130.81" pan="0" gain="0" />
+<note track="0" page="1" position= "0" originalNote="C#3" currentPitch="138.59" pan="0" gain="0" />
+<note track="0" page="1" position= "12" originalNote="E3" currentPitch="164.81" pan="0" gain="0" />
+<note track="0" page="2" position= "0" originalNote="D#3" currentPitch="155.56" pan="0" gain="0" />
+<note track="0" page="2" position= "12" originalNote="B2" currentPitch="123.47" pan="0" gain="0" />
+<note track="0" page="3" position= "0" originalNote="F2" currentPitch="87.31" pan="0" gain="0" />
+<note track="0" page="3" position= "12" originalNote="G#2" currentPitch="103.83" pan="0" gain="0" />
+<note track="1" page="0" position= "0" originalNote="A1" currentPitch="55" pan="0" gain="0" />
+<note track="1" page="0" position= "12" originalNote="C2" currentPitch="65.41" pan="0" gain="0" />
+<note track="1" page="1" position= "0" originalNote="C#2" currentPitch="69.3" pan="0" gain="0" />
+<note track="1" page="1" position= "12" originalNote="E2" currentPitch="82.41" pan="0" gain="0" />
+<note track="1" page="2" position= "0" originalNote="D#2" currentPitch="77.78" pan="0" gain="0" />
+<note track="1" page="2" position= "12" originalNote="B1" currentPitch="61.74" pan="0" gain="0" />
+<note track="1" page="3" position= "0" originalNote="F1" currentPitch="43.65" pan="0" gain="0" />
+<note track="1" page="3" position= "12" originalNote="G#1" currentPitch="51.91" pan="0" gain="0" />
+<note track="2" page="0" position= "0" originalNote="E2" currentPitch="82.41" pan="0" gain="0" />
+<note track="2" page="0" position= "12" originalNote="G2" currentPitch="98" pan="0" gain="0" />
+<note track="2" page="1" position= "0" originalNote="G#2" currentPitch="103.83" pan="0" gain="0" />
+<note track="2" page="1" position= "12" originalNote="A2" currentPitch="110" pan="0" gain="0" />
+<note track="2" page="2" position= "0" originalNote="A#2" currentPitch="116.54" pan="0" gain="0" />
+<note track="2" page="2" position= "12" originalNote="F#2" currentPitch="92.5" pan="0" gain="0" />
+<note track="2" page="3" position= "0" originalNote="C2" currentPitch="65.41" pan="0" gain="0" />
+<note track="2" page="3" position= "12" originalNote="D#2" currentPitch="77.78" pan="0" gain="0" />
+</point>
+</trackboy_project>
