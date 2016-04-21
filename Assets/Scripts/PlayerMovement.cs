@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public static float speedModifier = 1;
     public static int numSpeedUpgrades = 0;
-    public static int maxSpeedMod = 2;
+    public static float maxSpeedMod = 2;
     public float sprintModifier;
 	private int currentSpeed;
 	Animator anim;
@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour {
 	Vector3 direction = new Vector3 (0, 0, 0);
 	public static int lastMovementDirection;
 	int layer;
+    public bool changedMaxSpeed = false;
 
 	// Use this for initialization
 	void Start () {
@@ -29,8 +30,12 @@ public class PlayerMovement : MonoBehaviour {
 		return lastMovementDirection;
 	}
 
-	// Update is called once per frame
-	void FixedUpdate () {
+    // Update is called once per frame
+    void FixedUpdate() {
+        if (changedMaxSpeed == false && PlayerHealth.perks[2] == 1) {
+            maxSpeedMod = maxSpeedMod + (PlayerHealth.perks[2] * (.2f));
+            changedMaxSpeed = true;
+        }
 
         direction = new Vector3 (0, 0, 0);
 		//lastMovementDirection = 0;
